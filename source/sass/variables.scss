@@ -1,0 +1,22 @@
+// Брейкпоинты :
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+// Плотность пикселей
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+// Шрифт
+$font--pt-mono: "PTMono-Regular", "Times New Roman", serif;
+$font--roboto-regular: "RobotoCondensed-Regular", "Arial", sans-serif;
+$font--roboto-medium: "Roboto-Medium", "Arial", sans-serif;
+$font--roboto-bold: "RobotoCondensed-Bold", "Arial", sans-serif;
+
+// Цвета
+$white: rgba(255, 255, 255, 1);
+$dull-gray: rgba(120, 136, 145, 1);
+$gray: rgba(102, 102, 102, 1);
+$blue: rgba(0, 178, 255, 1);
+$blue-green: rgba(32, 60, 66, 1);
+$dark-blue: rgba(27, 45, 55, 1);
