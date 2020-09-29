@@ -13,6 +13,10 @@
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     padding: 20px 25px 0 25px;
   }
+
+  @media (max-width: $tablet-width) {
+    padding: 15px 17px 0 17px;
+  }
 }
 
 .page-header__container {
@@ -20,38 +24,49 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
-  padding: 0 40px;
-
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-    padding: 0;
-  }
 }
 
 .page-header__image--polygons {
-  position: relative;
-  top: -45px;
-  left: 60px;
+  position: absolute;
+  top: 117px;
+  right: 214px;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-    top: -145px;
-    left: -175px;
+    top: -39px;
+    right: -198px;
 
     width: 528px;
     height: 505px;
   }
+
+  @media (max-width: $tablet-width) {
+    top: -44px;
+    left: 151px;
+
+    max-width: none;
+    width: 505px;
+    height: 482px;
+  }
 }
 
 .page-header__image--ic {
-  position: relative;
-  top: 35px;
-  right: 602px;
+  position: absolute;
+  top: 257px;
+  right: 173px;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-    top: -80px;
-    right: 635px;
+    top: 111px;
+    right: -203px;
 
     width: 465px;
     height: 340px;
+  }
+
+  @media (max-width: $tablet-width) {
+    top: 92px;
+    right: -5px;
+
+    width: 301px;
+    height: 220px;
   }
 }
