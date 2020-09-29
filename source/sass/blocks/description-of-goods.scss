@@ -15,6 +15,7 @@
   }
 }
 
+// Блок описания продукции компании
 .description-of-goods__name {
   display: flex;
   flex-direction: column;
@@ -30,6 +31,7 @@
   }
 }
 
+// Название продукции
 .description-of-goods__name--header {
   font-family: $font--roboto-bold;
   font-style: normal;
@@ -53,6 +55,7 @@
   }
 }
 
+// Поясняющий текст
 .description-of-goods__name--text {
   position: relative;
 
@@ -83,6 +86,7 @@
   }
 }
 
+// Белая линия перед поясняющим текстом
 .description-of-goods__name--text::before {
   position: absolute;
   top: 17px;

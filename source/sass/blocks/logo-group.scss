@@ -14,6 +14,7 @@
   }
 }
 
+// Логотип компании
 .logo-group__image {
   margin-right: 16px;
 
@@ -33,6 +34,7 @@
   }
 }
 
+// Блок текста логотипа
 .logo-group__text {
   display: flex;
   flex-direction: column;
@@ -42,6 +44,7 @@
   }
 }
 
+// Название компании в логотипе
 .logo-group__text--bold {
   font-family: $font--roboto-bold;
   font-style: normal;
@@ -52,6 +55,7 @@
   color: $white;
 }
 
+// Пояснение в логотипе
 .logo-group__text--normal {
   font-family: $font--roboto-medium;
   font-style: normal;

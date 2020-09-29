@@ -4,6 +4,7 @@
   overflow: hidden;
 }
 
+// Контейнер-центровщик
 .page-header__layout-container {
   margin: 0 auto;
   padding: 33px 40px 0 40px;
@@ -28,6 +29,7 @@
   align-items: center;
 }
 
+// Изображение двух треугольников
 .page-header__image--polygons {
   position: absolute;
   top: 117px;
@@ -51,6 +53,7 @@
   }
 }
 
+// Изображение печатной платы
 .page-header__image--ic {
   position: absolute;
   top: 257px;
