@@ -10,6 +10,8 @@
 
   max-width: 1410px;
 
+  overflow: hidden;
+
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     padding: 20px 25px 0 25px;
   }
@@ -41,7 +43,7 @@
 
   @media (max-width: $tablet-width) {
     top: -44px;
-    left: 151px;
+    right: -335px;
 
     max-width: none;
     width: 505px;
@@ -52,11 +54,11 @@
 .page-header__image--ic {
   position: absolute;
   top: 257px;
-  right: 173px;
+  left: 1045px;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     top: 111px;
-    right: -203px;
+    left: 509px;
 
     width: 465px;
     height: 340px;
@@ -64,7 +66,7 @@
 
   @media (max-width: $tablet-width) {
     top: 92px;
-    right: -5px;
+    left: 30px;
 
     width: 301px;
     height: 220px;
