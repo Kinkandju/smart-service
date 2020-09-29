@@ -33,10 +33,13 @@
   top: -45px;
   left: 60px;
 
-  // @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-  //   top: ;
-  //   left: ;
-  // }
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    top: -145px;
+    left: -175px;
+
+    width: 528px;
+    height: 505px;
+  }
 }
 
 .page-header__image--ic {
@@ -44,8 +47,11 @@
   top: 35px;
   right: 602px;
 
-  // @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-  //   top: ;
-  //   right: ;
-  // }
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    top: -80px;
+    right: 635px;
+
+    width: 465px;
+    height: 340px;
+  }
 }
