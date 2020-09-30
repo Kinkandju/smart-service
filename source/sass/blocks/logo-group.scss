@@ -3,7 +3,7 @@
   flex-direction: row;
   align-items: center;
 
-  flex-basis: 202px;
+  width: 202px;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     flex-basis: 202px;
@@ -12,6 +12,10 @@
   @media (max-width: $tablet-width) {
     flex-basis: 52px;
   }
+}
+
+.logo-group--footer {
+  width: 220px;
 }
 
 // Логотип компании
@@ -53,6 +57,11 @@
   line-height: 29px;
 
   color: $white;
+}
+
+// Название компании в логотипе в подвале сайта
+.logo-group__text--black {
+  color: $blue-green;
 }
 
 // Пояснение в логотипе

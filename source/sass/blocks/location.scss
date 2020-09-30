@@ -1,0 +1,38 @@
+.location {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 0 0 150px;
+  padding: 0;
+}
+
+.location__title {
+  font-family: $font--roboto-regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+
+  text-transform: uppercase;
+
+  margin-bottom: 27px;
+
+  color: $dark-blue;
+}
+
+.location__place,
+.location__tel {
+  margin: 0;
+  padding: 0;
+
+  font-family: $font--pt-mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+
+  color: $dark-blue;
+
+  opacity: 0.5;
+}
