@@ -1,5 +1,8 @@
 .page-header {
   position: relative;
+  top: -20px;
+  left: 0;
+
   background-color: $dark-blue;
 
   overflow: hidden;
@@ -33,11 +36,11 @@
 // Изображение двух треугольников
 .page-header__image--polygons {
   position: absolute;
-  top: 117px;
-  right: 214px;
+  top: 135px;
+  right: 85px;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-    top: -39px;
+    top: -19px;
     right: -198px;
 
     width: 528px;
@@ -45,7 +48,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    top: -44px;
+    top: -24px;
     right: -335px;
 
     max-width: none;
@@ -57,11 +60,11 @@
 // Изображение печатной платы
 .page-header__image--ic {
   position: absolute;
-  top: 257px;
-  left: 1045px;
+  top: 277px;
+  left: 915px;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-    top: 111px;
+    top: 131px;
     left: 509px;
 
     width: 465px;
@@ -69,7 +72,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    top: 92px;
+    top: 112px;
     left: 30px;
 
     width: 301px;
