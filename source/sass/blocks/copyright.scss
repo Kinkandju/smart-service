@@ -15,6 +15,10 @@
   padding: 0 40px;
 
   max-width: 1410px;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    padding: 0 25px;
+  }
 }
 
 .copyright__container {
@@ -47,15 +51,45 @@
   opacity: 0.5;
 }
 
+.copyright__text {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.copyright__text--desktop {
+  display: none;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    display: block;
+
+    margin: 0;
+  }
+}
+
 .copyright__link--first {
   margin: 0 -14px 0 0;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    margin: 0 -20px;
+    padding: 20px;
+  }
 }
 
 .copyright__link--last {
   margin: 0 -14px 0 14px;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    margin: 0 -20px;
+    padding: 20px;
+  }
 }
 
 .copyright__text--middle {
   position: relative;
   right: 25px;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    display: none;
+  }
 }

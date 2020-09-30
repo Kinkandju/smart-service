@@ -6,16 +6,20 @@
   width: 202px;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-    flex-basis: 202px;
+    width: 202px;
   }
 
   @media (max-width: $tablet-width) {
-    flex-basis: 52px;
+    width: 52px;
   }
 }
 
 .logo-group--footer {
   width: 220px;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    width: 220px;
+  }
 }
 
 // Логотип компании
