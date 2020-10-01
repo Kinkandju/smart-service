@@ -3,6 +3,10 @@
   padding: 95px 0 0 0;
 
   background-color: $white;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    padding: 40px 0 0 0;
+  }
 }
 
 .advantages__layout-container {
@@ -43,15 +47,54 @@
 
   border: 1px solid $silver;
   border-left: 3px solid $blue;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    flex-basis: 40.3%;
+
+    padding: 25px 25px 20px 25px;
+  }
 }
 
-.advantages__item:nth-child(2) {
+.advantages__item--providers {
   letter-spacing: -0.01em;
 }
 
-.advantages__item:nth-child(3),
-.advantages__item:nth-child(4) {
+.advantages__item--privacy,
+.advantages__item--cost {
   padding: 40px 45px 85px 45px;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    padding: 25px 25px 31px 25px;
+  }
+}
+
+.advantages__item--deadlines,
+.advantages__item--privacy {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    margin: 15px 15px 15px 0;
+  }
+}
+
+.advantages__item--providers,
+.advantages__item--cost {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    margin: 15px 0 15px 15px;
+  }
+}
+
+.advantages__image--hired {
+  width: 32px;
+  height: 32px;
+}
+
+.advantages__image--detective {
+  width: 30px;
+  height: 26px;
+}
+
+.advantages__image--tag {
+  width: 32px;
+  height: 32px;
 }
 
 .advantages__title {
@@ -65,6 +108,31 @@
   padding: 20px 20px 15px 20px;
 
   color: $blue;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    margin: 0 0 0 -5px;
+    padding: 5px;
+  }
+}
+
+.advantages__title--privacy,
+.advantages__title--cost {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    padding: 9px 5px;
+  }
+}
+
+.advantages__title--privacy {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    margin: 0 -15px 0 -5px;
+    padding: 12px 5px 14px 5px;
+  }
+}
+
+.advantages__title--providers {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    padding: 8px 5px 9px 5px;
+  }
 }
 
 .advantages__text {
