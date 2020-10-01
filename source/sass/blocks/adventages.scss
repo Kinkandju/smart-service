@@ -108,18 +108,24 @@
 }
 
 .advantages__image--hired {
-  width: 32px;
-  height: 32px;
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 .advantages__image--detective {
-  width: 30px;
-  height: 26px;
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    width: 30px;
+    height: 26px;
+  }
 }
 
 .advantages__image--tag {
-  width: 32px;
-  height: 32px;
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 .advantages__title {

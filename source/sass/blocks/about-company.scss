@@ -1,0 +1,84 @@
+.about-company {
+  margin: 0;
+  padding: 90px 0 115px 0;
+
+  background-color: $white;
+}
+
+.about-company__layout-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  margin: 0 auto;
+  padding: 0 40px;
+
+  max-width: 1410px;
+}
+
+.about-company__image {
+  position: relative;
+  top: 12px;
+}
+
+.about-company__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 70%;
+
+  margin: -20px -20px -20px 45px;
+  padding: 20px;
+}
+
+.about-company__title {
+  font-family: $font--roboto-regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+
+  margin: -20px;
+  padding: 20px;
+
+  color: $gray;
+}
+
+.about-company__text {
+  font-family: $font--pt-mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+
+  margin: 0;
+  padding: 0;
+
+  color: $gray;
+}
+
+.about-company__text p {
+  margin: 0;
+  padding-bottom: 14px;
+}
+
+.about-company__button {
+  position: relative;
+  top: 6px;
+
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  margin: 0;
+  padding: 14px 50px;
+
+  max-width: 180px;
+
+  border: 1px solid $blue;
+  border-radius: 5px;
+
+  background-color: transparent;
+  color: $blue;
+}
