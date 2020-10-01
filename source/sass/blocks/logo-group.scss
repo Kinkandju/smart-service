@@ -20,6 +20,10 @@
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     width: 220px;
   }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 10px;
+  }
 }
 
 // Логотип компании
@@ -42,6 +46,15 @@
   }
 }
 
+.logo-group__image--footer {
+  @media (max-width: $tablet-width) {
+    margin-right: 16px;
+
+    width: 52px;
+    height: 52px;
+  }
+}
+
 // Блок текста логотипа
 .logo-group__text {
   display: flex;
@@ -49,6 +62,13 @@
 
   @media (max-width: $tablet-width) {
     display: none;
+  }
+}
+
+// Блок текста логотипа в футере
+.logo-group__text--footer {
+  @media (max-width: $tablet-width) {
+    display: block;
   }
 }
 

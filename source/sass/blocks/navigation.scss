@@ -5,6 +5,22 @@
 
   margin: 0;
   padding: 0;
+
+  @media (max-width: $tablet-width) {
+    margin: 0 -17px;
+    padding: 0 17px;
+
+    border-bottom: 1px solid $silver;
+  }
+}
+
+.navigation__container {
+  @media (max-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .navigation__title {
@@ -20,6 +36,73 @@
   margin-bottom: 27px;
 
   color: $dark-blue;
+
+  @media (max-width: $tablet-width) {
+    margin: 0 -17px;
+    padding: 29px 17px;
+  }
+}
+
+.navigation__button {
+  display: none;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    display: none;
+  }
+
+  @media (max-width: $tablet-width) {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    margin: 0 -17px;
+    padding: 17px;
+
+    width: 16px;
+    height: 16px;
+
+    box-sizing: content-box;
+
+    cursor: pointer;
+
+    border: none;
+
+    background-color: $light-gray;
+  }
+}
+
+.navigation__button span {
+  @media (max-width: $tablet-width) {
+    position: relative;
+    display: flex;
+    align-self: center;
+
+    width: 16px;
+    height: 2px;
+
+    background: $silver;
+  }
+}
+
+.navigation__button span::before {
+  @media (max-width: $tablet-width) {
+    position: absolute;
+    top: -7px;
+    left: 7px;
+
+    width: 2px;
+    height: 16px;
+
+    content: "";
+
+    background: $silver;
+  }
+}
+
+.navigation__button--opened span::before {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .navigation__list {
@@ -32,6 +115,22 @@
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     column-count: 1;
+  }
+
+  @media (max-width: $tablet-width) {
+    &--opened {
+      padding-bottom: 30px;
+
+      column-count: 1;
+    }
+
+    &--nojs {
+      display: none;
+    }
+
+    &--closed {
+      display: none;
+    }
   }
 }
 
@@ -49,6 +148,10 @@
   text-overflow: ellipsis;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    margin: 0;
+  }
+
+  @media (max-width: $tablet-width) {
     margin: 0;
   }
 }
