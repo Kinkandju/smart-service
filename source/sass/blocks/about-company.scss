@@ -1,11 +1,15 @@
 .about-company {
   margin: 0;
-  padding: 90px 0 115px 0;
+  padding: 90px 0 112px 0;
 
   background-color: $white;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     padding: 35px 0 62px 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 0 0 48px 0;
   }
 }
 
@@ -24,6 +28,10 @@
 
     padding: 0 25px;
   }
+
+  @media (max-width: $tablet-width) {
+    padding: 0 17px;
+  }
 }
 
 .about-company__image {
@@ -35,6 +43,10 @@
 
     width: 131px;
     height: 348px;
+  }
+
+  @media (max-width: $tablet-width) {
+    display: none;
   }
 }
 
@@ -52,6 +64,13 @@
 
     margin: 0 0 0 50px;
     padding: 20px 10px;
+  }
+
+  @media (max-width: $tablet-width) {
+    flex-basis: 100%;
+
+    margin: 0 -17px;
+    padding: 17px;
   }
 }
 
@@ -73,6 +92,14 @@
 
     margin: -20px -20px 5px -20px;
     padding: 6px 20px 20px 20px;
+  }
+
+  @media (max-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 39px;
+
+    margin: 0 -20px;
+    padding: 20px;
   }
 }
 
@@ -102,12 +129,19 @@
 
     max-height: 85px;
   }
+
+  @media (max-width: $tablet-width) {
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    margin: 0 -10px 40px 0;
+    padding: 0;
+
+    max-height: 175px;
+  }
 }
 
 .about-company__button {
-  position: relative;
-  top: 6px;
-
   font-size: 14px;
   line-height: 16px;
   text-align: center;
@@ -125,8 +159,10 @@
   color: $blue;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-    top: 0;
-
     margin-top: 26px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-top: -10px;
   }
 }
