@@ -186,13 +186,51 @@
         </div>
       </div>
     </section>
+
+    <section class="feedback" id="feedback">
+      <div class="feedback__layout-container">
+        <div class="feedback__container">
+          <h2 class="feedback__title">Остались вопросы? Задайте их нам!</h2>
+          <p class="feedback__text">
+            Мы проконсультируем Вас бесплатно
+          </p>
+        </div>
+
+        <form class="feedback__form form" action="" method="">
+          <fieldset>
+            <legend class="visually-hidden">Форма обратной связи</legend>
+
+            <div class="form__name">
+              <label class="visually-hidden" for="name">Ваше имя:</label>
+              <input class="form__name--input" type="text" id="name" name="name" placeholder="Имя" autocomplete="off" required="">
+            </div>
+
+            <div class="form__tel">
+              <label class="visually-hidden" for="tel">Ваш телефон:</label>
+              <input class="form__tel--input" type="tel" id="tel" name="tel" placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" maxlength="18" autocomplete="off" required="">
+            </div>
+
+            <div class="form__question">
+              <label class="visually-hidden" for="tel">Ваш вопрос:</label>
+              <textarea class="form__question--input" id="message" name="message" cols="30" rows="7" placeholder="Ваш вопрос" required=""></textarea>
+            </div>
+
+            <button class="form__button" type="submit">Задать вопрос</button>
+
+            <div class="form__block">
+              <input class="form__checkbox visually-hidden" type="checkbox" id="checkbox" name="checkbox" checked="" required="">
+              <label class="form__label" for="checkbox">
+                Я согласен на обработку персональных данных
+              </label>
+            </div>
+          </fieldset>
+        </form>
+
+      </div>
+    </section>
   </main>
 
   <footer class="page-footer">
-    <section class="page-footer__form form">
-
-    </section>
-
     <section class="page-footer__info info">
       <div class="info__layout-container">
         <div class="info__container">
@@ -297,6 +335,10 @@
           <a class="copyright__link copyright__link--last" href="#">Developed by wow studio</a>
         </div>
       </div>
+    </section>
+
+    <section class="page-footer__modal modal">
+
     </section>
   </footer>
 </body>
