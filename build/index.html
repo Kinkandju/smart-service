@@ -117,7 +117,10 @@
 
     <section class="about-company">
       <div class="about-company__layout-container">
-        <img class="about-company__image" src="img/year_desktop_1x.png" width="115" height="303" alt="">
+        <picture>
+          <source media="(min-width: 1024px)" srcset="img/year_desktop_1x.png, img/year_desktop_2x.png 2x">
+          <img class="about-company__image" src="img/year_tablet_1x.png" srcset="img/year_tablet_1x.png 2x" width="115" height="303" alt="">
+        </picture>
 
         <div class="about-company__container">
           <h2 class="about-company__title">О компании</h2>

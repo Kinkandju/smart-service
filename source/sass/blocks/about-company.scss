@@ -3,6 +3,10 @@
   padding: 90px 0 115px 0;
 
   background-color: $white;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    padding: 35px 0 62px 0;
+  }
 }
 
 .about-company__layout-container {
@@ -14,11 +18,24 @@
   padding: 0 40px;
 
   max-width: 1410px;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    justify-content: space-between;
+
+    padding: 0 25px;
+  }
 }
 
 .about-company__image {
   position: relative;
   top: 12px;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    left: 5px;
+
+    width: 131px;
+    height: 348px;
+  }
 }
 
 .about-company__container {
@@ -29,6 +46,13 @@
 
   margin: -20px -20px -20px 45px;
   padding: 20px;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    flex-basis: 73%;
+
+    margin: 0 0 0 50px;
+    padding: 20px 10px;
+  }
 }
 
 .about-company__title {
@@ -42,6 +66,14 @@
   padding: 20px;
 
   color: $gray;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    font-size: 32px;
+    line-height: 45px;
+
+    margin: -20px -20px 5px -20px;
+    padding: 6px 20px 20px 20px;
+  }
 }
 
 .about-company__text {
@@ -60,6 +92,16 @@
 .about-company__text p {
   margin: 0;
   padding-bottom: 14px;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    margin: 0 0 20px 0;
+    padding: 0;
+
+    max-height: 85px;
+  }
 }
 
 .about-company__button {
@@ -81,4 +123,10 @@
 
   background-color: transparent;
   color: $blue;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    top: 0;
+
+    margin-top: 26px;
+  }
 }
