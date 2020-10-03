@@ -1,0 +1,118 @@
+.form {
+  margin: 0;
+  padding: 0;
+
+  width: 84.7%;
+}
+
+.form__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+
+  margin: 0 0 4px 0;
+  padding: 0;
+}
+
+.form__name,
+.form__tel {
+  width: 50%;
+}
+
+.form__question {
+  width: 100%;
+}
+
+.form__name--input,
+.form__tel--input,
+.form__question--input {
+  font-family: $font--pt-mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+
+  margin: 20px 15px;
+  padding: 14px 15px 16px 15px;
+
+  width: 90.6%;
+  max-height: 124px;
+
+  border: none;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  color: $white;
+  background-color: $transparent-white;
+}
+
+.form__name--input,
+.form__tel--input {
+  width: 81%;
+}
+
+.form__name--input::placeholder,
+.form__tel--input::placeholder,
+.form__question--input::placeholder {
+  color: $white;
+}
+
+.form__button {
+  font-family: $font--roboto-bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  margin: 15px;
+  padding: 13px 15px 14px 15px;
+
+  width: 45.2%;
+
+  border: 1px solid $white;
+  border-radius: 5px;
+
+  color: $white;
+  background-color: transparent;
+}
+
+.form__label {
+  position: relative;
+  display: block;
+
+  font-family: $font--pt-mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+
+  margin: 0;
+  padding: 15px 15px 15px 55px;
+
+  width: 100%;
+  max-width: 210px;
+
+  color: $white;
+
+  opacity: 0.8;
+}
+
+.form__label::after {
+  position: absolute;
+  top: 25%;
+  left: 8%;
+
+  content: "";
+
+  width: 16px;
+  height: 16px;
+  border: 1px solid $white;
+
+  background-color: transparent;
+}

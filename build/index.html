@@ -188,44 +188,52 @@
     </section>
 
     <section class="feedback" id="feedback">
+      <img class="feedback__image feedback__image--polygons-right" src="img/polygons_group-right.svg" width="509" height="669" alt="Декоративный элемент. Группа треугольников">
+
       <div class="feedback__layout-container">
+        <img class="feedback__image feedback__image--polygons" src="img/polygons_group.svg" width="671" height="641" alt="Декоративный элемент. Группа треугольников">
+        <img class="feedback__image feedback__image--airplane" src="img/paper_airplane_desktop_1x.png" srcset="img/paper_airplane_desktop_2x.png 2x" width="511" height="288" alt="Декоративный элемент: бумажный самолётик">
+
         <div class="feedback__container">
-          <h2 class="feedback__title">Остались вопросы? Задайте их нам!</h2>
-          <p class="feedback__text">
-            Мы проконсультируем Вас бесплатно
-          </p>
+          <div class="feedback__container--block">
+            <h2 class="feedback__title">Остались вопросы? Задайте их нам!</h2>
+            <p class="feedback__text">Мы проконсультируем Вас бесплатно</p>
+          </div>
+
+          <form class="feedback__form form" action="" method="">
+            <fieldset>
+              <legend class="visually-hidden">Форма обратной связи</legend>
+
+              <div class="form__container">
+                <div class="form__name">
+                  <label class="visually-hidden" for="name">Ваше имя:</label>
+                  <input class="form__name--input" type="text" id="name" name="name" placeholder="Имя" autocomplete="off" required="">
+                </div>
+
+                <div class="form__tel">
+                  <label class="visually-hidden" for="tel">Ваш телефон:</label>
+                  <input class="form__tel--input" type="tel" id="tel" name="tel" placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" maxlength="18" autocomplete="off" required="">
+                </div>
+
+                <div class="form__question">
+                  <label class="visually-hidden" for="tel">Ваш вопрос:</label>
+                  <textarea class="form__question--input" id="message" name="message" cols="30" rows="7" placeholder="Ваш вопрос" required=""></textarea>
+                </div>
+              </div>
+
+              <div class="form__container">
+                <button class="form__button" type="submit">Задать вопрос</button>
+
+                <div class="form__block">
+                  <input class="form__checkbox visually-hidden" type="checkbox" id="checkbox" name="checkbox" checked="" required="">
+                  <label class="form__label" for="checkbox">
+                    Я согласен на обработку персональных данных
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </form>
         </div>
-
-        <form class="feedback__form form" action="" method="">
-          <fieldset>
-            <legend class="visually-hidden">Форма обратной связи</legend>
-
-            <div class="form__name">
-              <label class="visually-hidden" for="name">Ваше имя:</label>
-              <input class="form__name--input" type="text" id="name" name="name" placeholder="Имя" autocomplete="off" required="">
-            </div>
-
-            <div class="form__tel">
-              <label class="visually-hidden" for="tel">Ваш телефон:</label>
-              <input class="form__tel--input" type="tel" id="tel" name="tel" placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" maxlength="18" autocomplete="off" required="">
-            </div>
-
-            <div class="form__question">
-              <label class="visually-hidden" for="tel">Ваш вопрос:</label>
-              <textarea class="form__question--input" id="message" name="message" cols="30" rows="7" placeholder="Ваш вопрос" required=""></textarea>
-            </div>
-
-            <button class="form__button" type="submit">Задать вопрос</button>
-
-            <div class="form__block">
-              <input class="form__checkbox visually-hidden" type="checkbox" id="checkbox" name="checkbox" checked="" required="">
-              <label class="form__label" for="checkbox">
-                Я согласен на обработку персональных данных
-              </label>
-            </div>
-          </fieldset>
-        </form>
-
       </div>
     </section>
   </main>

@@ -1,0 +1,94 @@
+.feedback {
+  position: relative;
+
+  background-color: $blue;
+
+  overflow: hidden;
+}
+
+.feedback fieldset {
+  margin: 24px 0;
+  padding: 0;
+
+  border: none;
+}
+
+.feedback__layout-container {
+  position: relative;
+
+  margin: 0 auto;
+  padding: 60px 40px 69px 40px;
+
+  max-width: 1410px;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    padding: 0 25px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 0 17px;
+  }
+}
+
+.feedback__container {
+  display: flex;
+  flex-direction: column;
+
+  margin-left: auto;
+  padding: 0;
+
+  width: 50%;
+
+  z-index: 5;
+}
+
+.feedback__image {
+  position: absolute;
+
+  &--airplane {
+    top: 24%;
+    right: 56.8%;
+
+    object-fit: contain;
+    object-position: 50% 50%;
+  }
+
+  &--polygons {
+    top: -9%;
+    right: 57.7%;
+  }
+
+  &--polygons-right {
+    top: 5.3%;
+    right: -0.4%;
+
+    width: 19%;
+    height: auto;
+  }
+}
+
+.feedback__title {
+  font-family: $font--roboto-regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+
+  margin: 0;
+  padding: 30px 10px 7px 10px;
+
+  color: $white;
+}
+
+.feedback__text {
+  font-family: $font--pt-mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+
+  margin: 0;
+  padding: 5px 15px;
+
+  color: $white;
+}
