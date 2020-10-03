@@ -3,6 +3,10 @@
   padding: 0;
 
   width: 84.7%;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    width: 86.2%;
+  }
 }
 
 .form__container {
@@ -37,9 +41,6 @@
   margin: 20px 15px;
   padding: 14px 15px 16px 15px;
 
-  width: 90.6%;
-  max-height: 124px;
-
   border: none;
 
   overflow: hidden;
@@ -52,6 +53,17 @@
 .form__name--input,
 .form__tel--input {
   width: 81%;
+}
+
+.form__question--input {
+  width: 90.6%;
+  max-height: 124px;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    margin: 20px 15px 23px 15px;
+
+    max-height: 130px;
+  }
 }
 
 .form__name--input::placeholder,
@@ -101,6 +113,10 @@
   color: $white;
 
   opacity: 0.8;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    padding: 15px 15px 15px 60px;
+  }
 }
 
 .form__label::after {
@@ -115,4 +131,8 @@
   border: 1px solid $white;
 
   background-color: transparent;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    left: 9%;
+  }
 }
