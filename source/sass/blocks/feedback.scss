@@ -11,6 +11,10 @@
   padding: 0;
 
   border: none;
+
+  @media (max-width: $tablet-width) {
+    margin: 12px 0 24px 0;
+  }
 }
 
 .feedback__layout-container {
@@ -42,6 +46,12 @@
   z-index: 5;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    align-items: center;
+
+    width: 100%;
+  }
+
+  @media (max-width: $tablet-width) {
     align-items: center;
 
     width: 100%;
@@ -84,6 +94,10 @@
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     display: none;
   }
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .feedback__title {
@@ -105,6 +119,13 @@
     margin: 0;
     padding: 30px 10px 10px 10px;
   }
+
+  @media (max-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 39px;
+
+    padding: 30px 10px 10px 0;
+  }
 }
 
 .feedback__text {
@@ -122,5 +143,9 @@
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     margin: 0;
     padding: 5px 15px 11px 15px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 5px 15px 11px 0;
   }
 }
