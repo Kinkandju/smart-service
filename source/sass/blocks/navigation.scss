@@ -162,4 +162,11 @@
   color: $dark-blue;
 
   opacity: 0.5;
+
+  &:hover,
+  &:focus {
+    color: $blue;
+
+    opacity: 1;
+  }
 }

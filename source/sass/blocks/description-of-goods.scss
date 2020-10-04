@@ -129,6 +129,12 @@
   color: $white;
   background-color: $blue;
 
+  &:hover,
+  &:focus {
+    color: $blue;
+    background-color: $white;
+  }
+
   &--tablet {
     display: block;
   }
@@ -158,8 +164,8 @@
 
 .description-of-goods__scroll-down {
   position: absolute;
-  bottom: 128px;
-  left: -35px;
+  bottom: 112px;
+  left: -50px;
 
   font-family: $font--pt-mono;
   font-style: normal;
@@ -167,11 +173,19 @@
   font-size: 14px;
   line-height: 16px;
 
+  margin: 0;
+  padding: 15px;
+
   color: $white;
 
   opacity: 0.5;
 
   transform: rotate(-90deg);
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     display: none;

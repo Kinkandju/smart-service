@@ -49,6 +49,11 @@
   margin: 0;
   padding: 10px 46px;
 
+  &:hover,
+  &:focus {
+    color: $blue;
+  }
+
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     padding: 16px;
   }
@@ -131,6 +136,15 @@
 
   color: white;
   background-color: transparent;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $blue;
+
+    color: $blue;
+  }
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     display: none;

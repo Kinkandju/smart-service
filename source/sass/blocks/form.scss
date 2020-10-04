@@ -62,7 +62,13 @@
   overflow: hidden;
   text-overflow: ellipsis;
 
+  outline: none;
   background-color: $transparent-white;
+
+  &:hover,
+  &:focus {
+    background-color: $light-white;
+  }
 
   &::placeholder {
     color: $white;
@@ -120,8 +126,16 @@
   border: 1px solid $white;
   border-radius: 5px;
 
+  cursor: pointer;
+
   color: $white;
   background-color: transparent;
+
+  &:hover,
+  &:focus {
+    color: $blue;
+    background-color: $white;
+  }
 
   @media (max-width: $tablet-width) {
     margin: 0 0 15px 0;
@@ -149,6 +163,11 @@
   color: $white;
 
   opacity: 0.8;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
 
   &::after {
     position: absolute;

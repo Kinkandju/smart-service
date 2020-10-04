@@ -83,6 +83,11 @@
 
   background-color: $blue;
 
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
   &::before,
   &::after {
     position: absolute;
@@ -128,6 +133,11 @@
   text-overflow: ellipsis;
 
   background-color: $transparent-white;
+
+  &:hover,
+  &:focus {
+    background-color: $light-white;
+  }
 
   &::placeholder {
     color: $white;
@@ -186,6 +196,12 @@
 
   border: 1px solid $white;
   border-radius: 5px;
+
+  &:hover,
+  &:focus {
+    color: $blue;
+    background-color: $white;
+  }
 }
 
 .modal__label {
@@ -208,6 +224,11 @@
   color: $white;
 
   opacity: 0.8;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
 
   &::after {
     position: absolute;

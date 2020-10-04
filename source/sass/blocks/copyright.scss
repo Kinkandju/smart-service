@@ -107,6 +107,13 @@
     margin: 0 -14px 0 14px;
   }
 
+  &:hover,
+  &:focus {
+    opacity: 1;
+
+    color: $blue;
+  }
+
   &--first,
   &--last {
     @media (min-width: $tablet-width) and (max-width: $desktop-width) {

@@ -56,6 +56,24 @@
   border: 1px solid $silver;
   border-left: 3px solid $blue;
 
+  &:hover,
+  &:focus {
+    border: 1px solid $blue;
+    border-left: 3px solid $blue;
+    background-color: $blue;
+
+    cursor: pointer;
+
+    svg {
+      color: $white;
+    }
+
+    h3,
+    p {
+      color: $white;
+    }
+  }
+
   &--providers {
     letter-spacing: -0.01em;
   }
@@ -110,7 +128,7 @@
 }
 
 .advantages__image {
-  &----stopwatch {
+  &--stopwatch {
     width: 29px;
     height: 35px;
   }

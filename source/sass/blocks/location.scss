@@ -141,3 +141,12 @@
 
   opacity: 0.5;
 }
+
+.location__tel {
+  &:hover,
+  &:focus {
+    color: $blue;
+
+    opacity: 1;
+  }
+}

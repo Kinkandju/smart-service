@@ -144,10 +144,15 @@
 }
 
 .about-company__button {
+  font-family: $font--roboto-bold;
+  font-style: normal;
+  font-weight: bold;
   font-size: 14px;
   line-height: 16px;
   text-align: center;
   letter-spacing: 0.05em;
+
+  text-transform: uppercase;
 
   margin: 0;
   padding: 14px 50px;
@@ -159,6 +164,14 @@
 
   background-color: transparent;
   color: $blue;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $white;
+
+    background-color: $blue;
+    color: $white;
+  }
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     margin-top: 26px;
