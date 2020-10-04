@@ -1,9 +1,6 @@
 .page-header {
-  position: relative;
-  top: 0;
-  left: 0;
-
-  margin-top: -20px;
+  margin: 0;
+  padding: 0;
 
   background-color: $dark-blue;
 
@@ -12,12 +9,14 @@
 
 // Контейнер-центровщик
 .page-header__layout-container {
+  position: relative;
+  top: 0;
+  left: 0;
+
   margin: 0 auto;
   padding: 33px 40px 0 40px;
 
   max-width: 1410px;
-
-  overflow: hidden;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     padding: 20px 25px 0 25px;
@@ -28,30 +27,23 @@
   }
 }
 
-.page-header__container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
 // Изображение двух треугольников
 .page-header__image--polygons {
   position: absolute;
-  top: 135px;
-  right: 85px;
+  top: 118px;
+  left: 55%;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-    top: -19px;
-    right: -198px;
+    top: -38px;
+    left: 57.5%;
 
     width: 528px;
     height: 505px;
   }
 
   @media (max-width: $tablet-width) {
-    top: -24px;
-    right: -335px;
+    top: -46px;
+    left: 47.6%;
 
     max-width: none;
     width: 505px;
@@ -62,22 +54,36 @@
 // Изображение печатной платы
 .page-header__image--ic {
   position: absolute;
-  top: 277px;
-  left: 915px;
+  top: 258px;
+  left: 55.4%;
+
+  width: 705px;
+  height: 515px;
+
+  object-fit: cover;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-    top: 131px;
-    left: 509px;
+    top: 115px;
+    left: 66.5%;
 
     width: 465px;
     height: 340px;
   }
 
   @media (max-width: $tablet-width) {
-    top: 112px;
-    left: 30px;
+    top: 93px;
+    left: 8%;
 
     width: 301px;
     height: 220px;
   }
+}
+
+.page-header__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 5;
 }

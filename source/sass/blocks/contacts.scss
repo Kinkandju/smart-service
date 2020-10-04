@@ -28,6 +28,15 @@
   }
 }
 
+.contacts__item {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width),
+    @media (max-width: $tablet-width) {
+    position: relative;
+    top: -5px;
+    left: 2px;
+  }
+}
+
 // Ссылки для обратной связи
 .contacts__item a {
   display: flex;
