@@ -184,33 +184,28 @@
 
   background-color: $blue;
 
-  ::before {
+  &::before,
+  &::after {
     position: absolute;
-    top: 29px;
     left: 30px;
 
     width: 7px;
     height: 1px;
 
     content: "";
-
-    transform: rotate(45deg);
 
     background: $white;
   }
 
-  ::after {
-    position: absolute;
+  &::before {
+    top: 29px;
+
+    transform: rotate(45deg);
+  }
+
+  &::after {
     top: 33px;
-    left: 30px;
-
-    width: 7px;
-    height: 1px;
-
-    content: "";
 
     transform: rotate(-45deg);
-
-    background: $white;
   }
 }

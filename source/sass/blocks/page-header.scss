@@ -4,20 +4,20 @@
 
   background-color: $dark-blue;
   background-image: url("../img/background_image_desktop_1x.png");
-  background-size: 100% 100%;
-  background-repeat: repeat-x;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-position: 0 0;
 
   overflow: hidden;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     background-size: cover;
-    background-position: 50% 50%;
+    background-position: 0 0;
   }
 
   @media (max-width: $tablet-width) {
     background-size: cover;
-    background-position: 50% 50%;
+    background-position: 0 0;
   }
 }
 

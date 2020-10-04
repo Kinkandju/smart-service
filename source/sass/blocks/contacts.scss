@@ -58,42 +58,47 @@
   }
 }
 
-.contacts__image--mail {
-  margin-right: 20px;
+.contacts__image {
+  &--mail {
+    margin-right: 20px;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-    width: 25px;
-    height: 19px;
+    width: 19px;
+    height: 14px;
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+      margin-right: 0;
+
+      width: 25px;
+      height: 19px;
+    }
+
+    @media (max-width: $tablet-width) {
+      margin-right: 0;
+
+      width: 25px;
+      height: 19px;
+    }
   }
 
-  @media (max-width: $tablet-width) {
-    width: 25px;
-    height: 19px;
-  }
-}
+  &--phone {
+    margin-right: 16px;
 
-.contacts__image--phone {
-  margin-right: 16px;
+    width: 18px;
+    height: 18px;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-    width: 24px;
-    height: 24px;
-  }
+    @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+      margin-right: 0;
 
-  @media (max-width: $tablet-width) {
-    width: 24px;
-    height: 24px;
-  }
-}
+      width: 24px;
+      height: 24px;
+    }
 
-.contacts__image--mail,
-.contacts__image--phone {
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-    margin-right: 0;
-  }
+    @media (max-width: $tablet-width) {
+      margin-right: 0;
 
-  @media (max-width: $tablet-width) {
-    margin-right: 0;
+      width: 24px;
+      height: 24px;
+    }
   }
 }
 

@@ -74,7 +74,7 @@
 
     background: $silver;
 
-    ::before {
+    &::before {
       position: absolute;
       top: -7px;
       left: 7px;

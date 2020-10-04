@@ -83,7 +83,7 @@
     background: $silver;
   }
 
-  ::before {
+  &::before {
     @media (max-width: $tablet-width) {
       position: absolute;
       top: -7px;

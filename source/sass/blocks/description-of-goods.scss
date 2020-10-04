@@ -111,8 +111,14 @@
 }
 
 .description-of-goods__feedback {
+  font-family: $font--roboto-bold;
+  font-style: normal;
+  font-weight: bold;
   font-size: 16px;
   line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 
   margin: 0 0 0 97px;
   padding: 17px 43px 16px 43px;
