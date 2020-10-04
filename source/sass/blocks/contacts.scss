@@ -29,8 +29,13 @@
 }
 
 .contacts__item {
-  @media (min-width: $tablet-width) and (max-width: $desktop-width),
-    @media (max-width: $tablet-width) {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    position: relative;
+    top: -5px;
+    left: 2px;
+  }
+
+  @media (max-width: $tablet-width) {
     position: relative;
     top: -5px;
     left: 2px;
