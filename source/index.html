@@ -343,21 +343,21 @@
       </div>
     </section>
 
-    <section class="page-footer__modal modal">
+    <section class="page-footer__modal modal modal--hide">
       <div class="modal__container">
         <h2 class="modal__title">Закажите звонок</h2>
         <p class="modal__text">
           Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
         </p>
-        <button class="modal__button-close" type="button">
-          <span class="visually-hidden">Закрыть</span>
+        <button class="modal__button-close" type="button" name="Закрыть">
+          <span></span>
         </button>
 
         <form>
           <fieldset action="" method="">
             <legend class="visually-hidden">Форма заказа обратного звонка</legend>
 
-            <div class="modal__container">
+            <div class="modal__container--id">
               <div class="modal__name">
                 <label class="visually-hidden" for="name">Ваше имя:</label>
                 <input class="modal__name--input" type="text" id="name" name="name" placeholder="Имя" autocomplete="off" required="">
@@ -374,7 +374,7 @@
               </div>
             </div>
 
-            <div class="modal__container">
+            <div class="modal__container--send">
               <button class="modal__button" type="submit">Отправить</button>
 
               <div class="modal__block">

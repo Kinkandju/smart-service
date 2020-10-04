@@ -1,0 +1,225 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  margin: 0;
+  padding: 0;
+
+  width: 490px;
+
+  transform: translate(-50%, -50%);
+
+  background-color: $blue;
+
+  z-index: 10;
+
+  &--hide {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    display: none;
+  }
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.modal fieldset {
+  margin: 0;
+  padding: 15px 0;
+
+  border: none;
+}
+
+.modal__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin: 0;
+  padding: 28px 40px;
+
+  &--id,
+  &--send {
+    position: static;
+
+    padding: 0;
+  }
+}
+
+.modal__button-close {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  display: flex;
+  justify-content: center;
+
+  margin: 0 -15px;
+  padding: 15px;
+
+  width: 29px;
+  height: 29px;
+
+  box-sizing: content-box;
+
+  cursor: pointer;
+
+  border: none;
+
+  background-color: $blue;
+}
+
+.modal__button-close span {
+  position: relative;
+  display: flex;
+  align-self: center;
+
+  width: 19px;
+  height: 19px;
+
+  background-color: $blue;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 8px;
+    left: -1px;
+
+    width: 23px;
+    height: 1px;
+
+    content: "";
+
+    background-color: $white;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.modal__name--input,
+.modal__tel--input,
+.modal__question--input {
+  font-family: $font--pt-mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+
+  margin: 15px 0;
+  padding: 14px 25px 16px 25px;
+
+  width: 100%;
+
+  border: none;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  background-color: $transparent-white;
+
+  &::placeholder {
+    color: $white;
+  }
+}
+
+.modal__question {
+  &--input {
+    max-height: 104px;
+  }
+}
+
+.modal__title {
+  font-family: $font--roboto-regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 39px;
+
+  margin: -15px -15px 0 -15px;
+  padding: 15px 15px 15px 15px;
+
+  color: $white;
+}
+
+.modal__text {
+  font-family: $font--pt-mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+
+  margin: -15px 0 -15px -15px;
+  padding: 15px;
+
+  color: $white;
+}
+
+.modal__button {
+  font-family: $font--roboto-regular;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  margin: 15px 0;
+  padding: 14px;
+
+  width: 100%;
+
+  color: $white;
+  background-color: transparent;
+
+  border: 1px solid $white;
+  border-radius: 5px;
+}
+
+.modal__label {
+  position: relative;
+  top: 11px;
+  display: block;
+
+  font-family: $font--pt-mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+
+  margin: 0;
+  padding: 5px 5px 5px 48px;
+
+  width: 100%;
+  max-width: 340px;
+
+  color: $white;
+
+  opacity: 0.8;
+
+  &::after {
+    position: absolute;
+    top: 15%;
+    left: 0;
+
+    content: "";
+
+    width: 16px;
+    height: 16px;
+    border: 1px solid $white;
+
+    background-color: transparent;
+  }
+}

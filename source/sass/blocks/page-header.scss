@@ -21,7 +21,6 @@
   }
 }
 
-// Контейнер-центровщик
 .page-header__layout-container {
   position: relative;
   top: 0;
@@ -41,55 +40,59 @@
   }
 }
 
-// Изображение двух треугольников
-.page-header__image--polygons {
-  position: absolute;
-  top: 118px;
-  left: 55%;
+.page-header__image {
+  &--polygons {
+    position: absolute;
+    top: 118px;
+    left: 55%;
+  }
+
+  &--ic {
+    position: absolute;
+    top: 258px;
+    left: 55.4%;
+
+    width: 705px;
+    height: 515px;
+
+    object-fit: cover;
+  }
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-    top: -38px;
-    left: 57.5%;
+    &--polygons {
+      top: -38px;
+      left: 57.5%;
 
-    width: 528px;
-    height: 505px;
+      width: 528px;
+      height: 505px;
+    }
+
+    &--ic {
+      top: 115px;
+      left: 66.5%;
+
+      width: 465px;
+      height: 340px;
+    }
   }
 
   @media (max-width: $tablet-width) {
-    top: -46px;
-    left: 47.6%;
+    &--polygons {
+      top: -46px;
+      left: 47.6%;
 
-    max-width: none;
-    width: 505px;
-    height: 482px;
-  }
-}
+      max-width: none;
+      width: 505px;
+      height: 482px;
+    }
 
-// Изображение печатной платы
-.page-header__image--ic {
-  position: absolute;
-  top: 258px;
-  left: 55.4%;
+    &--ic {
+      top: 93px;
+      left: 8%;
 
-  width: 705px;
-  height: 515px;
-
-  object-fit: cover;
-
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-    top: 115px;
-    left: 66.5%;
-
-    width: 465px;
-    height: 340px;
-  }
-
-  @media (max-width: $tablet-width) {
-    top: 93px;
-    left: 8%;
-
-    width: 301px;
-    height: 220px;
+      width: 301px;
+      height: 220px;
+    }
   }
 }
 

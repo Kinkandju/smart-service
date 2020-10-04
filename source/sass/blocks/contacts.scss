@@ -8,7 +8,6 @@
   align-items: baseline;
 }
 
-// Список контактов для обратной связи (почта, телефон)
 .contacts__list {
   margin: 0;
   padding: 0;
@@ -42,7 +41,6 @@
   }
 }
 
-// Ссылки для обратной связи
 .contacts__item a {
   display: flex;
   flex-direction: row;
@@ -60,7 +58,6 @@
   }
 }
 
-// Изображение иконки почты
 .contacts__image--mail {
   margin-right: 20px;
 
@@ -75,7 +72,6 @@
   }
 }
 
-// Изображение иконки телефона
 .contacts__image--phone {
   margin-right: 16px;
 
@@ -116,7 +112,6 @@
   }
 }
 
-// Кнопка открытия модального окна
 .contacts__open-modal {
   margin: 0;
   padding: 10px 26px;

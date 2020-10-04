@@ -49,21 +49,19 @@
     align-items: center;
 
     width: 100%;
+
+    &--block {
+      position: relative;
+      left: 7.5%;
+
+      align-self: flex-start;
+    }
   }
 
   @media (max-width: $tablet-width) {
     align-items: center;
 
     width: 100%;
-  }
-}
-
-.feedback__container--block {
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-    position: relative;
-    left: 7.5%;
-
-    align-self: flex-start;
   }
 }
 

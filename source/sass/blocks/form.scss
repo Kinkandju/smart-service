@@ -62,8 +62,11 @@
   overflow: hidden;
   text-overflow: ellipsis;
 
-  color: $white;
   background-color: $transparent-white;
+
+  &::placeholder {
+    color: $white;
+  }
 }
 
 .form__name--input,
@@ -97,12 +100,6 @@
 
     box-sizing: border-box;
   }
-}
-
-.form__name--input::placeholder,
-.form__tel--input::placeholder,
-.form__question--input::placeholder {
-  color: $white;
 }
 
 .form__button {
@@ -153,8 +150,26 @@
 
   opacity: 0.8;
 
+  &::after {
+    position: absolute;
+    top: 25%;
+    left: 8%;
+
+    content: "";
+
+    width: 16px;
+    height: 16px;
+    border: 1px solid $white;
+
+    background-color: transparent;
+  }
+
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     padding: 15px 15px 15px 60px;
+
+    &::after {
+      left: 9%;
+    }
   }
 
   @media (max-width: $tablet-width) {
@@ -162,27 +177,9 @@
 
     margin: 0 0 0 -15px;
     padding: 15px;
-  }
-}
 
-.form__label::after {
-  position: absolute;
-  top: 25%;
-  left: 8%;
-
-  content: "";
-
-  width: 16px;
-  height: 16px;
-  border: 1px solid $white;
-
-  background-color: transparent;
-
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-    left: 9%;
-  }
-
-  @media (max-width: $tablet-width) {
-    left: -7.3%;
+    &::after {
+      left: -7.3%;
+    }
   }
 }

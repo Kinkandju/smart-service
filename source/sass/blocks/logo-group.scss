@@ -5,28 +5,27 @@
 
   width: 202px;
 
+  &--footer {
+    width: 220px;
+  }
+
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     width: 202px;
+
+    &--footer {
+      width: 220px;
+    }
   }
 
   @media (max-width: $tablet-width) {
     width: 52px;
+
+    &--footer {
+      margin-bottom: 10px;
+    }
   }
 }
 
-.logo-group--footer {
-  width: 220px;
-
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-    width: 220px;
-  }
-
-  @media (max-width: $tablet-width) {
-    margin-bottom: 10px;
-  }
-}
-
-// Логотип компании
 .logo-group__image {
   margin-right: 16px;
 
@@ -43,57 +42,48 @@
 
     width: 38px;
     height: 38px;
+
+    &--footer {
+      margin-right: 16px;
+
+      width: 52px;
+      height: 52px;
+    }
   }
 }
 
-.logo-group__image--footer {
-  @media (max-width: $tablet-width) {
-    margin-right: 16px;
-
-    width: 52px;
-    height: 52px;
-  }
-}
-
-// Блок текста логотипа
 .logo-group__text {
   display: flex;
   flex-direction: column;
 
+  &--bold {
+    font-family: $font--roboto-bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 29px;
+
+    color: $white;
+  }
+
+  &--black {
+    color: $blue-green;
+  }
+
+  &--normal {
+    font-family: $font--roboto-medium;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 14px;
+
+    color: $dull-gray;
+  }
+
   @media (max-width: $tablet-width) {
     display: none;
+
+    &--footer {
+      display: block;
+    }
   }
-}
-
-// Блок текста логотипа в футере
-.logo-group__text--footer {
-  @media (max-width: $tablet-width) {
-    display: block;
-  }
-}
-
-// Название компании в логотипе
-.logo-group__text--bold {
-  font-family: $font--roboto-bold;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 25px;
-  line-height: 29px;
-
-  color: $white;
-}
-
-// Название компании в логотипе в подвале сайта
-.logo-group__text--black {
-  color: $blue-green;
-}
-
-// Пояснение в логотипе
-.logo-group__text--normal {
-  font-family: $font--roboto-medium;
-  font-style: normal;
-  font-size: 12px;
-  line-height: 14px;
-
-  color: $dull-gray;
 }

@@ -82,26 +82,28 @@
 
     background: $silver;
   }
-}
 
-.navigation__button span::before {
-  @media (max-width: $tablet-width) {
-    position: absolute;
-    top: -7px;
-    left: 7px;
+  ::before {
+    @media (max-width: $tablet-width) {
+      position: absolute;
+      top: -7px;
+      left: 7px;
 
-    width: 2px;
-    height: 16px;
+      width: 2px;
+      height: 16px;
 
-    content: "";
+      content: "";
 
-    background: $silver;
+      background: $silver;
+    }
   }
 }
 
-.navigation__button--opened span::before {
+.navigation__button--opened span {
   @media (max-width: $tablet-width) {
-    display: none;
+    &::before {
+      display: none;
+    }
   }
 }
 
