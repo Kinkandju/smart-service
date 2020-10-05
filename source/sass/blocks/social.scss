@@ -19,3 +19,9 @@
     margin: 0;
   }
 }
+
+.social__item {
+  &:hover {
+    opacity: 0.7;
+  }
+}
