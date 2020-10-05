@@ -1,5 +1,9 @@
 'use strict';
 
+// var inputsTel = document.querySelectorAll('input[type="tel"]');
+// var maskTel = new Inputmask('+7 (999) 999-99-99');
+// maskTel.mask(inputsTel);
+
 var KEY_CODE = 27;
 
 var buttonOpen = document.querySelector('.contacts__open-modal');
