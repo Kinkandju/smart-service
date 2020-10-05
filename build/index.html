@@ -198,7 +198,7 @@
             <p class="feedback__text">Мы проконсультируем Вас бесплатно</p>
           </div>
 
-          <form class="feedback__form form" action="" method="">
+          <form class="feedback__form form" action="https://echo.htmlacademy.ru" method="post">
             <fieldset>
               <legend class="visually-hidden">Форма обратной связи</legend>
 
@@ -343,18 +343,18 @@
       </div>
     </section>
 
-    <section class="page-footer__modal modal modal--hide">
+    <section class="page-footer__modal modal modal--hidden">
       <div class="modal__container">
         <h2 class="modal__title">Закажите звонок</h2>
         <p class="modal__text">
           Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
         </p>
-        <button class="modal__button-close" type="button" name="Закрыть">
+        <button class="modal__button--close" type="button" name="Закрыть">
           <span></span>
         </button>
 
-        <form>
-          <fieldset action="" method="">
+        <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset>
             <legend class="visually-hidden">Форма заказа обратного звонка</legend>
 
             <div class="modal__container--id">
@@ -388,6 +388,9 @@
         </form>
       </div>
     </section>
+
+    <div class="overlay overlay--hidden"></div>
+
   </footer>
 </body>
 

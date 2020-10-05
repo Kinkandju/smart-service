@@ -146,6 +146,12 @@
     color: $blue;
   }
 
+  &:active {
+    border: 1px solid $white;
+
+    color: white;
+  }
+
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     display: none;
   }
