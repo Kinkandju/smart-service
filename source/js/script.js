@@ -109,6 +109,62 @@ form.addEventListener('submit', function (evt) {
   }
 });
 
+var linkAnchors = document.querySelectorAll('[href^="#"]');
+
+for (var i = 0; i < linkAnchors.length; i++) {
+  linkAnchors[i].addEventListener('click', function (target) {
+    target.preventDefault();
+
+    var targetElement = document.querySelector(target.currentTarget.href.replace(/[^#]*(.*)/, '$1'));
+    var ua = window.navigator.userAgent;
+    var msie = ua.indexOf('MSIE ');
+    var trident = ua.indexOf('Trident/');
+
+    function isInternetExplorer() {
+      return msie > -1 || trident > -1;
+    }
+
+    var targetY;
+
+    if (isInternetExplorer() === false) {
+      targetY = targetElement.getBoundingClientRect().y;
+    } else {
+      targetY = targetElement.getBoundingClientRect().top;
+    }
+    var startY = window.pageYOffset;
+
+    function scrollSpeed(object) {
+      var start = performance.now();
+
+      requestAnimationFrame(function animate(time) {
+        var timeFraction = (time - start) / object.duration;
+
+        if (timeFraction > 1) {
+          timeFraction = 1;
+        }
+
+        var progress = object.timing(timeFraction);
+        object.draw(progress);
+
+        if (timeFraction < 1) {
+          requestAnimationFrame(animate);
+        }
+      });
+    }
+
+    var data = {
+      duration: 1800,
+      timing: function (timeFraction) {
+        return timeFraction;
+      },
+      draw: function (progress) {
+        window.scrollTo(0, startY + progress * targetY);
+      }
+    };
+
+    scrollSpeed(data);
+  });
+}
 
 // var navButton = document.querySelector('.navigation__button');
 // var locationButton = document.querySelector('.location__button');

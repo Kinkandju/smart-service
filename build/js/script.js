@@ -53,8 +53,6 @@ var openPopup = function () {
   popup.classList.add('modal--show');
   overlay.classList.add('overlay--show');
 
-  document.body.style.overflow = 'hidden';
-
   document.addEventListener('keydown', onEscPress);
 };
 
@@ -62,8 +60,6 @@ var closePopup = function () {
   popup.classList.remove('modal--show');
   popup.classList.remove('modal--error');
   overlay.classList.remove('overlay--show');
-
-  document.body.style.overflow = '';
 
   document.removeEventListener('keydown', onEscPress);
 };
@@ -113,6 +109,77 @@ form.addEventListener('submit', function (evt) {
   }
 });
 
+// var skrollSpeed = function (object) {
+//   var start = performance.now();
+//   requestAnimationFrame(function animate(time) {
+//     var timeFraction = (time - start) / object.duration;
+//     if (timeFraction > 1) {
+//       timeFraction = 1;
+//     }
+//     var progress = object.timing(timeFraction);
+//     object.draw(progress);
+//     if (timeFraction < 1) {
+//       requestAnimationFrame(animate);
+//     }
+//   });
+// };
+
+var linkAnchors = document.querySelectorAll('[href^="#"]');
+
+for (var i = 0; i < linkAnchors.length; i++) {
+  linkAnchors[i].addEventListener('click', function (target) {
+    target.preventDefault();
+
+    var targetElement = document.querySelector(target.currentTarget.href.replace(/[^#]*(.*)/, '$1'));
+    var ua = window.navigator.userAgent;
+    var msie = ua.indexOf('MSIE ');
+    var trident = ua.indexOf('Trident/');
+
+    function isInternetExplorer() {
+      return msie > -1 || trident > -1;
+    }
+
+    var targetY;
+
+    if (isInternetExplorer() === false) {
+      targetY = targetElement.getBoundingClientRect().y;
+    } else {
+      targetY = targetElement.getBoundingClientRect().top;
+    }
+    var startY = window.pageYOffset;
+
+    function scrollSpeed(object) {
+      var start = performance.now();
+
+      requestAnimationFrame(function animate(time) {
+        var timeFraction = (time - start) / object.duration;
+
+        if (timeFraction > 1) {
+          timeFraction = 1;
+        }
+
+        var progress = object.timing(timeFraction);
+        object.draw(progress);
+
+        if (timeFraction < 1) {
+          requestAnimationFrame(animate);
+        }
+      });
+    }
+
+    var params = {
+      duration: 2000,
+      timing: function (timeFraction) {
+        return timeFraction;
+      },
+      draw: function (progress) {
+        window.scrollTo(0, startY + progress * targetY);
+      }
+    };
+
+    scrollSpeed(params);
+  });
+}
 
 // var navButton = document.querySelector('.navigation__button');
 // var locationButton = document.querySelector('.location__button');
