@@ -188,6 +188,7 @@
 
   outline: none;
 
+  color: $white;
   background-color: $transparent-white;
 
   &:hover,
@@ -260,7 +261,24 @@
   }
 }
 
-.modal__label {
+.modal__checkbox {
+  &:checked + .modal__checkbox-label::after {
+    position: absolute;
+    top: 15.5%;
+    left: 0.5%;
+
+    width: 16px;
+    height: 16px;
+
+    content: "";
+
+    background-image: url("../img/icon-checkbox.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+}
+
+.modal__checkbox-label {
   position: relative;
   top: 11px;
   display: block;
@@ -279,22 +297,23 @@
 
   color: $white;
 
-  opacity: 0.8;
+  opacity: 0.7;
 
   &:hover,
   &:focus {
     opacity: 1;
   }
 
-  &::after {
+  &::before {
     position: absolute;
     top: 15%;
     left: 0;
 
-    content: "";
-
     width: 16px;
     height: 16px;
+
+    content: "";
+
     border: 1px solid $white;
 
     background-color: transparent;

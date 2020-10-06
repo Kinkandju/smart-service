@@ -53,6 +53,8 @@ var openPopup = function () {
   popup.classList.add('modal--show');
   overlay.classList.add('overlay--show');
 
+  document.body.style.overflow = 'hidden';
+
   document.addEventListener('keydown', onEscPress);
 };
 
@@ -60,6 +62,8 @@ var closePopup = function () {
   popup.classList.remove('modal--show');
   popup.classList.remove('modal--error');
   overlay.classList.remove('overlay--show');
+
+  document.body.style.overflow = '';
 
   document.removeEventListener('keydown', onEscPress);
 };

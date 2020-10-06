@@ -12,6 +12,8 @@
 
   @media (max-width: $tablet-width) {
     padding: 226px 0 70px 0;
+
+    width: 100%;
   }
 }
 
@@ -87,7 +89,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    width: 277px;
+    width: 94%;
 
     &--header {
       font-size: 40px;
