@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Учебный проект Акселератора - Smart Device">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="js/script.min.js" as="script" rel="preload">
-  <link href="js/script.js" as="script" rel="preload">
+  <link href="js/main.js" as="script" rel="preload">
   <link href="fonts/PTMono-Regular.woff2" as="font" crossorigin="anonymous" rel="preload">
   <link href="fonts/RobotoCondensed-Bold.woff2" as="font" crossorigin="anonymous" rel="preload">
   <link href="fonts/RobotoCondensed-Regular.woff2" as="font" crossorigin="anonymous" rel="preload">
@@ -23,7 +22,7 @@
       <img class="page-header__image--ic" src="img/ic_desktop_1x.png" width="705" height="515" alt="Печатные платы">
 
       <div class="page-header__container">
-        <a class="page-header__logo-group logo-group" href="">
+        <a class="page-header__logo-group logo-group" href="index.html">
           <img class="logo-group__image" src="img/logo.svg" width="52" height="52" alt="Логотип компании">
 
           <div class="logo-group__text">
@@ -73,7 +72,7 @@
             </p>
           </div>
 
-          <a class="intro__link" href="#feedback">
+          <a class="description-of-goods__link" href="#feedback">
             <span class="description-of-goods__feedback description-of-goods__feedback--tablet">Получить бесплатную консультацию</span>
             <span class="description-of-goods__feedback description-of-goods__feedback--mobil">Бесплатная консультация</span>
           </a>
@@ -158,7 +157,7 @@
           <h2 class="services__title">Service Device предлагает следующие товары и услуги</h2>
           <ul class="services__list">
             <li class="services__item">
-              <a href="">
+              <a href="#">
                 <picture>
                   <source media="(min-width: 1024px)" srcset="img/device1_desktop_1x.png, img/device1_desktop_2x.png 2x">
                   <source media="(min-width: 768 && max-width: 1023)" srcset="img/device1_tablet_1x.png, img/device1_tablet_2x.png 2x">
@@ -171,7 +170,7 @@
               </a>
             </li>
             <li class="services__item">
-              <a href="">
+              <a href="#">
                 <picture>
                   <source media="(min-width: 1024px)" srcset="img/device2_desktop_1x.png, img/device2_desktop_2x.png 2x">
                   <source media="(min-width: 768 && max-width: 1023)" srcset="img/device2_tablet_1x.png, img/device2_tablet_2x.png 2x">
@@ -184,7 +183,7 @@
               </a>
             </li>
             <li class="services__item">
-              <a href="">
+              <a href="#">
                 <picture>
                   <source media="(min-width: 1024px)" srcset="img/device3_desktop_1x.png, img/device3_desktop_2x.png 2x">
                   <source media="(min-width: 768 && max-width: 1023)" srcset="img/device3_tablet_1x.png, img/device3_tablet_2x.png 2x">
@@ -256,7 +255,7 @@
     <section class="page-footer__info info">
       <div class="info__layout-container">
         <div class="info__container">
-          <a class="info__logo-group logo-group logo-group--footer" href="">
+          <a class="info__logo-group logo-group logo-group--footer" href="#">
             <img class="logo-group__image logo-group__image--footer" src="img/logo.svg" width="52" height="52" alt="Логотип компании">
 
             <div class="logo-group__text logo-group__text--footer">
@@ -273,7 +272,7 @@
             <h3 class="visually-hidden">Ссылки на страницы социальных сетей</h3>
             <ul class="social__list">
               <li class="social__item">
-                <a href="">
+                <a href="#">
                   <svg class="social__image--fb" width="27" height="27">
                     <use xlink:href="#icon-facebook">
                   </use></svg>
@@ -281,7 +280,7 @@
                 </a>
               </li>
               <li class="social__item">
-                <a href="">
+                <a href="#">
                   <svg class="social__image--ok" width="27" height="27">
                     <use xlink:href="#icon-ok">
                   </use></svg>
@@ -289,7 +288,7 @@
                 </a>
               </li>
               <li class="social__item">
-                <a href="">
+                <a href="#">
                   <svg class="social__image--vk" width="27" height="27">
                     <use xlink:href="#icon-vk">
                   </use></svg>
@@ -300,52 +299,54 @@
           </div>
         </div>
 
-        <div class="info__helpful-information">
-          <nav class="info__navigation navigation">
-            <div class="navigation__container">
-              <h3 class="navigation__title">Разделы сайта</h3>
-              <button class="navigation__button navigation__button--closed" type="button" name="Открыть меню">
+        <div class="info__navigation">
+          <nav class="info__navigation-data">
+            <div class="info__navigation-container">
+              <h3 class="info__navigation-title">Разделы сайта</h3>
+              <button class="info__navigation-button info__navigation-button--closed" type="button" name="Открыть меню">
                 <span></span>
               </button>
             </div>
-            <ul class="navigation__list navigation__list--closed navigation__list--nojs">
-              <li class="navigation__item">
-                <a href="">О компании</a>
+
+            <ul class="info__navigation-list info__navigation-list--closed">
+              <li class="info__navigation-item">
+                <a href="#">О компании</a>
               </li>
-              <li class="navigation__item">
-                <a href="">Продукты</a>
+              <li class="info__navigation-item">
+                <a href="#">Продукты</a>
               </li>
-              <li class="navigation__item">
-                <a href="">Производство печатных плат</a>
+              <li class="info__navigation-item">
+                <a href="#">Производство печатных плат</a>
               </li>
-              <li class="navigation__item">
-                <a href="">Монтаж печатных плат</a>
+              <li class="info__navigation-item">
+                <a href="#">Монтаж печатных плат</a>
               </li>
-              <li class="navigation__item">
-                <a href="">Комплектующие</a>
+              <li class="info__navigation-item">
+                <a href="#">Комплектующие</a>
               </li>
-              <li class="navigation__item">
-                <a href="">Доставка</a>
+              <li class="info__navigation-item">
+                <a href="#">Доставка</a>
               </li>
-              <li class="navigation__item">
-                <a href="">Контакты</a>
+              <li class="info__navigation-item">
+                <a href="#">Контакты</a>
             </li></ul>
           </nav>
 
-          <div class="info__location location">
-            <div class="location__container">
-              <h3 class="location__title">Наш офис</h3>
-              <button class="location__button location__button--closed" type="button" name="Открыть меню">
+          <div class="info__location">
+            <div class="info__location-container">
+              <h3 class="info__navigation-title">Наш офис</h3>
+              <button class="info__navigation-button info__navigation-button--closed" type="button" name="Открыть меню">
                 <span></span>
               </button>
             </div>
-            <div class="location__group location__group--closed location__group--nojs">
-              <p class="location__place">
+            <!-- <div class="info__location-group info__location-group--closed"> -->
+            <div class="info__navigation-list info__navigation-list--closed info__navigation-list--location">
+              <p class="info__location-place">
                 г. Мытищи, Олимпийский проспект, д.10
               </p>
-              <a class="location__tel" href="tel:+74955894050">+7 (495) 589-40-50</a>
-              <a class="location__tel" href="tel:+79250038767">+7 (925) 003-87-67</a>
-              <a class="location__tel" href="tel:+792692608079">+7 (926) 926-080-79</a>
+              <a class="info__location-tel" href="tel:+74955894050" aria-label="+7 (495) 589-40-50">+7 (495) 589-40-50</a>
+              <a class="info__location-tel" href="tel:+79250038767" aria-label="+7 (925) 003-87-67">+7 (925) 003-87-67</a>
+              <a class="info__location-tel" href="tel:+792692608079" aria-label="+7 (926) 926-080-79">+7 (926) 926-080-79</a>
             </div>
           </div>
         </div>
@@ -360,10 +361,10 @@
             <span class="copyright__text copyright__text--middle">
               1999-2018 SD Service Devices
             </span>
-            <a class="copyright__link copyright__link--first" href="">Условия конфиденциальности</a>
+            <a class="copyright__link copyright__link--first" href="#">Условия конфиденциальности</a>
           </div>
 
-          <a class="copyright__link copyright__link--last" href="">Developed by wow studio</a>
+          <a class="copyright__link copyright__link--last" href="#">Developed by wow studio</a>
         </div>
       </div>
     </section>
@@ -433,5 +434,5 @@
 </symbol><symbol id="icon-tag"><path d="M10.794 8.44a.633.633 0 00-.444-.184.633.633 0 00-.444.184.634.634 0 00-.184.444c0 .166.067.328.184.445.117.117.279.184.444.184a.633.633 0 00.629-.629.633.633 0 00-.184-.444z"></path><path d="M32.611 3.175l-.777-.778.777-.777a.629.629 0 00-.89-.889l-.776.777L30.18.74a.629.629 0 00-.445-.185L19.098.551h-.002c-.84 0-1.63.327-2.224.92l-5.308 5.31a.629.629 0 00.889.889l5.308-5.31c.357-.356.83-.552 1.335-.552h.001l10.377.006.583.583-2.332 2.332a2.579 2.579 0 00-3.144.388 2.559 2.559 0 00-.754 1.821c0 .688.268 1.334.754 1.82a2.567 2.567 0 001.82.754c.66 0 1.32-.251 1.821-.753.85-.85.98-2.152.39-3.14l2.333-2.333.593.594-.006 10.365c0 .504-.197.977-.553 1.334L15.642 30.918c-.356.357-.83.553-1.335.553-.504 0-.978-.197-1.335-.553L2.425 20.369a1.876 1.876 0 01-.553-1.335c0-.504.197-.978.553-1.335L9.2 10.923a.629.629 0 00-.889-.889L1.536 16.81a3.125 3.125 0 00-.92 2.224c0 .84.326 1.63.92 2.224l10.548 10.549c.613.613 1.418.92 2.223.92.806 0 1.61-.307 2.224-.92l15.337-15.34c.593-.593.92-1.382.921-2.222l.006-10.625a.628.628 0 00-.184-.445zM27.333 7.87c-.249.249-.58.386-.931.386a1.32 1.32 0 010-2.635c.127 0 .254.018.377.054l-.726.726a.629.629 0 00.889.889l.723-.724c.13.448.02.952-.332 1.304z"></path><path d="M27.463 13.202L20.14 5.877c-.97-.97-2.55-.97-3.52 0L5.03 17.469a2.473 2.473 0 00-.73 1.76c0 .665.26 1.29.73 1.76l7.324 7.326c.47.47 1.095.729 1.76.729.664 0 1.29-.259 1.76-.729l11.59-11.593c.47-.47.73-1.095.73-1.76s-.26-1.29-.73-1.76zm-.889 2.631l-11.59 11.593c-.233.233-.543.36-.871.36-.33 0-.639-.127-.871-.36L5.917 20.1a1.224 1.224 0 01-.36-.87c0-.33.127-.639.36-.872L17.508 6.766c.24-.24.556-.36.871-.36.315 0 .63.12.87.36l7.325 7.325c.233.233.361.542.361.871 0 .33-.128.639-.36.871z"></path><path d="M21.11 13.122a.629.629 0 00-.89-.89l-.361.363c-.966-.597-2.206-.517-2.99.267a2.281 2.281 0 00-.658 1.747c.031.647.31 1.265.784 1.74.505.505.562 1.272.126 1.708-.437.436-1.203.38-1.709-.126-.505-.506-.562-1.272-.126-1.709a.629.629 0 00-.888-.889c-.784.784-.864 2.024-.267 2.99l-.43.43a.629.629 0 10.89.89l.429-.43a2.6 2.6 0 001.362.393c.6 0 1.186-.219 1.628-.66.926-.926.87-2.49-.126-3.486a1.39 1.39 0 01-.418-.912 1.038 1.038 0 01.292-.797c.436-.437 1.202-.38 1.708.126s.562 1.272.126 1.708a.629.629 0 00.889.89c.784-.785.864-2.025.267-2.991l.362-.362zM14.75 23.543l-3.229-3.229a.629.629 0 00-.889.89l3.229 3.228a.627.627 0 00.888 0 .629.629 0 000-.889zM9.799 18.592a.632.632 0 00-.444-.184.634.634 0 00-.445.184.633.633 0 00.444 1.074.632.632 0 00.63-.629.633.633 0 00-.185-.445z"></path></symbol><symbol id="icon-vk"><path fill="#CDCDCD" d="M19.475 15.127c-1.109-1.024-1.188-1.024-.238-2.206 1.188-1.497 2.773-3.388 1.347-3.388H17.97c-.475 0-.554.316-.713.71-.633 1.496-1.9 3.466-2.376 3.15-.475-.314-.237-1.496-.237-3.387a.61.61 0 00-.159-.63c-.158-.158-.396-.315-.633-.315-.396-.079-.792-.158-1.188-.158-1.505 0-2.535.63-1.98.71 1.03.157.95 2.363.712 3.308-.396 1.655-1.98-1.26-2.693-2.757-.079-.394-.396-.63-.792-.63H5.852c-.317 0-.554.078-.554.315 0 .393 1.98 4.254 3.801 6.224 1.822 1.89 3.644 1.733 4.911 1.733a.607.607 0 00.396-.158.6.6 0 00.158-.394c0-1.26.476-1.89 1.347-1.024.95.945 1.188 1.576 2.376 1.576h2.138c.555 0 .713-.158.713-.394.08-.552-.871-1.576-1.663-2.285zM13.852.001c7.366.157 13.226 6.066 13.147 13.235-.079 7.17-6.178 12.842-13.543 12.763C6.01 25.92.07 20.17.07 13 .15 5.753 6.327-.077 13.852.002z"></path></symbol></svg>
 </div>
 
-<script src="js/script.min.js"></script>
+<script src="js/main.js"></script>
 </html>

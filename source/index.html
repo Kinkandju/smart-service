@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Учебный проект Акселератора - Smart Device">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="js/script.min.js" as="script" rel="preload" >
-  <link href="js/script.js" as="script" rel="preload" >
+  <link href="js/main.js" as="script" rel="preload" >
   <link href="fonts/PTMono-Regular.woff2" as="font" crossorigin="anonymous" rel="preload">
   <link href="fonts/RobotoCondensed-Bold.woff2" as="font" crossorigin="anonymous" rel="preload">
   <link href="fonts/RobotoCondensed-Regular.woff2" as="font" crossorigin="anonymous" rel="preload">
@@ -23,7 +22,7 @@
       <img class="page-header__image--ic" src="img/ic_desktop_1x.png" width="705" height="515" alt="Печатные платы">
 
       <div class="page-header__container">
-        <a class="page-header__logo-group logo-group" href="">
+        <a class="page-header__logo-group logo-group" href="index.html">
           <img class="logo-group__image" src="img/logo.svg" width="52" height="52" alt="Логотип компании">
 
           <div class="logo-group__text">
@@ -73,7 +72,7 @@
             </p>
           </div>
 
-          <a class="intro__link" href="#feedback">
+          <a class="description-of-goods__link" href="#feedback">
             <span class="description-of-goods__feedback description-of-goods__feedback--tablet">Получить бесплатную консультацию</span>
             <span class="description-of-goods__feedback description-of-goods__feedback--mobil">Бесплатная консультация</span>
           </a>
@@ -158,7 +157,7 @@
           <h2 class="services__title">Service Device предлагает следующие товары и услуги</h2>
           <ul class="services__list">
             <li class="services__item">
-              <a href="">
+              <a href="#">
                 <picture>
                   <source media="(min-width: 1024px)" srcset="img/device1_desktop_1x.png, img/device1_desktop_2x.png 2x">
                   <source media="(min-width: 768 && max-width: 1023)" srcset="img/device1_tablet_1x.png, img/device1_tablet_2x.png 2x">
@@ -171,7 +170,7 @@
               </a>
             </li>
             <li class="services__item">
-              <a href="">
+              <a href="#">
                 <picture>
                   <source media="(min-width: 1024px)" srcset="img/device2_desktop_1x.png, img/device2_desktop_2x.png 2x">
                   <source media="(min-width: 768 && max-width: 1023)" srcset="img/device2_tablet_1x.png, img/device2_tablet_2x.png 2x">
@@ -184,7 +183,7 @@
               </a>
             </li>
             <li class="services__item">
-              <a href="">
+              <a href="#">
                 <picture>
                   <source media="(min-width: 1024px)" srcset="img/device3_desktop_1x.png, img/device3_desktop_2x.png 2x">
                   <source media="(min-width: 768 && max-width: 1023)" srcset="img/device3_tablet_1x.png, img/device3_tablet_2x.png 2x">
@@ -256,7 +255,7 @@
     <section class="page-footer__info info">
       <div class="info__layout-container">
         <div class="info__container">
-          <a class="info__logo-group logo-group logo-group--footer"  href="">
+          <a class="info__logo-group logo-group logo-group--footer"  href="#">
             <img class="logo-group__image logo-group__image--footer" src="img/logo.svg" width="52" height="52" alt="Логотип компании">
 
             <div class="logo-group__text logo-group__text--footer">
@@ -273,7 +272,7 @@
             <h3 class="visually-hidden">Ссылки на страницы социальных сетей</h3>
             <ul class="social__list">
               <li class="social__item">
-                <a href="">
+                <a href="#">
                   <svg class="social__image--fb" width="27" height="27">
                     <use xlink:href="#icon-facebook">
                   </svg>
@@ -281,7 +280,7 @@
                 </a>
               </li>
               <li class="social__item">
-                <a href="">
+                <a href="#">
                   <svg class="social__image--ok" width="27" height="27">
                     <use xlink:href="#icon-ok">
                   </svg>
@@ -289,7 +288,7 @@
                 </a>
               </li>
               <li class="social__item">
-                <a href="">
+                <a href="#">
                   <svg class="social__image--vk" width="27" height="27">
                     <use xlink:href="#icon-vk">
                   </svg>
@@ -300,52 +299,54 @@
           </div>
         </div>
 
-        <div class="info__helpful-information">
-          <nav class="info__navigation navigation">
-            <div class="navigation__container">
-              <h3 class="navigation__title">Разделы сайта</h3>
-              <button class="navigation__button navigation__button--closed" type="button" name="Открыть меню">
+        <div class="info__navigation">
+          <nav class="info__navigation-data">
+            <div class="info__navigation-container">
+              <h3 class="info__navigation-title">Разделы сайта</h3>
+              <button class="info__navigation-button info__navigation-button--closed" type="button" name="Открыть меню">
                 <span></span>
               </button>
             </div>
-            <ul class="navigation__list navigation__list--closed navigation__list--nojs">
-              <li class="navigation__item">
-                <a href="">О компании</a>
+
+            <ul class="info__navigation-list info__navigation-list--closed">
+              <li class="info__navigation-item">
+                <a href="#">О компании</a>
               </li>
-              <li class="navigation__item">
-                <a href="">Продукты</a>
+              <li class="info__navigation-item">
+                <a href="#">Продукты</a>
               </li>
-              <li class="navigation__item">
-                <a href="">Производство печатных плат</a>
+              <li class="info__navigation-item">
+                <a href="#">Производство печатных плат</a>
               </li>
-              <li class="navigation__item">
-                <a href="">Монтаж печатных плат</a>
+              <li class="info__navigation-item">
+                <a href="#">Монтаж печатных плат</a>
               </li>
-              <li class="navigation__item">
-                <a href="">Комплектующие</a>
+              <li class="info__navigation-item">
+                <a href="#">Комплектующие</a>
               </li>
-              <li class="navigation__item">
-                <a href="">Доставка</a>
+              <li class="info__navigation-item">
+                <a href="#">Доставка</a>
               </li>
-              <li class="navigation__item">
-                <a href="">Контакты</a>
+              <li class="info__navigation-item">
+                <a href="#">Контакты</a>
             </ul>
           </nav>
 
-          <div class="info__location location">
-            <div class="location__container">
-              <h3 class="location__title">Наш офис</h3>
-              <button class="location__button location__button--closed" type="button" name="Открыть меню">
+          <div class="info__location">
+            <div class="info__location-container">
+              <h3 class="info__navigation-title">Наш офис</h3>
+              <button class="info__navigation-button info__navigation-button--closed" type="button" name="Открыть меню">
                 <span></span>
               </button>
             </div>
-            <div class="location__group location__group--closed location__group--nojs">
-              <p class="location__place">
+            <!-- <div class="info__location-group info__location-group--closed"> -->
+            <div class="info__navigation-list info__navigation-list--closed info__navigation-list--location">
+              <p class="info__location-place">
                 г. Мытищи, Олимпийский проспект, д.10
               </p>
-              <a class="location__tel" href="tel:+74955894050">+7 (495) 589-40-50</a>
-              <a class="location__tel" href="tel:+79250038767">+7 (925) 003-87-67</a>
-              <a class="location__tel" href="tel:+792692608079">+7 (926) 926-080-79</a>
+              <a class="info__location-tel" href="tel:+74955894050" aria-label="+7 (495) 589-40-50">+7 (495) 589-40-50</a>
+              <a class="info__location-tel" href="tel:+79250038767" aria-label="+7 (925) 003-87-67">+7 (925) 003-87-67</a>
+              <a class="info__location-tel" href="tel:+792692608079" aria-label="+7 (926) 926-080-79">+7 (926) 926-080-79</a>
             </div>
           </div>
         </div>
@@ -360,10 +361,10 @@
             <span class="copyright__text copyright__text--middle">
               1999-2018 SD Service Devices
             </span>
-            <a class="copyright__link copyright__link--first" href="">Условия конфиденциальности</a>
+            <a class="copyright__link copyright__link--first" href="#">Условия конфиденциальности</a>
           </div>
 
-          <a class="copyright__link copyright__link--last" href="">Developed by wow studio</a>
+          <a class="copyright__link copyright__link--last" href="#">Developed by wow studio</a>
         </div>
       </div>
     </section>
@@ -423,5 +424,5 @@
   <include src="build/img/sprite.svg"></include>
 </div>
 
-<script src="js/script.min.js"></script>
+<script src="js/main.js"></script>
 </html>
