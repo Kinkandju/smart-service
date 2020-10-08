@@ -94,48 +94,72 @@
   margin: 15px;
   padding: 0;
 
+  width: 31.6%;
+  height: 620px;
+
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 370px auto;
+
+  outline: none;
+  overflow: hidden;
+
   &:hover,
   &:focus {
     background-color: $blue;
     opacity: 0.9;
   }
 
+  &--productions {
+    background-image: url("../img/device1_desktop_1x.png");
+  }
+
+  &--montage {
+    background-image: url("../img/device2_desktop_1x.png");
+  }
+
+  &--components {
+    background-image: url("../img/device3_desktop_1x.png");
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    &--productions {
+      background-image: url("../img/device1_desktop_2x.png");
+    }
+
+    &--montage {
+      background-image: url("../img/device2_desktop_2x.png");
+    }
+
+    &--components {
+      background-image: url("../img/device3_desktop_2x.png");
+    }
+  }
+
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     margin: 0 0 41px 0;
+
+    width: 100%;
+    height: 256px;
+
+    background-position: 50% 50%;
+    background-size: 100% auto;
   }
 
   @media (max-width: $tablet-width) {
     margin: 0 0 25px 0;
+
+    width: 100%;
+    height: 256px;
+
+    background-position: 50% 50%;
+    background-size: 100% auto;
   }
 }
 
 .services__item a {
   margin: 0;
   padding: 0;
-}
-
-.services__image {
-  width: 100%;
-  height: 620px;
-
-  object-fit: cover;
-  object-position: 50% 50%;
-
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-    width: 100%;
-    height: 256px;
-
-    object-fit: cover;
-    object-position: 50% 50%;
-  }
-
-  @media (max-width: $tablet-width) {
-    width: 100%;
-    height: 256px;
-
-    object-fit: cover;
-    object-position: 50% 50%;
-  }
 }
 
 .services__text {
@@ -180,9 +204,9 @@
 }
 
 .services__decorative-block {
-  position: absolute;
   display: block;
-  bottom: 4px;
+  position: absolute;
+  bottom: 0;
   right: 0;
 
   width: 63px;
