@@ -34,9 +34,17 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
-  flex-grow: 1;
 
+  width: 80%;
   max-width: 815px;
+
+  @media (max-width: $desktop-width) {
+    width: auto;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: auto;
+  }
 }
 
 .copyright__text,
@@ -101,10 +109,25 @@
 .copyright__link {
   &--first {
     margin: 0 -14px 0 0;
+
+    width: 100%;
+    max-width: 245px;
   }
 
   &--last {
+    display: block;
+
     margin: 0 -14px 0 14px;
+
+    width: 23%;
+
+    @media (max-width: $desktop-width) {
+      width: auto;
+    }
+
+    @media (max-width: $tablet-width) {
+      width: auto;
+    }
   }
 
   &:hover,

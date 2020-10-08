@@ -28,6 +28,10 @@
   }
 }
 
+.form__container--question {
+  flex-wrap: nowrap;
+}
+
 .form__name,
 .form__tel {
   width: 50%;
@@ -161,6 +165,13 @@
     background-repeat: no-repeat;
     background-position: 50%;
   }
+
+  @media (max-width: $tablet-width) {
+    &:checked + .form__checkbox-label::after {
+      top: 26%;
+      left: 0.5%;
+    }
+  }
 }
 
 .form__checkbox-label {
@@ -177,7 +188,7 @@
   padding: 15px 15px 15px 55px;
 
   width: 100%;
-  max-width: 200px;
+  max-width: 70%;
 
   color: $white;
 
@@ -206,18 +217,19 @@
     padding: 15px 15px 15px 60px;
 
     &::before {
-      left: 9%;
+      left: 8%;
     }
   }
 
   @media (max-width: $tablet-width) {
     align-items: flex-start;
 
-    margin: 0 0 0 -15px;
-    padding: 15px;
+    padding: 15px 15px 15px 35px;
+
+    max-width: 82%;
 
     &::before {
-      left: -7.3%;
+      left: 0;
     }
   }
 }
