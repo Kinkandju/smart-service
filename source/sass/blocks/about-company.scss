@@ -2,7 +2,7 @@
   margin: 0;
   padding: 90px 0 112px 0;
 
-  background-color: $white;
+  z-index: 5;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     padding: 35px 0 62px 0;

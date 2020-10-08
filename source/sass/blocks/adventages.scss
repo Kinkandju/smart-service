@@ -2,9 +2,9 @@
   margin: 0;
   padding: 95px 0 0 0;
 
-  background-color: $white;
-
   overflow: hidden;
+
+  z-index: 5;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     padding: 40px 0 0 0;
@@ -55,6 +55,8 @@
 
   border: 1px solid $silver;
   border-left: 3px solid $blue;
+
+  background-color: $white;
 
   &:hover,
   &:focus {
