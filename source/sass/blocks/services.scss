@@ -11,7 +11,7 @@
 
   max-width: 1410px;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     padding: 0 25px;
   }
 
@@ -26,7 +26,7 @@
 
   width: 85.1%;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     padding: 25px 0 35px 0;
 
     width: 100%;
@@ -51,7 +51,7 @@
 
   color: $white;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     margin: 0 -15px;
     padding: 25px 15px 50px 15px;
 
@@ -79,7 +79,7 @@
 
   list-style: none;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     flex-direction: column;
   }
 
@@ -136,7 +136,7 @@
     }
   }
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     margin: 0 0 41px 0;
 
     width: 100%;
@@ -181,7 +181,7 @@
 
   color: $white;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     top: 40px;
 
     width: 23%;

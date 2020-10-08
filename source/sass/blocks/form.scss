@@ -4,7 +4,7 @@
 
   width: 84.7%;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     width: 86.2%;
   }
 
@@ -93,7 +93,7 @@
   width: 90.6%;
   max-height: 124px;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     margin: 20px 15px 23px 15px;
 
     max-height: 130px;
@@ -202,7 +202,7 @@
     background-color: transparent;
   }
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     padding: 15px 15px 15px 60px;
 
     &::before {

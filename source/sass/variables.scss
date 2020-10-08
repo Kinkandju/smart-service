@@ -1,19 +1,15 @@
-// Брейкпоинты :
 $mobile-width: 320px;
 $tablet-width: 767px;
 $desktop-width: 1023px;
 
-// Плотность пикселей
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
 
-// Шрифт
 $font--pt-mono: "PTMono-Regular", "Times New Roman", serif;
 $font--roboto-regular: "RobotoCondensed-Regular", "Arial", sans-serif;
 $font--roboto-medium: "Roboto-Medium", "Arial", sans-serif;
 $font--roboto-bold: "RobotoCondensed-Bold", "Arial", sans-serif;
 
-// Цвета
 $white: rgba(255, 255, 255, 1);
 $transparent-white: rgba(255, 255, 255, 0.1);
 $light-white: rgba(255, 255, 255, 0.3);

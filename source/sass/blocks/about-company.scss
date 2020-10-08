@@ -4,7 +4,7 @@
 
   z-index: 5;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     padding: 35px 0 62px 0;
   }
 
@@ -23,7 +23,7 @@
 
   max-width: 1410px;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     justify-content: space-between;
 
     padding: 0 25px;
@@ -38,7 +38,7 @@
   position: relative;
   top: 12px;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     left: 5px;
 
     width: 131px;
@@ -59,7 +59,7 @@
   margin: -20px -20px -20px 45px;
   padding: 20px;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     flex-basis: 73%;
 
     margin: 0 0 0 50px;
@@ -86,7 +86,7 @@
 
   color: $gray;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     font-size: 32px;
     line-height: 45px;
 
@@ -122,7 +122,7 @@
   margin: 0;
   padding-bottom: 14px;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     text-overflow: ellipsis;
     overflow: hidden;
 
@@ -173,7 +173,7 @@
     color: $white;
   }
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     margin-top: 26px;
   }
 

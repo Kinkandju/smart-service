@@ -10,7 +10,7 @@
 
   overflow: hidden;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     background-size: cover;
     background-position: 0 0;
   }
@@ -31,7 +31,7 @@
 
   max-width: 1410px;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     padding: 20px 25px 0 25px;
   }
 
@@ -58,7 +58,7 @@
     object-fit: cover;
   }
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     &--polygons {
       top: -38px;
       left: 57.5%;
@@ -88,7 +88,7 @@
 
     &--ic {
       top: 93px;
-      // left: 8%;
+      left: 8%;
       // right: 30%;
 
       width: 301px;

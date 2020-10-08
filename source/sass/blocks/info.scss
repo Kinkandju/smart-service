@@ -11,7 +11,7 @@
 
   overflow: hidden;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     flex-direction: column;
 
     padding: 0 25px;
@@ -28,7 +28,7 @@
   flex-direction: column;
   justify-content: flex-start;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -61,7 +61,7 @@
   justify-content: space-between;
   flex-basis: 70%;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
@@ -75,6 +75,10 @@
   @media (max-width: $tablet-width) {
     flex-direction: column;
     justify-content: flex-start;
+    align-items: stretch;
+
+    margin: 0;
+    padding: 0;
 
     width: 100%;
   }
@@ -128,7 +132,7 @@
 .info__navigation-button {
   display: none;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     display: none;
   }
 
@@ -206,7 +210,7 @@
     padding: 0;
   }
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     column-count: 1;
 
     &--location {
@@ -278,7 +282,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     margin: 0;
   }
 

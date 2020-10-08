@@ -6,7 +6,7 @@
 
   z-index: 5;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     padding: 113px 62px 161px 62px;
   }
 
@@ -64,7 +64,7 @@
     background: $white;
   }
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     width: 470px;
 
     &--header {
@@ -145,7 +145,7 @@
     display: none;
   }
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     margin: 0 0 0 52px;
     padding: 17px 29px 16px 29px;
   }
@@ -189,7 +189,7 @@
     opacity: 1;
   }
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     display: none;
   }
 

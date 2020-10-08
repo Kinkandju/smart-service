@@ -16,7 +16,7 @@
 
   max-width: 1410px;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     padding: 0 25px;
   }
 
@@ -69,7 +69,7 @@
     right: 25px;
   }
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     display: none;
 
     &--desktop {
@@ -116,7 +116,7 @@
 
   &--first,
   &--last {
-    @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    @media (max-width: $desktop-width) {
       margin: 0 -20px;
       padding: 20px;
     }

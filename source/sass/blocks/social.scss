@@ -11,7 +11,7 @@
 
   list-style: none;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     margin: 0;
   }
 

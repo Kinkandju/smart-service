@@ -16,7 +16,7 @@
     width: 220px;
   }
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     width: 202px;
 
     &--footer {
@@ -41,7 +41,7 @@
   width: 52px;
   height: 52px;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
     width: 52px;
     height: 52px;
   }
