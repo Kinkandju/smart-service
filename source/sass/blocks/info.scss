@@ -97,6 +97,11 @@
     padding: 0 17px;
 
     border-bottom: 1px solid $silver;
+
+    &--closed .info__navigation-list,
+    &--closed .info__location-group {
+      display: none;
+    }
   }
 }
 
@@ -154,41 +159,37 @@
     border: none;
 
     background-color: $light-gray;
-  }
-}
 
-.info__navigation-button span {
-  @media (max-width: $tablet-width) {
-    position: relative;
-    display: flex;
-    align-self: center;
+    &--closed {
+      span {
+        &::before {
+          display: none;
+        }
+      }
+    }
 
-    width: 16px;
-    height: 2px;
+    span {
+      position: relative;
+      display: flex;
+      align-self: center;
 
-    background: $silver;
-  }
-
-  &::before {
-    @media (max-width: $tablet-width) {
-      position: absolute;
-      top: -7px;
-      left: 7px;
-
-      width: 2px;
-      height: 16px;
-
-      content: "";
+      width: 16px;
+      height: 2px;
 
       background: $silver;
-    }
-  }
-}
 
-.info__navigation-button--opened span {
-  @media (max-width: $tablet-width) {
-    &::before {
-      display: none;
+      &::before {
+        position: absolute;
+        top: -7px;
+        left: 7px;
+
+        width: 2px;
+        height: 16px;
+
+        content: "";
+
+        background: $silver;
+      }
     }
   }
 }
@@ -236,38 +237,32 @@
   }
 }
 
-// .info__location-group {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: flex-start;
-//
-//   margin: 0;
-//   padding: 0;
-//
-//   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: flex-start;
-//
-//     margin: 0;
-//     padding: 0;
-//   }
-//
-//   @media (max-width: $tablet-width) {
-//     &--opened {
-//       display: flex;
-//       flex-direction: column;
-//       justify-content: flex-start;
-//
-//       margin: 0;
-//       padding: 0 0 30px 0;
-//     }
-//
-//     &--closed {
-//       display: none;
-//     }
-//   }
-// }
+.info__location-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  margin: 0;
+  padding: 0;
+
+  @media (max-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    margin: 0;
+    padding: 0 0 28px 0;
+  }
+}
 
 .info__navigation-item {
   margin: 0 57px 0 0;

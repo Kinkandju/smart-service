@@ -109,10 +109,10 @@
   var linkAnchors = document.querySelectorAll('.description-of-goods__link, .description-of-goods__scroll-down');
 
   for (var i = 0; i < linkAnchors.length; i++) {
-    linkAnchors[i].addEventListener('click', function (target) {
-      target.preventDefault();
+    linkAnchors[i].addEventListener('click', function (evt) {
+      evt.preventDefault();
 
-      var targetElement = document.querySelector(target.currentTarget.href.replace(/[^#]*(.*)/, '$1'));
+      var targetElement = document.querySelector(evt.currentTarget.href.replace(/[^#]*(.*)/, '$1'));
       var ua = window.navigator.userAgent;
       var msie = ua.indexOf('MSIE ');
       var trident = ua.indexOf('Trident/');
@@ -162,5 +162,49 @@
       getScrollSpeed(data);
     });
   }
+
+  var closeList = function (navigation, button) {
+    navigation.classList.add('info__navigation-data--closed');
+    button.classList.remove('info__navigation-button--closed');
+    button.classList.add('info__navigation-button--opened');
+  };
+
+  var openList = function (navigation, button) {
+    navigation.classList.remove('info__navigation-data--closed');
+    button.classList.remove('info__navigation-button--opened');
+    button.classList.add('info__navigation-button--closed');
+  };
+
+  var accordionLists = document.querySelectorAll('.info__navigation-data, .info__location');
+
+  var accordion = function (list, status) {
+    for (var j = 0; j < list.length; j++) {
+      var container = list[j];
+
+      if (status === 'initial') {
+        var toggle = container.querySelector('.info__navigation-container');
+        toggle.addEventListener('click', function (evt) {
+          evt.preventDefault();
+
+          var button = evt.target;
+          var ancestor = evt.currentTarget.parentNode;
+
+          if (button.classList.contains('info__navigation-button')) {
+            if (button.classList.contains('info__navigation-button--closed')) {
+              closeList(ancestor, button);
+            } else if (button.classList.contains('info__navigation-button--opened')) {
+              accordion(accordionLists, 'closeall');
+              openList(ancestor, button);
+            }
+          }
+        });
+      }
+      if (status === 'closeall') {
+        closeList(container, container.querySelector('.info__navigation-button'));
+      }
+    }
+  };
+
+  accordion(accordionLists, 'initial');
 
 })();
