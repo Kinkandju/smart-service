@@ -1,8 +1,19 @@
-.description-of-goods {
+.promo {
   position: relative;
 
   margin: 0;
-  padding: 230px 0 275px 0;
+  padding: 195px 0 275px 0;
+}
+
+.promo__container {
+  position: relative;
+  top: 0;
+  left: -4px;
+
+  margin: 0;
+  padding: 0;
+
+  width: 65%;
 
   z-index: 5;
 
@@ -17,7 +28,7 @@
   }
 }
 
-.description-of-goods__name {
+.promo__name {
   display: flex;
   flex-direction: column;
 
@@ -30,6 +41,9 @@
     font-size: 80px;
     line-height: 94px;
     letter-spacing: 0.07em;
+
+    margin: 0 0 27px 0;
+    padding: 0;
 
     text-transform: uppercase;
 
@@ -45,7 +59,7 @@
     font-size: 22px;
     line-height: 34px;
 
-    margin: 27px 0 44px 0;
+    margin: 0 0 44px 0;
     padding-left: 97px;
 
     color: $white;
@@ -54,7 +68,7 @@
   &--text::before {
     position: absolute;
     top: 17px;
-    left: 0;
+    left: 4px;
 
     width: 66px;
     height: 2px;
@@ -112,7 +126,7 @@
   }
 }
 
-.description-of-goods__feedback {
+.promo__feedback {
   font-family: $font--roboto-bold;
   font-style: normal;
   font-weight: bold;
@@ -122,8 +136,10 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
 
-  margin: 0 0 0 97px;
-  padding: 17px 43px 16px 43px;
+  margin: 0 0 0 98px;
+  padding: 16px 43px;
+
+  max-width: 407px;
 
   border: 2px solid $blue;
   border-radius: 5px;
@@ -164,10 +180,10 @@
   }
 }
 
-.description-of-goods__scroll-down {
+.promo__scroll-down {
   position: absolute;
   bottom: 112px;
-  left: -50px;
+  left: -53px;
 
   font-family: $font--pt-mono;
   font-style: normal;

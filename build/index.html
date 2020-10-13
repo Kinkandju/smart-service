@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Учебный проект Акселератора - Smart Device">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="js/main.js" as="script" rel="preload">
   <link href="fonts/PTMono-Regular.woff2" as="font" crossorigin="anonymous" rel="preload">
   <link href="fonts/RobotoCondensed-Bold.woff2" as="font" crossorigin="anonymous" rel="preload">
   <link href="fonts/RobotoCondensed-Regular.woff2" as="font" crossorigin="anonymous" rel="preload">
@@ -59,33 +58,34 @@
 
       <h1 class="visually-hidden">Основная страница сайта компании Smart Device</h1>
 
-      <div class="page-header__container">
-        <div class="page-header__description-of-goods description-of-goods">
+      <section class="promo">
+        <div class="promo__container">
           <h2 class="visually-hidden">Продукция компании</h2>
 
-          <div class="description-of-goods__name">
-            <h3 class="description-of-goods__name--header">
+          <div class="promo__name">
+            <h3 class="promo__name--header">
               Печатные платы
             </h3>
-            <p class="description-of-goods__name--text">
+            <p class="promo__name--text">
               производство и монтаж, поставка комплектующих, блоков и модулей
             </p>
           </div>
 
-          <a class="description-of-goods__link" href="#feedback">
-            <span class="description-of-goods__feedback description-of-goods__feedback--tablet">Получить бесплатную консультацию</span>
-            <span class="description-of-goods__feedback description-of-goods__feedback--mobil">Бесплатная консультация</span>
+          <a class="promo__link" href="#feedback">
+            <span class="promo__feedback promo__feedback--tablet">Получить бесплатную консультацию</span>
+            <span class="promo__feedback promo__feedback--mobil">Бесплатная консультация</span>
           </a>
-
-          <a class="description-of-goods__scroll-down" href="#advantages">Скролл вниз</a>
         </div>
-      </div>
+
+        <a class="promo__scroll-down" href="#advantages">Скролл вниз</a>
+      </section>
+
     </div>
   </header>
 
   <main class="page-main">
-    <section class="advantages" id="advantages">
-      <div class="advantages__layout-container">
+    <div class="page-main__layout-container">
+      <section class="advantages" id="advantages">
         <h2 class="visually-hidden">Преимущества компании</h2>
         <ul class="advantages__list">
           <li class="advantages__item advantages__item--deadlines">
@@ -125,31 +125,26 @@
             </p>
           </li>
         </ul>
-      </div>
-    </section>
+      </section>
 
-    <section class="about-company">
-      <div class="about-company__layout-container">
-        <picture>
-          <source media="(min-width: 1024px)" srcset="img/year_desktop_1x.png, img/year_desktop_2x.png 2x">
-          <img class="about-company__image" src="img/year_tablet_1x.png" srcset="img/year_tablet_1x.png 2x" width="115" height="303" alt="Декоративный элемент: 2005">
-        </picture>
+      <section class="about-company">
+        <div class="about-company__block">
+          <div class="about-company__container">
+            <h2 class="about-company__title">О компании</h2>
+            <div class="about-company__text">
+              <p>
+                Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
+              </p>
+              <p>
+                Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.
+              </p>
+            </div>
 
-        <div class="about-company__container">
-          <h2 class="about-company__title">О компании</h2>
-          <div class="about-company__text">
-            <p>
-              Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
-            </p>
-            <p>
-              Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.
-            </p>
+            <a class="about-company__button" href="">Подробнее</a>
           </div>
-
-          <a class="about-company__button" href="">Подробнее</a>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <section class="services">
       <div class="services__layout-container">
@@ -164,13 +159,13 @@
             </li>
             <li class="services__item services__item--montage">
               <a href="#">
-                <h3 class="services__text">Монтаж печатных плат</h3>
+                <h3 class="services__text">Монтаж печатных<br>плат</h3>
                 <span class="services__decorative-block"></span>
               </a>
             </li>
             <li class="services__item services__item--components">
               <a href="#">
-                <h3 class="services__text">Комплектующие для светотехники</h3>
+                <h3 class="services__text">Комплектующие<br>для светотехники</h3>
                 <span class="services__decorative-block"></span>
               </a>
             </li>

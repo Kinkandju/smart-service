@@ -1,66 +1,54 @@
 .about-company {
   margin: 0;
-  padding: 90px 0 112px 0;
+  padding: 77px 0 109px 0;
 
   z-index: 5;
 
-  @media (max-width: $desktop-width) {
-    padding: 35px 0 62px 0;
-  }
-
-  @media (max-width: $tablet-width) {
-    padding: 0 0 48px 0;
-  }
-}
-
-.about-company__layout-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
-  margin: 0 auto;
-  padding: 0 40px;
-
-  max-width: 1410px;
+  background-image: url("../img/year_desktop_1x.png");
+  background-repeat: no-repeat;
+  background-position: 9.4% 90px;
+  background-size: 115px 303px;
 
   @media (max-width: $desktop-width) {
     justify-content: space-between;
 
-    padding: 0 25px;
+    padding: 35px 0 62px 0;
+
+    background-image: url("../img/year_tablet_1x.png");
+    background-size: 131px 348px;
   }
 
   @media (max-width: $tablet-width) {
-    padding: 0 17px;
+    padding: 0 0 48px 0;
+
+    background-image: none;
   }
 }
 
-.about-company__image {
-  position: relative;
-  top: 12px;
+.about-company__block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 
-  @media (max-width: $desktop-width) {
-    left: 5px;
-
-    width: 131px;
-    height: 348px;
-  }
-
-  @media (max-width: $tablet-width) {
-    display: none;
-  }
+  margin: 0;
+  padding: 0;
 }
 
 .about-company__container {
+  position: relative;
+  top: 0;
+  left: 25px;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex-basis: 70%;
+  flex-basis: 78%;
 
-  margin: -20px -20px -20px 45px;
-  padding: 20px;
+  margin: 0;
+  padding: 0 0 0 120px;
 
   @media (max-width: $desktop-width) {
-    flex-basis: 73%;
+    // flex-basis: 73%;
 
     margin: 0 0 0 50px;
     padding: 20px 10px;
@@ -81,8 +69,8 @@
   font-size: 36px;
   line-height: 51px;
 
-  margin: -20px;
-  padding: 20px;
+  margin: 0 0 20px 0;
+  padding: 0;
 
   color: $gray;
 
@@ -116,30 +104,34 @@
   padding: 0;
 
   color: $gray;
-}
 
-.about-company__text p {
-  margin: 0;
-  padding-bottom: 14px;
-
-  @media (max-width: $desktop-width) {
-    text-overflow: ellipsis;
-    overflow: hidden;
-
+  p {
     margin: 0 0 20px 0;
     padding: 0;
 
-    max-height: 85px;
-  }
+    &:last-child {
+      margin: 0 0 40px 0;
+    }
 
-  @media (max-width: $tablet-width) {
-    text-overflow: ellipsis;
-    overflow: hidden;
+    @media (max-width: $desktop-width) {
+      text-overflow: ellipsis;
+      overflow: hidden;
 
-    margin: 0 -10px 40px 0;
-    padding: 0;
+      margin: 0 0 20px 0;
+      padding: 0;
 
-    max-height: 175px;
+      max-height: 85px;
+    }
+
+    @media (max-width: $tablet-width) {
+      text-overflow: ellipsis;
+      overflow: hidden;
+
+      margin: 0 -10px 40px 0;
+      padding: 0;
+
+      max-height: 175px;
+    }
   }
 }
 
