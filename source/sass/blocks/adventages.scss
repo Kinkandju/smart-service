@@ -7,7 +7,7 @@
   z-index: 5;
 
   @media (max-width: $desktop-width) {
-    padding: 40px 0 0 0;
+    padding: 55px 0 0 0;
   }
 
   @media (max-width: $tablet-width) {
@@ -48,12 +48,12 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  // flex-basis: 33.8%;
-  flex-basis: 40.4%;
 
-  // margin: 15px;
   margin: 0;
   padding: 40px 50px 65px 40px;
+
+  width: 40.4%;
+  min-width: 40.4%;
 
   border: 1px solid $silver;
   border-left: 3px solid $blue;
@@ -98,26 +98,27 @@
   }
 
   @media (max-width: $desktop-width) {
-    flex-basis: 40.3%;
+    width: 47.8%;
+    min-width: 47.5%;
 
     padding: 25px 25px 20px 25px;
 
     &--providers {
-      margin: 15px 0 15px 15px;
+      margin: 0 0 30px 0;
     }
 
     &--privacy {
-      margin: 15px 15px 15px 0;
+      margin: 0 30px 30px 0;
       padding: 25px 25px 31px 25px;
     }
 
     &--cost {
-      margin: 15px 0 15px 15px;
+      margin: 0 0 30px 0;
       padding: 25px 25px 31px 25px;
     }
 
     &--deadlines {
-      margin: 15px 15px 15px 0;
+      margin: 0 30px 30px 0;
     }
   }
 

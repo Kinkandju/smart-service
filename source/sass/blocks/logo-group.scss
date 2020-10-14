@@ -3,6 +3,9 @@
   flex-direction: row;
   align-items: center;
 
+  margin: 0;
+  padding: 0;
+
   width: 202px;
 
   &:hover,
@@ -13,6 +16,8 @@
   }
 
   &--footer {
+    margin: 0 0 53px 0;
+
     width: 220px;
   }
 
@@ -20,6 +25,8 @@
     width: 202px;
 
     &--footer {
+      margin: 0;
+
       width: 220px;
     }
   }

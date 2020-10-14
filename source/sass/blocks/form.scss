@@ -2,10 +2,13 @@
   margin: 0;
   padding: 0;
 
+  width: 100%;
   max-width: 570px;
 
   @media (max-width: $desktop-width) {
-    width: 86.2%;
+    // width: 86.2%;
+    width: 100%;
+    min-width: 100%;
   }
 
   @media (max-width: $tablet-width) {
@@ -20,7 +23,7 @@
   align-items: center;
   flex-wrap: wrap;
 
-  margin: 0 0 4px 0;
+  margin: 0;
   padding: 0;
 
   &--question {
@@ -42,14 +45,14 @@
     font-size: 16px;
     line-height: 22px;
 
-    border: none;
-
     overflow: hidden;
     text-overflow: ellipsis;
 
-    outline: none;
     color: $white;
     background-color: $transparent-white;
+    border: none;
+    box-shadow: none;
+    outline: none;
 
     &:hover,
     &:focus {
@@ -65,6 +68,10 @@
 .form__name,
 .form__tel {
   width: 47.4%;
+
+  @media (max-width: $desktop-width) {
+    width: 48.2%;
+  }
 
   @media (max-width: $tablet-width) {
     width: 100%;
@@ -101,16 +108,16 @@
   width: 100%;
 
   &--input {
-    margin: 0 0 27px 0;
+    margin: 0 0 40px 0;
     padding: 12px 16px;
 
     width: 100%;
     max-height: 154px;
 
     @media (max-width: $desktop-width) {
-      margin: 20px 15px 23px 15px;
+      margin: 0 0 43px 0;
 
-      max-height: 130px;
+      max-height: 160px;
     }
 
     @media (max-width: $tablet-width) {
@@ -138,10 +145,10 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
 
-  margin: 0;
+  margin: 0 38px 0 0;
   padding: 13px 15px 14px 15px;
 
-  width: 66%;
+  width: 69%;
 
   border: 1px solid $white;
   border-radius: 5px;
@@ -157,6 +164,12 @@
     background-color: $white;
   }
 
+  @media (max-width: $desktop-width) {
+    padding: 14px 15px;
+
+    width: 68%;
+  }
+
   @media (max-width: $tablet-width) {
     margin: 0 0 15px 0;
 
@@ -167,8 +180,8 @@
 .form__checkbox {
   &:checked + .form__checkbox-label::after {
     position: absolute;
-    top: 25.5%;
-    left: 8.5%;
+    top: 8%;
+    left: 0;
 
     width: 16px;
     height: 16px;
@@ -199,7 +212,7 @@
   line-height: 16px;
 
   margin: 0;
-  padding: 15px 15px 15px 55px;
+  padding: 0 0 0 33px;
 
   width: 100%;
 
@@ -214,8 +227,8 @@
 
   &::before {
     position: absolute;
-    top: 25%;
-    left: 8%;
+    top: 8%;
+    left: 0;
 
     content: "";
 
@@ -226,13 +239,13 @@
     background-color: transparent;
   }
 
-  @media (max-width: $desktop-width) {
-    padding: 15px 15px 15px 60px;
-
-    &::before {
-      left: 8%;
-    }
-  }
+  // @media (max-width: $desktop-width) {
+  //   padding: 15px 15px 15px 60px;
+  //
+  //   &::before {
+  //     left: 8%;
+  //   }
+  // }
 
   @media (max-width: $tablet-width) {
     align-items: flex-start;

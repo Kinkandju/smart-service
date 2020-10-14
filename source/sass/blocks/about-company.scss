@@ -9,13 +9,22 @@
   background-position: 9.4% 90px;
   background-size: 115px 303px;
 
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/year_desktop_2x.png");
+  }
+
   @media (max-width: $desktop-width) {
     justify-content: space-between;
 
-    padding: 35px 0 62px 0;
+    padding: 25px 0 82px 0;
 
     background-image: url("../img/year_tablet_1x.png");
+    background-position: 0.7% 30px;
     background-size: 131px 348px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/year_tablet_2x.png");
+    }
   }
 
   @media (max-width: $tablet-width) {
@@ -42,23 +51,27 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex-basis: 78%;
+
+  width: 78%;
+  min-width: 78%;
 
   margin: 0;
   padding: 0 0 0 120px;
 
   @media (max-width: $desktop-width) {
-    // flex-basis: 73%;
+    left: 67px;
 
-    margin: 0 0 0 50px;
-    padding: 20px 10px;
+    margin: 0;
+    padding: 0 0 0 50px;
+
+    width: 80%;
   }
 
   @media (max-width: $tablet-width) {
-    flex-basis: 100%;
+    margin: 0;
+    padding: 0;
 
-    margin: 0 -17px;
-    padding: 17px 10px 17px 17px;
+    width: 100%;
   }
 }
 
@@ -78,16 +91,16 @@
     font-size: 32px;
     line-height: 45px;
 
-    margin: -20px -20px 5px -20px;
-    padding: 6px 20px 20px 20px;
+    margin: 0 0 25px 0;
+    padding: 0;
   }
 
   @media (max-width: $tablet-width) {
     font-size: 28px;
     line-height: 39px;
 
-    margin: 0 -20px;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
 
     width: 90%;
   }
@@ -111,6 +124,10 @@
 
     &:last-child {
       margin: 0 0 40px 0;
+
+      @media (max-width: $desktop-width) {
+        margin: 0 0 47px 0;
+      }
     }
 
     @media (max-width: $desktop-width) {
@@ -163,10 +180,6 @@
 
     background-color: $blue;
     color: $white;
-  }
-
-  @media (max-width: $desktop-width) {
-    margin-top: 26px;
   }
 
   @media (max-width: $tablet-width) {

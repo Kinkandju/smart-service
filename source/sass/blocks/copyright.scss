@@ -1,8 +1,12 @@
 .copyright {
   margin: 0;
-  padding: 0;
+  padding: 14px 0;
 
   border-top: 1px solid $silver;
+
+  @media (max-width: $desktop-width) {
+    padding: 20px 0;
+  }
 }
 
 .copyright__layout-container {
@@ -14,7 +18,7 @@
   margin: 0 auto;
   padding: 0 40px;
 
-  max-width: 1410px;
+  max-width: 1490px;
 
   @media (max-width: $desktop-width) {
     padding: 0 25px;
@@ -35,7 +39,7 @@
   justify-content: space-between;
   align-items: baseline;
 
-  width: 80%;
+  width: 75%;
   max-width: 815px;
 
   @media (max-width: $desktop-width) {
@@ -59,8 +63,10 @@
   text-align: center;
   text-transform: uppercase;
 
-  margin: 0 14px 0 -14px;
-  padding: 14px;
+  margin: 0;
+  padding: 0;
+
+  max-width: 235px;
 
   color: $dark-blue;
 
@@ -68,19 +74,24 @@
 }
 
 .copyright__text {
+  margin: 0 50px 0 0;
+
   &--desktop {
     display: none;
   }
 
   &--middle {
     position: relative;
-    right: 25px;
+    right: 35px;
   }
 
   @media (max-width: $desktop-width) {
     display: none;
 
     &--desktop {
+      position: relative;
+      top: 0;
+      left: 5px;
       display: block;
 
       margin: 0;
@@ -97,7 +108,7 @@
     &--desktop {
       display: block;
 
-      margin: 0 0 15px 0;
+      // margin: 0 0 15px 0;
     }
 
     &--middle {
@@ -115,19 +126,17 @@
   }
 
   &--first {
-    margin: 0 -14px 0 0;
-
-    width: 100%;
-    max-width: 245px;
+    // width: 100%;
+    // max-width: 245px;
 
     @media (max-width: $desktop-width) {
-      margin: 0 -20px;
-      padding: 20px;
+      // margin: 0 -20px;
+      // padding: 20px;
     }
 
     @media (max-width: $tablet-width) {
-      margin: 0;
-      padding: 28px 20px 10px 20px;
+      // margin: 0;
+      // padding: 28px 20px 10px 20px;
 
       box-sizing: content-box;
     }
@@ -136,20 +145,20 @@
   &--last {
     display: block;
 
-    margin: 0 -14px 0 14px;
+    // margin: 0 -14px 0 14px;
 
-    width: 23%;
+    // width: 20%;
 
     @media (max-width: $desktop-width) {
-      margin: 0 -20px;
-      padding: 20px;
+      // margin: 0 -20px;
+      // padding: 20px;
 
       width: auto;
     }
 
     @media (max-width: $tablet-width) {
-      margin: 0;
-      padding: 10px 20px 10px 20px;
+      // margin: 0;
+      // padding: 10px 20px 10px 20px;
 
       width: auto;
     }
