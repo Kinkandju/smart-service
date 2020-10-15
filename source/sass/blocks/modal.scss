@@ -83,7 +83,7 @@
 
 .modal fieldset {
   margin: 0;
-  padding: 15px 0;
+  padding: 0;
 
   border: none;
 }
@@ -95,7 +95,7 @@
   justify-content: center;
 
   margin: 0;
-  padding: 28px 40px;
+  padding: 30px 40px;
 
   &--id,
   &--send {
@@ -105,104 +105,48 @@
   }
 }
 
-.modal__button--close {
-  position: absolute;
-  top: 0;
-  right: 15px;
-  display: flex;
-  justify-content: center;
+.modal__name,
+.modal__tel,
+.modal__question {
+  &--input {
+    font-family: $font--pt-mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
 
-  margin: 0 -15px;
-  padding: 15px;
+    margin: 0 0 30px 0;
+    padding: 14px 25px 16px 25px;
 
-  width: 29px;
-  height: 29px;
+    width: 100%;
 
-  box-sizing: content-box;
+    border: none;
 
-  cursor: pointer;
+    box-sizing: border-box;
 
-  border: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
-  background-color: $blue;
-}
+    outline: none;
 
-.modal__button--close span {
-  position: relative;
-  display: flex;
-  align-self: center;
-
-  width: 19px;
-  height: 19px;
-
-  background-color: $blue;
-
-  &:hover,
-  &:focus {
-    opacity: 0.5;
-  }
-
-  &::before,
-  &::after {
-    position: absolute;
-    top: 8px;
-    left: -1px;
-
-    width: 23px;
-    height: 1px;
-
-    content: "";
-
-    background-color: $white;
-  }
-
-  &::before {
-    transform: rotate(45deg);
-  }
-
-  &::after {
-    transform: rotate(-45deg);
-  }
-}
-
-.modal__name--input,
-.modal__tel--input,
-.modal__question--input {
-  font-family: $font--pt-mono;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 22px;
-
-  margin: 15px 0;
-  padding: 14px 25px 16px 25px;
-
-  width: 100%;
-
-  border: none;
-
-  box-sizing: border-box;
-
-  overflow: hidden;
-  text-overflow: ellipsis;
-
-  outline: none;
-
-  color: $white;
-  background-color: $transparent-white;
-
-  &:hover,
-  &:focus {
-    background-color: $light-white;
-  }
-
-  &::placeholder {
     color: $white;
+    background-color: $transparent-white;
+
+    &:hover,
+    &:focus {
+      background-color: $light-white;
+    }
+
+    &::placeholder {
+      color: $white;
+    }
   }
 }
 
 .modal__question {
   &--input {
+    margin: 0 0 27px 0;
+
     max-height: 104px;
   }
 }
@@ -214,8 +158,8 @@
   font-size: 28px;
   line-height: 39px;
 
-  margin: -15px -15px 0 -15px;
-  padding: 15px 15px 15px 15px;
+  margin: 0 0 12px 0;
+  padding: 0;
 
   color: $white;
 }
@@ -227,8 +171,10 @@
   font-size: 16px;
   line-height: 22px;
 
-  margin: -15px 0 -15px -15px;
-  padding: 15px;
+  margin: 0 0 32px 0;
+  padding: 0;
+
+  width: 90%;
 
   color: $white;
 }
@@ -243,7 +189,7 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
 
-  margin: 15px 0;
+  margin: 0 0 22px 0;
   padding: 14px;
 
   width: 100%;
@@ -259,13 +205,73 @@
     color: $blue;
     background-color: $white;
   }
+
+  &--close {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    display: flex;
+    justify-content: center;
+
+    margin: 0 -15px;
+    padding: 15px;
+
+    width: 29px;
+    height: 29px;
+
+    box-sizing: content-box;
+
+    cursor: pointer;
+
+    border: none;
+
+    background-color: $blue;
+
+    span {
+      position: relative;
+      display: flex;
+      align-self: center;
+
+      width: 19px;
+      height: 19px;
+
+      background-color: $blue;
+
+      &:hover,
+      &:focus {
+        opacity: 0.5;
+      }
+
+      &::before,
+      &::after {
+        position: absolute;
+        top: 8px;
+        left: -1px;
+
+        width: 23px;
+        height: 1px;
+
+        content: "";
+
+        background-color: $white;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
 }
 
 .modal__checkbox {
   &:checked + .modal__checkbox-label::after {
     position: absolute;
-    top: 15.5%;
-    left: 0.5%;
+    top: 4.5%;
+    left: 0;
 
     width: 16px;
     height: 16px;
@@ -289,11 +295,11 @@
   font-size: 14px;
   line-height: 16px;
 
-  margin: 0;
-  padding: 5px 5px 5px 48px;
+  margin: 0 0 20px 0;
+  padding: 0 0 0 48px;
 
   width: 100%;
-  max-width: 340px;
+  max-width: 400px;
 
   color: $white;
 
@@ -306,7 +312,7 @@
 
   &::before {
     position: absolute;
-    top: 15%;
+    top: 5%;
     left: 0;
 
     width: 16px;

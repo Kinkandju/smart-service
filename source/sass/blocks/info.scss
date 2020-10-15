@@ -29,11 +29,6 @@
   @media (max-width: $desktop-width) {
     display: block;
   }
-
-  @media (max-width: $tablet-width) {
-    // flex-direction: column;
-    display: block;
-  }
 }
 
 .info__container {
@@ -64,7 +59,7 @@
     align-items: center;
 
     margin: 0;
-    padding: 46px 17px 53px 17px;
+    padding: 47px 17px 49px 17px;
 
     width: 100%;
 
@@ -123,8 +118,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    margin: 0 -17px;
-    padding: 0 17px;
+    width: 100%;
 
     border-bottom: 1px solid $silver;
 
@@ -142,7 +136,7 @@
     justify-content: space-between;
     align-items: center;
 
-    padding: 0 17px;
+    padding: 11px 17px;
   }
 }
 
@@ -161,8 +155,8 @@
   color: $dark-blue;
 
   @media (max-width: $tablet-width) {
-    margin: 0 -17px;
-    padding: 29px 17px;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -234,10 +228,6 @@
 
   list-style: none;
 
-  @media (max-width: $tablet-width) {
-    padding: 0 17px 30px 17px;
-  }
-
   &--location {
     display: flex;
     flex-direction: column;
@@ -261,6 +251,8 @@
   }
 
   @media (max-width: $tablet-width) {
+    padding: 5px 17px 24px 17px;
+
     &--opened {
       padding-bottom: 30px;
 
@@ -321,6 +313,10 @@
   @media (max-width: $desktop-width) {
     width: 48%;
   }
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+  }
 }
 
 .info__location-group {
@@ -346,7 +342,7 @@
     justify-content: flex-start;
 
     margin: 0;
-    padding: 0 17px 28px 17px;
+    padding: 6px 17px 24px 17px;
   }
 }
 

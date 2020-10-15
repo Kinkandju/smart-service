@@ -28,7 +28,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    padding: 0 0 48px 0;
+    padding: 15px 0 64px 0;
 
     background-image: none;
   }
@@ -68,6 +68,8 @@
   }
 
   @media (max-width: $tablet-width) {
+    left: 0;
+
     margin: 0;
     padding: 0;
 
@@ -99,7 +101,7 @@
     font-size: 28px;
     line-height: 39px;
 
-    margin: 0;
+    margin: 0 0 19px 0;
     padding: 0;
 
     width: 90%;
@@ -127,6 +129,10 @@
 
       @media (max-width: $desktop-width) {
         margin: 0 0 47px 0;
+      }
+
+      @media (max-width: $tablet-width) {
+        margin: 0 -10px 40px 0;
       }
     }
 

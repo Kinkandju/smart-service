@@ -89,7 +89,7 @@
         <h2 class="visually-hidden">Преимущества компании</h2>
         <ul class="advantages__list">
           <li class="advantages__item advantages__item--deadlines">
-            <svg class="advantages__image advantages__image--stopwatch" width="29" height="35">
+            <svg class="advantages__image advantages__image--stopwatch" width="29" height="35" viewBox="0 0 29 35">
               <use xlink:href="#icon-stopwatch">
             </svg>
             <h3 class="advantages__title">Оперативные сроки</h3>
@@ -98,7 +98,7 @@
             </p>
           </li>
           <li class="advantages__item advantages__item--providers">
-            <svg class="advantages__image advantages__image--hired" width="35" height="35">
+            <svg class="advantages__image advantages__image--hired" width="35" height="35" viewBox="0 0 35 35">
               <use xlink:href="#icon-hired">
             </svg>
             <h3 class="advantages__title advantages__title--providers">Крупные поставщики</h3>
@@ -107,7 +107,7 @@
             </p>
           </li>
           <li class="advantages__item advantages__item--privacy">
-            <svg class="advantages__image advantages__image--detective" width="36" height="31">
+            <svg class="advantages__image advantages__image--detective" width="36" height="31" viewBox="0 0 36 31">
               <use xlink:href="#icon-detective">
             </svg>
             <h3 class="advantages__title advantages__title--privacy">Полная конфиденциальность</h3>
@@ -116,7 +116,7 @@
             </p>
           </li>
           <li class="advantages__item advantages__item--cost">
-            <svg class="advantages__image advantages__image--tag" width="35" height="35">
+            <svg class="advantages__image advantages__image--tag" width="35" height="35" viewBox="0 0 35 35">
               <use xlink:href="#icon-tag">
             </svg>
             <h3 class="advantages__title advantages__title--cost">Персонализация стоимости</h3>
@@ -153,7 +153,7 @@
           <ul class="services__list">
             <li class="services__item services__item--productions">
               <a href="#">
-                <h3 class="services__text">Производство печатных плат</h3>
+                <h3 class="services__text">Производство<br>печатных плат</h3>
                 <span class="services__decorative-block"></span>
               </a>
             </li>
@@ -231,7 +231,7 @@
         <div class="info__container-box">
           <div class="info__container">
             <a class="info__logo-group logo-group logo-group--footer"  href="#">
-              <img class="logo-group__image logo-group__image--footer" src="img/logo.svg" width="52" height="52" alt="Логотип компании">
+              <img class="logo-group__image logo-group__image--footer" src="img/logo.svg" width="52" height="52" viewBox="0 0 52 52" alt="Логотип компании">
 
               <div class="logo-group__text logo-group__text--footer">
                 <span class="logo-group__text--bold logo-group__text--black">Service Device</span>
@@ -391,13 +391,12 @@
     </section>
 
     <div class="overlay overlay--hidden"></div>
-
   </footer>
+
+  <div style="display:none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+  <script src="js/main.js"></script>
+
 </body>
-
-<div style="display:none">
-  <include src="build/img/sprite.svg"></include>
-</div>
-
-<script src="js/main.js"></script>
 </html>

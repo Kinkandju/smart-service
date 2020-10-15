@@ -11,7 +11,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    padding: 37px 0 0 0;
+    padding: 37px 0;
   }
 }
 
@@ -109,12 +109,12 @@
 
     &--privacy {
       margin: 0 30px 30px 0;
-      padding: 25px 25px 31px 25px;
+      padding: 25px 15px 34px 25px;
     }
 
     &--cost {
       margin: 0 0 30px 0;
-      padding: 25px 25px 31px 25px;
+      padding: 25px 25px 34px 25px;
     }
 
     &--deadlines {
@@ -137,12 +137,16 @@
     }
 
     &--cost {
+      margin: 0;
       padding: 25px 15px 32px 25px;
     }
   }
 }
 
 .advantages__image {
+  margin: 0 0 20px 0;
+  padding: 0;
+
   fill: $blue;
 
   &--stopwatch {
@@ -154,21 +158,36 @@
   &--tag {
     width: 35px;
     height: 35px;
-
-    @media (max-width: $desktop-width) {
-      width: 32px;
-      height: 32px;
-    }
   }
 
   &--detective {
     width: 36px;
     height: 31px;
+  }
 
-    @media (max-width: $desktop-width) {
+  @media (max-width: $desktop-width) {
+    margin: 0 0 5px 0;
+
+    &--hired,
+    &--tag {
+      width: 32px;
+      height: 32px;
+    }
+
+    &--tag {
+      margin: 0 0 12px 0;
+    }
+
+    &--detective {
+      margin: 0 0 12px 0;
+
       width: 30px;
       height: 26px;
     }
+  }
+
+  @media (max-width: $tablet-width) {
+    margin: 0 0 12px 0;
   }
 }
 
@@ -179,26 +198,22 @@
   font-size: 24px;
   line-height: 34px;
 
-  margin: 0 0 0 -20px;
-  padding: 20px 20px 15px 20px;
+  margin: 0 0 15px 0;
+  padding: 0;
 
   color: $blue;
 
   @media (max-width: $desktop-width) {
-    margin: 0 0 0 -5px;
-    padding: 5px;
+    margin: 0 0 10px 0;
+    padding: 0;
 
     &--privacy {
-      margin: 0 -15px 0 -5px;
-      padding: 12px 5px 14px 5px;
+      margin: 0 0 15px 0;
+      padding: 0;
     }
 
     &--cost {
-      padding: 9px 5px;
-    }
-
-    &--providers {
-      padding: 8px 5px 9px 5px;
+      margin: 0 0 5px 0;
     }
   }
 
@@ -206,21 +221,8 @@
     font-size: 20px;
     line-height: 28px;
 
-    margin: 0 0 0 -10px;
-    padding: 10px;
-
-    &--privacy {
-      padding: 14px 10px 10px 10px;
-    }
-
-    &--cost {
-      margin: 0 -15px 0 -5px;
-      padding: 10px 5px;
-    }
-
-    &--providers {
-      padding: 14px 10px 10px 10px;
-    }
+    margin: 0 0 10px 0;
+    padding: 0;
   }
 }
 

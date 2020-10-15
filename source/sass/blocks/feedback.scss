@@ -13,6 +13,10 @@
   @media (max-width: $desktop-width) {
     padding: 80px 0 79px 0;
   }
+
+  @media (max-width: $tablet-width) {
+    padding: 30px 0 19px 0;
+  }
 }
 
 .feedback fieldset {
@@ -71,7 +75,13 @@
   @media (max-width: $tablet-width) {
     align-items: center;
 
+    padding: 0;
+
     width: 100%;
+
+    &--block {
+      width: 100%;
+    }
   }
 }
 
@@ -129,15 +139,13 @@
     line-height: 45px;
 
     margin: 0 0 15px 0;
-    padding: 0;
   }
 
   @media (max-width: $tablet-width) {
     font-size: 28px;
     line-height: 39px;
 
-    // padding: 30px 10px 10px 0;
-    margin: 0;
+    margin: 0 0 14px 0;
     padding: 0;
   }
 }
@@ -160,7 +168,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    // padding: 5px 15px 11px 0;
+    margin: 0 0 12px 0;
     padding: 0;
   }
 }

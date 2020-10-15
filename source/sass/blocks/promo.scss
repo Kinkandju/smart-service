@@ -9,7 +9,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    padding: 226px 0 70px 0;
+    padding: 210px 0 70px 0;
   }
 }
 
@@ -32,7 +32,9 @@
   }
 
   @media (max-width: $tablet-width) {
-    // padding: 226px 0 70px 0;
+    left: 0;
+
+    padding: 0;
 
     width: 100%;
   }
@@ -77,6 +79,8 @@
     @media (max-width: $tablet-width) {
       font-size: 40px;
       line-height: 47px;
+
+      margin: 0 0 28px 0;
     }
   }
 
@@ -106,7 +110,7 @@
       font-size: 16px;
       line-height: 25px;
 
-      margin: 28px 0 39px 0;
+      margin: 0 0 39px 0;
       padding-left: 48px;
     }
   }
@@ -185,22 +189,11 @@
       display: block;
 
       margin: 0;
-      padding: 16px 30px 16px 29px;
+      padding: 16px 25px;
+
+      max-width: 286px;
     }
   }
-
-  // @media (max-width: $tablet-width) {
-  //   &--tablet {
-  //     display: none;
-  //   }
-  //
-  //   &--mobil {
-  //     display: block;
-  //
-  //     margin: 0;
-  //     padding: 16px 30px 16px 29px;
-  //   }
-  // }
 }
 
 .promo__scroll-down {
