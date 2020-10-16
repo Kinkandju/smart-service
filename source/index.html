@@ -6,9 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Учебный проект Акселератора - Smart Device">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="fonts/PTMono-Regular.woff" as="font" crossorigin="anonymous" rel="preload">
   <link href="fonts/PTMono-Regular.woff2" as="font" crossorigin="anonymous" rel="preload">
+  <link href="fonts/RobotoCondensed-Bold.woff" as="font" crossorigin="anonymous" rel="preload">
   <link href="fonts/RobotoCondensed-Bold.woff2" as="font" crossorigin="anonymous" rel="preload">
+  <link href="fonts/RobotoCondensed-Regular.woff" as="font" crossorigin="anonymous" rel="preload">
   <link href="fonts/RobotoCondensed-Regular.woff2" as="font" crossorigin="anonymous" rel="preload">
+  <link href="fonts/Roboto-Medium.woff" as="font" crossorigin="anonymous" rel="preload">
   <link href="fonts/Roboto-Medium.woff2" as="font" crossorigin="anonymous" rel="preload">
   <link href="css/style.min.css" rel="stylesheet">
   <title>Smart Device - умные технологии</title>
@@ -17,8 +21,10 @@
 <body>
   <header class="page-header">
     <div class="page-header__layout-container">
-      <img class="page-header__image--polygons" src="img/polygons_group.svg" width="671" height="641" alt="Декоративный элемент. Группа треугольников">
-      <img class="page-header__image--ic" src="img/ic_desktop_1x.png" width="705" height="515" alt="Печатные платы">
+      <picture>
+        <source type="image/webp" srcset="img/ic_desktop_1x.webp 1x, img/ic_desktop_2x.webp 2x">
+        <img class="page-header__image" src="img/ic_desktop_1x.png" width="705" height="515" srcset="img/ic_desktop_1x.png 1x, img/ic_desktop_2x.png 2x" alt="Печатные платы">
+      </picture>
 
       <div class="page-header__container">
         <a class="page-header__logo-group logo-group" href="index.html">
@@ -175,11 +181,11 @@
     </section>
 
     <section class="feedback" id="feedback">
-      <img class="feedback__image feedback__image--polygons-right" src="img/polygons_group-right.svg" width="509" height="669" alt="Декоративный элемент. Группа треугольников">
-
       <div class="feedback__layout-container">
-        <img class="feedback__image feedback__image--polygons" src="img/polygons_group.svg" width="671" height="641" alt="Декоративный элемент. Группа треугольников">
-        <img class="feedback__image feedback__image--airplane" src="img/paper_airplane_desktop_1x.png" srcset="img/paper_airplane_desktop_2x.png 2x" width="511" height="288" alt="Декоративный элемент: бумажный самолётик">
+        <picture>
+          <source type="image/webp" srcset="img/paper_airplane_desktop_1x.webp 1x, img/paper_airplane_desktop_2x.webp 2x">
+          <img class="feedback__image" src="img/paper_airplane_desktop_1x.png" width="511" height="288" srcset="img/paper_airplane_desktop_1x.png 1x, img/paper_airplane_desktop_2x.png 2x" alt="Декоративный элемент: бумажный самолётик">
+        </picture>
 
         <div class="feedback__container">
           <div class="feedback__container--block">
@@ -361,17 +367,17 @@
             <div class="modal__container--id">
               <div class="modal__name">
                 <label class="visually-hidden" for="name">Ваше имя:</label>
-                <input class="modal__name--input" type="text" id="name" name="name" placeholder="Имя" autocomplete="off" required="">
+                <input class="modal__name--input" type="text" id="name" name="user_name" placeholder="Имя" autocomplete="off" required="">
               </div>
 
               <div class="modal__tel">
                 <label class="visually-hidden" for="tel">Ваш телефон:</label>
-                <input class="modal__tel--input" type="tel" id="tel" name="tel" placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" maxlength="18" autocomplete="off" required="">
+                <input class="modal__tel--input" type="tel" id="tel" name="user_tel" placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" maxlength="18" autocomplete="off" required="">
               </div>
 
               <div class="modal__question">
                 <label class="visually-hidden" for="tel">Ваш вопрос:</label>
-                <textarea class="modal__question--input" id="message" name="message" cols="30" rows="7" placeholder="Ваш вопрос" required=""></textarea>
+                <textarea class="modal__question--input" id="message" name="user_message" cols="30" rows="7" placeholder="Ваш вопрос" required=""></textarea>
               </div>
             </div>
 
@@ -390,12 +396,13 @@
       </div>
     </section>
 
-    <div class="overlay overlay--hidden"></div>
+    <!-- <div class="overlay overlay--hidden"></div> -->
   </footer>
 
   <div style="display:none">
     <include src="build/img/sprite.svg"></include>
   </div>
+
   <script src="js/main.js"></script>
 
 </body>

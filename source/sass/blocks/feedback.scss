@@ -5,6 +5,10 @@
   padding: 91px 0 88px 0;
 
   background-color: $blue;
+  background-image: url("../img/polygons_group-right.svg"), url("../img/polygons_group.svg");
+  background-size: 359px 669px, 671px 641px;
+  background-repeat: no-repeat, no-repeat;
+  background-position: 101% 25px, 14.5% -50px;
 
   z-index: 4;
 
@@ -12,6 +16,8 @@
 
   @media (max-width: $desktop-width) {
     padding: 80px 0 79px 0;
+
+    background-image: none, none;
   }
 
   @media (max-width: $tablet-width) {
@@ -87,27 +93,11 @@
 
 .feedback__image {
   position: absolute;
+  top: 14%;
+  right: 55.4%;
 
-  &--airplane {
-    top: 14%;
-    right: 55.4%;
-
-    object-fit: contain;
-    object-position: 50% 50%;
-  }
-
-  &--polygons {
-    top: -30%;
-    right: 56.4%;
-  }
-
-  &--polygons-right {
-    top: 5.3%;
-    right: -1.4%;
-
-    width: 19%;
-    height: auto;
-  }
+  object-fit: contain;
+  object-position: 50% 50%;
 
   @media (max-width: $desktop-width) {
     display: none;

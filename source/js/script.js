@@ -106,7 +106,7 @@
     }
   });
 
-  var linkAnchors = document.querySelectorAll('.description-of-goods__link, .description-of-goods__scroll-down');
+  var linkAnchors = document.querySelectorAll('.promo__link, .promo__scroll-down');
 
   for (var i = 0; i < linkAnchors.length; i++) {
     linkAnchors[i].addEventListener('click', function (evt) {

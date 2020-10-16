@@ -3,10 +3,10 @@
   padding: 0;
 
   background-color: $dark-blue;
-  background-image: url("../img/background_image_desktop_1x.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 0 0;
+  background-image: url("../img/background_image_desktop_1x.png"), url("../img/polygons_group.svg");
+  background-size: cover, 671px 641px;
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 0, 83.3% 50%;
 
   overflow: hidden;
 
@@ -15,13 +15,13 @@
   }
 
   @media (max-width: $desktop-width) {
-    background-size: cover;
-    background-position: 0 0;
+    background-size: cover, 528px 505px;
+    background-position: 0 0, 445px -18%;
   }
 
   @media (max-width: $tablet-width) {
-    background-size: cover;
-    background-position: 0 0;
+    background-size: cover, 505px 482px;
+    background-position: 0 0, 155px -25%;
   }
 }
 
@@ -65,56 +65,28 @@
 }
 
 .page-header__image {
-  &--polygons {
-    position: absolute;
-    top: 118px;
-    left: 55%;
-  }
+  position: absolute;
+  top: 258px;
+  left: 55.4%;
 
-  &--ic {
-    position: absolute;
-    top: 258px;
-    left: 55.4%;
+  width: 705px;
+  height: 515px;
 
-    width: 705px;
-    height: 515px;
-
-    object-fit: cover;
-  }
+  object-fit: cover;
 
   @media (max-width: $desktop-width) {
-    &--polygons {
-      top: -38px;
-      left: 57.5%;
+    top: 115px;
+    left: 66.5%;
 
-      width: 528px;
-      height: 505px;
-    }
-
-    &--ic {
-      top: 115px;
-      left: 66.5%;
-
-      width: 465px;
-      height: 340px;
-    }
+    width: 465px;
+    height: 340px;
   }
 
   @media (max-width: $tablet-width) {
-    &--polygons {
-      top: -46px;
-      left: 47.6%;
+    top: 93px;
+    left: 8%;
 
-      width: 505px;
-      height: 482px;
-    }
-
-    &--ic {
-      top: 93px;
-      left: 8%;
-
-      width: 301px;
-      height: 220px;
-    }
+    width: 301px;
+    height: 220px;
   }
 }

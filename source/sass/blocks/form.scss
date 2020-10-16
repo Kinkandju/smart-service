@@ -5,6 +5,10 @@
   width: 100%;
   max-width: 570px;
 
+  background-color: $blue;
+
+  z-index: 5;
+
   @media (max-width: $desktop-width) {
     width: 100%;
     min-width: 100%;
