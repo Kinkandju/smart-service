@@ -1,76 +1,18 @@
 .modal {
+  display: none;
   position: fixed;
-  top: 50%;
-  left: 50%;
+  top: 0;
+  left: 0;
 
   margin: 0;
   padding: 0;
 
-  width: 490px;
+  width: 100%;
+  height: 100%;
 
-  transform: translate(-50%, -50%);
+  z-index: 100;
 
-  background-color: $blue;
-
-  z-index: 10;
-
-  &--hidden {
-    display: none;
-  }
-
-  &--show {
-    display: block;
-
-    @keyframes bounce {
-      0% {
-        transform: translate(-50%, -50%) translate(0, -2000px);
-        opacity: 0;
-      }
-
-      70% {
-        transform: translate(-50%, -50%) translate(0, 30px);
-        opacity: 0.9;
-      }
-
-      80% {
-        transform: translate(-50%, -50%) translate(0, -20px);
-        opacity: 1;
-      }
-
-      100% {
-        transform: translate(-50%, -50%) translate(0, 0);
-        opacity: 1;
-      }
-    }
-
-    animation: bounce 0.6s;
-  }
-
-  &--error {
-    @keyframes shake {
-      0%,
-      100% {
-        transform: translate(-50%, -50%) translateX(0);
-      }
-
-      10%,
-      30%,
-      50%,
-      70%,
-      90% {
-        transform: translate(-50%, -50%) translateX(-10px);
-      }
-
-      20%,
-      40%,
-      60%,
-      80% {
-        transform: translate(-50%, -50%) translateX(10px);
-      }
-    }
-
-    animation: shake 0.6s;
-  }
+  background-color: rgba(0, 0, 0, 0.5);
 
   @media (max-width: $desktop-width) {
     display: none;
@@ -81,15 +23,28 @@
   }
 }
 
+.modal--active .modal {
+  display: block;
+}
+
+.modal--active {
+  overflow: hidden;
+}
+
 .modal fieldset {
   margin: 0;
   padding: 0;
 
   border: none;
+
+  background-color: $blue;
 }
 
 .modal__container {
-  position: relative;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -97,12 +52,42 @@
   margin: 0;
   padding: 30px 40px;
 
+  width: 490px;
+
+  transform: translate(-50%, -50%);
+
+  background-color: $blue;
+
   &--id,
   &--send {
     position: static;
 
     padding: 0;
   }
+
+  @keyframes bounce {
+    0% {
+      transform: translate(-50%, -50%) translate(0, -2000px);
+      opacity: 0;
+    }
+
+    70% {
+      transform: translate(-50%, -50%) translate(0, 30px);
+      opacity: 0.9;
+    }
+
+    80% {
+      transform: translate(-50%, -50%) translate(0, -20px);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translate(-50%, -50%) translate(0, 0);
+      opacity: 1;
+    }
+  }
+
+  animation: bounce 0.6s;
 }
 
 .modal__name,

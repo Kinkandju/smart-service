@@ -350,13 +350,13 @@
       </div>
     </section>
 
-    <section class="page-footer__modal modal modal--hidden">
+    <section class="page-footer__modal modal">
       <div class="modal__container">
         <h2 class="modal__title">Закажите звонок</h2>
         <p class="modal__text">
           Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
         </p>
-        <button class="modal__button--close" type="button" name="Закрыть">
+        <button class="modal__button--close" type="button" aria-label="Закрыть форму" tabindex="3">
           <span></span>
         </button>
 
@@ -367,25 +367,25 @@
             <div class="modal__container--id">
               <div class="modal__name">
                 <label class="visually-hidden" for="name">Ваше имя:</label>
-                <input class="modal__name--input" type="text" id="name" name="user_name" placeholder="Имя" autocomplete="off" required="">
+                <input class="modal__name--input" type="text" id="name" name="user_name" placeholder="Имя" autocomplete="off" required="" tabindex="1">
               </div>
 
               <div class="modal__tel">
                 <label class="visually-hidden" for="tel">Ваш телефон:</label>
-                <input class="modal__tel--input" type="tel" id="tel" name="user_tel" placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" maxlength="18" autocomplete="off" required="">
+                <input class="modal__tel--input" type="tel" id="tel" name="user_tel" placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" maxlength="18" autocomplete="off" required="" tabindex="1">
               </div>
 
               <div class="modal__question">
                 <label class="visually-hidden" for="tel">Ваш вопрос:</label>
-                <textarea class="modal__question--input" id="message" name="user_message" cols="30" rows="7" placeholder="Ваш вопрос" required=""></textarea>
+                <textarea class="modal__question--input" id="message" name="user_message" cols="30" rows="7" placeholder="Ваш вопрос" required="" tabindex="1"></textarea>
               </div>
             </div>
 
             <div class="modal__container--send">
-              <button class="modal__button" type="submit">Отправить</button>
+              <button class="modal__button" type="submit" tabindex="2">Отправить</button>
 
               <div class="modal__block">
-                <input class="modal__checkbox visually-hidden" type="checkbox" id="checkbox" name="checkbox" checked="" required="">
+                <input class="modal__checkbox visually-hidden" type="checkbox" id="checkbox" name="checkbox" checked="" required="" tabindex="1">
                 <label class="modal__checkbox-label" for="checkbox">
                   Я согласен на обработку персональных данных
                 </label>
