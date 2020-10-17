@@ -2,6 +2,14 @@
 
 (function () {
 
+  var PHONE_INPUTS = ['tel', 'user_tel'];
+
+  PHONE_INPUTS.forEach(function (input) {
+    IMask(document.getElementById(input), {
+      mask: '+{7} (000) 000-00-00'
+    });
+  });
+
   var ESC = 27;
 
   var popup = document.querySelector('.modal');
@@ -150,14 +158,14 @@
 
   var closeList = function (navigation, button) {
     navigation.classList.add('info__navigation-data--closed');
-    button.classList.remove('info__navigation-button--closed');
-    button.classList.add('info__navigation-button--opened');
+    button.classList.remove('info__navigation-button--opened');
+    button.classList.add('info__navigation-button--closed');
   };
 
   var openList = function (navigation, button) {
     navigation.classList.remove('info__navigation-data--closed');
-    button.classList.remove('info__navigation-button--opened');
-    button.classList.add('info__navigation-button--closed');
+    button.classList.remove('info__navigation-button--closed');
+    button.classList.add('info__navigation-button--opened');
   };
 
   var accordionLists = document.querySelectorAll('.info__navigation-data, .info__location');
@@ -175,9 +183,9 @@
           var ancestor = evt.currentTarget.parentNode;
 
           if (button.classList.contains('info__navigation-button')) {
-            if (button.classList.contains('info__navigation-button--closed')) {
+            if (button.classList.contains('info__navigation-button--opened')) {
               closeList(ancestor, button);
-            } else if (button.classList.contains('info__navigation-button--opened')) {
+            } else if (button.classList.contains('info__navigation-button--closed')) {
               accordion(accordionLists, 'closeall');
               openList(ancestor, button);
             }

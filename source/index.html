@@ -41,7 +41,7 @@
             <li class="contacts__item">
               <a href="mailto:info@sd.ru">
                 <svg class="contacts__image--mail" width="19" height="14">
-                  <use xlink:href="#icon-mail">
+                  <use xlink:href="img/sprite.svg#icon-mail">
                 </svg>
                 <span class="visually-hidden">Адрес электронной почты</span>
                 <span class="contacts__mail">info@sd.ru</span>
@@ -50,7 +50,7 @@
             <li class="contacts__item">
               <a href="tel:+74950005252">
                 <svg class="contacts__image--phone" width="18" height="18">
-                  <use xlink:href="#icon-phone">
+                  <use xlink:href="img/sprite.svg#icon-phone">
                 </svg>
                 <span class="visually-hidden">Контактный телефон</span>
                 <span class="contacts__phone">+7 (495) 000 52 52</span>
@@ -96,7 +96,7 @@
         <ul class="advantages__list">
           <li class="advantages__item advantages__item--deadlines">
             <svg class="advantages__image advantages__image--stopwatch" width="29" height="35" viewBox="0 0 29 35">
-              <use xlink:href="#icon-stopwatch">
+              <use xlink:href="img/sprite.svg#icon-stopwatch">
             </svg>
             <h3 class="advantages__title">Оперативные сроки</h3>
             <p class="advantages__text">
@@ -105,7 +105,7 @@
           </li>
           <li class="advantages__item advantages__item--providers">
             <svg class="advantages__image advantages__image--hired" width="35" height="35" viewBox="0 0 35 35">
-              <use xlink:href="#icon-hired">
+              <use xlink:href="img/sprite.svg#icon-hired">
             </svg>
             <h3 class="advantages__title advantages__title--providers">Крупные поставщики</h3>
             <p class="advantages__text">
@@ -114,7 +114,7 @@
           </li>
           <li class="advantages__item advantages__item--privacy">
             <svg class="advantages__image advantages__image--detective" width="36" height="31" viewBox="0 0 36 31">
-              <use xlink:href="#icon-detective">
+              <use xlink:href="img/sprite.svg#icon-detective">
             </svg>
             <h3 class="advantages__title advantages__title--privacy">Полная конфиденциальность</h3>
             <p class="advantages__text">
@@ -123,7 +123,7 @@
           </li>
           <li class="advantages__item advantages__item--cost">
             <svg class="advantages__image advantages__image--tag" width="35" height="35" viewBox="0 0 35 35">
-              <use xlink:href="#icon-tag">
+              <use xlink:href="img/sprite.svg#icon-tag">
             </svg>
             <h3 class="advantages__title advantages__title--cost">Персонализация стоимости</h3>
             <p class="advantages__text">
@@ -218,7 +218,7 @@
                 <button class="form__button" type="submit">Задать вопрос</button>
 
                 <div class="form__block">
-                  <input class="form__checkbox visually-hidden" type="checkbox" id="checkbox" name="checkbox" checked required>
+                  <input class="form__checkbox visually-hidden" type="checkbox" id="checkbox" name="checkbox" required>
                   <label class="form__checkbox-label" for="checkbox">
                     Я согласен на обработку персональных данных
                   </label>
@@ -255,7 +255,7 @@
                 <li class="social__item">
                   <a href="#">
                     <svg class="social__image--fb" width="27" height="27">
-                      <use xlink:href="#icon-facebook">
+                      <use xlink:href="img/sprite.svg#icon-facebook">
                     </svg>
                     <span class="visually-hidden">Ссылка на страницу в Facebook</span>
                   </a>
@@ -263,7 +263,7 @@
                 <li class="social__item">
                   <a href="#">
                     <svg class="social__image--ok" width="27" height="27">
-                      <use xlink:href="#icon-ok">
+                      <use xlink:href="img/sprite.svg#icon-ok">
                     </svg>
                     <span class="visually-hidden">Ссылка на страницу в Одноклассники</span>
                   </a>
@@ -271,7 +271,7 @@
                 <li class="social__item">
                   <a href="#">
                     <svg class="social__image--vk" width="27" height="27">
-                      <use xlink:href="#icon-vk">
+                      <use xlink:href="img/sprite.svg#icon-vk">
                     </svg>
                     <span class="visually-hidden">Ссылка на страницу в Вконтакте</span>
                   </a>
@@ -284,7 +284,7 @@
             <nav class="info__navigation-data info__navigation-data--closed">
               <div class="info__navigation-container">
                 <h3 class="info__navigation-title">Разделы сайта</h3>
-                <button class="info__navigation-button info__navigation-button--opened" type="button" name="Открыть меню">
+                <button class="info__navigation-button info__navigation-button--closed" type="button" name="Открыть меню">
                   <span></span>
                 </button>
               </div>
@@ -316,7 +316,7 @@
             <div class="info__location">
               <div class="info__navigation-container">
                 <h3 class="info__navigation-title">Наш офис</h3>
-                <button class="info__navigation-button info__navigation-button--closed" type="button" name="Открыть меню">
+                <button class="info__navigation-button info__navigation-button--opened" type="button" name="Открыть меню">
                   <span></span>
                 </button>
               </div>
@@ -367,17 +367,17 @@
             <div class="modal__container--id">
               <div class="modal__name">
                 <label class="visually-hidden" for="name">Ваше имя:</label>
-                <input class="modal__name--input" type="text" id="name" name="user_name" placeholder="Имя" autocomplete="off" required tabindex="1">
+                <input class="modal__name--input" type="text" id="user_name" name="user_name" placeholder="Имя" autocomplete="off" required tabindex="1">
               </div>
 
               <div class="modal__tel">
                 <label class="visually-hidden" for="tel">Ваш телефон:</label>
-                <input class="modal__tel--input" type="tel" id="tel" name="user_tel" placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" maxlength="18" autocomplete="off" required tabindex="1">
+                <input class="modal__tel--input" type="tel" id="user_tel" name="user_tel" placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" maxlength="18" autocomplete="off" required tabindex="1">
               </div>
 
               <div class="modal__question">
                 <label class="visually-hidden" for="tel">Ваш вопрос:</label>
-                <textarea class="modal__question--input" id="message" name="user_message" cols="30" rows="7" placeholder="Ваш вопрос" required tabindex="1"></textarea>
+                <textarea class="modal__question--input" id="user_message" name="user_message" cols="30" rows="7" placeholder="Ваш вопрос" required tabindex="1"></textarea>
               </div>
             </div>
 
@@ -385,8 +385,8 @@
               <button class="modal__button" type="submit" tabindex="2">Отправить</button>
 
               <div class="modal__block">
-                <input class="modal__checkbox visually-hidden" type="checkbox" id="checkbox" name="checkbox" checked required tabindex="1">
-                <label class="modal__checkbox-label" for="checkbox">
+                <input class="modal__checkbox visually-hidden" type="checkbox" id="user_checkbox" name="user_checkbox" required tabindex="1">
+                <label class="modal__checkbox-label" for="user_checkbox">
                   Я согласен на обработку персональных данных
                 </label>
               </div>
@@ -395,14 +395,11 @@
         </form>
       </div>
     </section>
-
-    <!-- <div class="overlay overlay--hidden"></div> -->
   </footer>
 
-  <div style="display:none">
-    <include src="build/img/sprite.svg"></include>
-  </div>
-
+  <script src="js/svg4everybody.js"></script>
+  <script>svg4everybody();</script>
+  <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 
 </body>
