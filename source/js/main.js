@@ -3,6 +3,8 @@
 (function () {
 
   var PHONE_INPUTS = ['tel', 'user_tel'];
+  var ESC = 27;
+  var DEVICE_SIZE = 768;
 
   PHONE_INPUTS.forEach(function (input) {
     IMask(document.getElementById(input), {
@@ -10,7 +12,40 @@
     });
   });
 
-  var ESC = 27;
+  var classListAdd = function (element, className) {
+    element.classList.add(className);
+  };
+
+  var classListRemove = function (element, className) {
+    element.classList.remove(className);
+  };
+
+  var isToggleActive = function (title) {
+    var titles = Array.from(document.querySelectorAll(title));
+
+    titles.forEach(function (element) {
+      classListAdd(element, 'navigation__title--active');
+      window.addEventListener('resize', function () {
+        var action = innerWidth < DEVICE_SIZE ? classListAdd : classListRemove;
+        action(element, 'navigation__title--active');
+      });
+
+      element.addEventListener('click', function () {
+        if (innerWidth < DEVICE_SIZE) {
+          var action = classListAdd;
+          if (element.classList.contains('navigation__title--active')) {
+            titles.forEach(function (elem) {
+              classListAdd(elem, 'navigation__title--active');
+            });
+            action = classListRemove;
+          }
+          action(element, 'navigation__title--active');
+        }
+      });
+    });
+  };
+
+  isToggleActive('.navigation__title');
 
   var popup = document.querySelector('.modal');
   var form = popup.querySelector('.modal__form');
@@ -155,49 +190,5 @@
       getScrollSpeed(data);
     });
   }
-
-  var closeList = function (navigation, button) {
-    navigation.classList.add('info__navigation-data--closed');
-    button.classList.remove('info__navigation-button--opened');
-    button.classList.add('info__navigation-button--closed');
-  };
-
-  var openList = function (navigation, button) {
-    navigation.classList.remove('info__navigation-data--closed');
-    button.classList.remove('info__navigation-button--closed');
-    button.classList.add('info__navigation-button--opened');
-  };
-
-  var accordionLists = document.querySelectorAll('.info__navigation-data, .info__location');
-
-  var accordion = function (list, status) {
-    for (var j = 0; j < list.length; j++) {
-      var container = list[j];
-
-      if (status === 'initial') {
-        var toggle = container.querySelector('.info__navigation-container');
-        toggle.addEventListener('click', function (evt) {
-          evt.preventDefault();
-
-          var button = evt.target;
-          var ancestor = evt.currentTarget.parentNode;
-
-          if (button.classList.contains('info__navigation-button')) {
-            if (button.classList.contains('info__navigation-button--opened')) {
-              closeList(ancestor, button);
-            } else if (button.classList.contains('info__navigation-button--closed')) {
-              accordion(accordionLists, 'closeall');
-              openList(ancestor, button);
-            }
-          }
-        });
-      }
-      if (status === 'closeall') {
-        closeList(container, container.querySelector('.info__navigation-button'));
-      }
-    }
-  };
-
-  accordion(accordionLists, 'initial');
 
 })();

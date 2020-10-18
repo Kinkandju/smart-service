@@ -153,7 +153,7 @@
   text-transform: uppercase;
 
   margin: 0 0 0 98px;
-  padding: 16px 43px;
+  padding: 16px 40px;
 
   max-width: 407px;
 
@@ -169,29 +169,31 @@
     background-color: $white;
   }
 
-  @media (max-width: $desktop-width) {
-    margin: 0 0 0 52px;
-    padding: 16px 29px;
-  }
-
   &--tablet {
     display: block;
-
-    @media (max-width: $desktop-width) {
-      padding: 16px 20px;
-
-      max-width: 380px;
-    }
-
-    @media (max-width: $tablet-width) {
-      display: none;
-    }
   }
 
   &--mobil {
     display: none;
+  }
 
-    @media (max-width: $tablet-width) {
+  @media (max-width: $desktop-width) {
+    margin: 0 0 0 52px;
+    padding: 16px 29px;
+
+    &--tablet {
+      padding: 16px 20px;
+
+      max-width: 380px;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    &--tablet {
+      display: none;
+    }
+
+    &--mobil {
       display: block;
 
       margin: 0;
