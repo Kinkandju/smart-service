@@ -54,7 +54,7 @@
     width: 94%;
   }
 
-  &--header {
+  h3 {
     font-family: $font--roboto-bold;
     font-style: normal;
     font-weight: bold;
@@ -84,7 +84,7 @@
     }
   }
 
-  &--text {
+  p {
     position: relative;
 
     font-family: $font--pt-mono;
@@ -115,7 +115,7 @@
     }
   }
 
-  &--text::before {
+  p::before {
     position: absolute;
     top: 17px;
     left: 4px;

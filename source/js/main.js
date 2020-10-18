@@ -2,15 +2,15 @@
 
 (function () {
 
-  var PHONE_INPUTS = ['tel', 'user_tel'];
+  // var PHONE_INPUTS = ['tel', 'user_tel'];
   var ESC = 27;
   var DEVICE_SIZE = 768;
 
-  PHONE_INPUTS.forEach(function (input) {
-    IMask(document.getElementById(input), {
-      mask: '+{7} (000) 000-00-00'
-    });
-  });
+  // PHONE_INPUTS.forEach(function (input) {
+  //   IMask(document.getElementById(input), {
+  //     mask: '+{7} (000) 000-00-00'
+  //   });
+  // });
 
   var classListAdd = function (element, className) {
     element.classList.add(className);
