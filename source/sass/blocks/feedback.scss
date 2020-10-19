@@ -72,10 +72,6 @@
     padding: 0 64px;
 
     width: 100%;
-
-    &--block {
-      align-self: flex-start;
-    }
   }
 
   @media (max-width: $tablet-width) {
@@ -84,10 +80,16 @@
     padding: 0;
 
     width: 100%;
+  }
+}
 
-    &--block {
-      width: 100%;
-    }
+.feedback__group {
+  @media (max-width: $desktop-width) {
+    align-self: flex-start;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
   }
 }
 

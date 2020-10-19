@@ -49,9 +49,9 @@
 
   var popup = document.querySelector('.modal');
   var form = popup.querySelector('.modal__form');
-  var nameInput = popup.querySelector('.modal__name--input');
-  var telInput = popup.querySelector('.modal__tel--input');
-  var messageInput = popup.querySelector('.modal__question--input');
+  var nameInput = popup.querySelector('.modal__name-input');
+  var telInput = popup.querySelector('.modal__tel-input');
+  var messageInput = popup.querySelector('.modal__question-input');
 
   var isStorageSupport = true;
   var storageName = '';
@@ -88,7 +88,7 @@
         if (popup) {
           document.body.classList.add('modal--active');
 
-          var username = document.querySelector('.modal__name--input');
+          var username = document.querySelector('.modal__name-input');
           username.focus();
 
           localStorage.setItem('nameInput', nameInput.value);
@@ -106,7 +106,7 @@
   };
 
   var closePopup = function () {
-    var buttonClose = popup.querySelector('.modal__button--close');
+    var buttonClose = popup.querySelector('.modal__button-close');
 
     if (buttonClose) {
       buttonClose.addEventListener('click', function () {

@@ -14,6 +14,14 @@
 
   background-color: rgba(0, 0, 0, 0.5);
 
+  &--active .modal {
+    display: block;
+  }
+
+  &--active {
+    overflow: hidden;
+  }
+
   @media (max-width: $desktop-width) {
     display: none;
   }
@@ -21,14 +29,6 @@
   @media (max-width: $tablet-width) {
     display: none;
   }
-}
-
-.modal--active .modal {
-  display: block;
-}
-
-.modal--active {
-  overflow: hidden;
 }
 
 .modal fieldset {
@@ -58,13 +58,6 @@
 
   background-color: $blue;
 
-  &--id,
-  &--send {
-    position: static;
-
-    padding: 0;
-  }
-
   @keyframes bounce {
     0% {
       transform: translate(-50%, -50%) translate(0, -2000px);
@@ -90,50 +83,53 @@
   animation: bounce 0.6s;
 }
 
-.modal__name,
-.modal__tel,
-.modal__question {
-  &--input {
-    font-family: $font--pt-mono;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 22px;
+.modal__container-inputs,
+.modal__container-send {
+  position: static;
 
-    margin: 0 0 30px 0;
-    padding: 14px 25px 16px 25px;
+  padding: 0;
+}
 
-    width: 100%;
+.modal__name-input,
+.modal__tel-input,
+.modal__question-input {
+  font-family: $font--pt-mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
 
-    border: none;
+  margin: 0 0 30px 0;
+  padding: 14px 25px 16px 25px;
 
-    box-sizing: border-box;
+  width: 100%;
 
-    overflow: hidden;
-    text-overflow: ellipsis;
+  border: none;
 
-    outline: none;
+  box-sizing: border-box;
 
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  outline: none;
+
+  color: $white;
+  background-color: $transparent-white;
+
+  &:hover,
+  &:focus {
+    background-color: $light-white;
+  }
+
+  &::placeholder {
     color: $white;
-    background-color: $transparent-white;
-
-    &:hover,
-    &:focus {
-      background-color: $light-white;
-    }
-
-    &::placeholder {
-      color: $white;
-    }
   }
 }
 
-.modal__question {
-  &--input {
-    margin: 0 0 27px 0;
+.modal__question-input {
+  margin: 0 0 27px 0;
 
-    max-height: 104px;
-  }
+  max-height: 104px;
 }
 
 .modal__title {
@@ -190,64 +186,64 @@
     color: $blue;
     background-color: $white;
   }
+}
 
-  &--close {
-    position: absolute;
-    top: 0;
-    right: 15px;
+.modal__button-close {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  display: flex;
+  justify-content: center;
+
+  margin: 0 -15px;
+  padding: 15px;
+
+  width: 29px;
+  height: 29px;
+
+  box-sizing: content-box;
+
+  cursor: pointer;
+
+  border: none;
+
+  background-color: $blue;
+
+  span {
+    position: relative;
     display: flex;
-    justify-content: center;
+    align-self: center;
 
-    margin: 0 -15px;
-    padding: 15px;
-
-    width: 29px;
-    height: 29px;
-
-    box-sizing: content-box;
-
-    cursor: pointer;
-
-    border: none;
+    width: 19px;
+    height: 19px;
 
     background-color: $blue;
 
-    span {
-      position: relative;
-      display: flex;
-      align-self: center;
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
 
-      width: 19px;
-      height: 19px;
+    &::before,
+    &::after {
+      position: absolute;
+      top: 8px;
+      left: -1px;
 
-      background-color: $blue;
+      width: 23px;
+      height: 1px;
 
-      &:hover,
-      &:focus {
-        opacity: 0.5;
-      }
+      content: "";
 
-      &::before,
-      &::after {
-        position: absolute;
-        top: 8px;
-        left: -1px;
+      background-color: $white;
+    }
 
-        width: 23px;
-        height: 1px;
+    &::before {
+      transform: rotate(45deg);
+    }
 
-        content: "";
-
-        background-color: $white;
-      }
-
-      &::before {
-        transform: rotate(45deg);
-      }
-
-      &::after {
-        transform: rotate(-45deg);
-      }
+    &::after {
+      transform: rotate(-45deg);
     }
   }
 }
