@@ -152,6 +152,11 @@
     background-position: 50% 50%;
     background-size: 100% auto;
 
+    &--productions,
+    &--montage {
+      padding: 42px 44px;
+    }
+
     &--components {
       margin: 0;
     }
@@ -166,8 +171,14 @@
     background-position: 50% 50%;
     background-size: 100% auto;
 
+    &--productions,
+    &--montage {
+      padding: 20px 36px;
+    }
+
     &--components {
       margin: 0;
+      padding: 30px 36px;
     }
   }
 }
@@ -178,10 +189,7 @@
 }
 
 .services__text {
-  position: absolute;
   display: block;
-  top: 50px;
-  left: 45px;
 
   margin: 0;
   padding: 0;
@@ -193,23 +201,6 @@
   line-height: 30px;
 
   color: $white;
-
-  @media (max-width: $desktop-width) {
-    top: 40px;
-
-    &--last {
-      top: 50px;
-    }
-  }
-
-  @media (max-width: $tablet-width) {
-    top: 20px;
-    left: 35px;
-
-    &--last {
-      top: 30px;
-    }
-  }
 }
 
 .services__decorative-block {
