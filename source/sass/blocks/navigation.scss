@@ -90,6 +90,11 @@
     background-color: $light-gray;
 
     border: none;
+
+    &:focus,
+    &:active {
+      pointer-events: none;
+    }
   }
 
   @media (max-width: $tablet-width) {

@@ -1,15 +1,15 @@
 .services {
   margin: 0;
-  padding: 90px 0 112px 0;
+  padding: 90px 0 97px 0;
 
   background-color: $dark-blue;
 
   @media (max-width: $desktop-width) {
-    padding: 50px 0 78px 0;
+    padding: 50px 0 48px 0;
   }
 
   @media (max-width: $tablet-width) {
-    padding: 50px 0 64px 0;
+    padding: 50px 0 34px 0;
   }
 }
 
@@ -50,7 +50,7 @@
   font-size: 36px;
   line-height: 51px;
 
-  margin: 0 0 36px 0;
+  margin: 0 0 51px 0;
   padding: 0 15px;
 
   color: $white;
@@ -79,29 +79,35 @@
 .services__list {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
 
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 15px;
 
   list-style: none;
 
   @media (max-width: $desktop-width) {
     flex-direction: column;
+
+    padding: 0;
   }
 
   @media (max-width: $tablet-width) {
     flex-direction: column;
+
+    padding: 0;
   }
 }
 
 .services__item {
   position: relative;
 
-  margin: 15px;
-  padding: 50px 44px;
+  margin: 0 2.5% 30px 0;
+  padding: 0;
 
-  width: 31.6%;
+  width: 31.3%;
   height: 620px;
 
   background-repeat: no-repeat;
@@ -110,6 +116,10 @@
 
   outline: none;
   overflow: hidden;
+
+  &:nth-child(3n) {
+    margin: 0 0 30px 0;
+  }
 
   &:hover,
   &:focus {
@@ -154,7 +164,9 @@
 
     &--productions,
     &--montage {
-      padding: 42px 44px;
+      .services__text {
+        padding: 42px 44px;
+      }
     }
 
     &--components {
@@ -173,12 +185,16 @@
 
     &--productions,
     &--montage {
-      padding: 20px 36px;
+      .services__text {
+        padding: 20px 36px;
+      }
     }
 
     &--components {
-      margin: 0;
-      padding: 30px 36px;
+      .services__text {
+        margin: 0;
+        padding: 30px 36px;
+      }
     }
   }
 }
@@ -192,7 +208,10 @@
   display: block;
 
   margin: 0;
-  padding: 0;
+  padding: 50px 44px;
+
+  width: 100%;
+  height: 100%;
 
   font-family: $font--roboto-regular;
   font-style: normal;
