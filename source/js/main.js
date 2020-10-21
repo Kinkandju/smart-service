@@ -49,9 +49,9 @@
 
   var popup = document.querySelector('.modal');
   var form = popup.querySelector('.modal__form');
-  var nameInput = popup.querySelector('.modal__name-input');
-  var telInput = popup.querySelector('.modal__tel-input');
-  var messageInput = popup.querySelector('.modal__question-input');
+  var nameInput = document.getElementById('user_name');
+  var telInput = document.getElementById('user_tel');
+  var messageInput = document.getElementById('user_message');
 
   var isStorageSupport = true;
   var storageName = '';
@@ -87,9 +87,7 @@
 
         if (popup) {
           document.body.classList.add('modal--active');
-
-          var username = document.querySelector('.modal__name-input');
-          username.focus();
+          nameInput.focus();
 
           localStorage.setItem('nameInput', nameInput.value);
           localStorage.setItem('telInput', telInput.value);

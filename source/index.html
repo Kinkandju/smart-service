@@ -28,7 +28,7 @@
       </picture>
 
       <div class="page-header__container">
-        <a class="page-header__logo-group logo-group" href="index.html">
+        <a class="page-header__logo-group logo-group" href="index.html" tabindex="1">
           <img class="logo-group__image" src="img/logo.svg" width="52" height="52" alt="Логотип компании">
 
           <div class="logo-group__text">
@@ -40,7 +40,7 @@
         <div class="page-header__contacts contacts">
           <ul class="contacts__list">
             <li class="contacts__item">
-              <a href="mailto:info@sd.ru">
+              <a href="mailto:info@sd.ru" tabindex="1">
                 <svg class="contacts__image contacts__image--mail" width="19" height="14" viewBox="0 0 19 14">
                   <use xlink:href="img/sprite.svg#icon-mail"></use>
                 </svg>
@@ -49,7 +49,7 @@
               </a>
             </li>
             <li class="contacts__item">
-              <a href="tel:+74950005252">
+              <a href="tel:+74950005252" tabindex="1">
                 <svg class="contacts__image contacts__image--phone" width="18" height="18" viewBox="0 0 18 18">
                   <use xlink:href="img/sprite.svg#icon-phone"></use>
                 </svg>
@@ -59,7 +59,7 @@
             </li>
           </ul>
 
-          <button class="contacts__open-modal">Заказать звонок</button>
+          <button class="contacts__open-modal" tabindex="1">Заказать звонок</button>
         </div>
       </div>
 
@@ -78,13 +78,13 @@
             </p>
           </div>
 
-          <a class="promo__link" href="#feedback">
+          <a class="promo__link" href="#feedback" tabindex="1">
             <span class="promo__feedback promo__feedback--tablet">Получить бесплатную консультацию</span>
             <span class="promo__feedback promo__feedback--mobil">Бесплатная консультация</span>
           </a>
         </div>
 
-        <a class="promo__scroll-down" href="#advantages">Скролл вниз</a>
+        <a class="promo__scroll-down" href="#advantages" tabindex="1">Скролл вниз</a>
       </section>
 
     </div>
@@ -147,7 +147,7 @@
               </p>
             </div>
 
-            <a class="about-company__button" href="">Подробнее</a>
+            <a class="about-company__button" href="#" tabindex="1">Подробнее</a>
           </div>
         </div>
       </section>
@@ -159,19 +159,19 @@
           <h2 class="services__title">Service Device предлагает следующие товары и услуги</h2>
           <ul class="services__list">
             <li class="services__item services__item--productions">
-              <a href="#">
+              <a href="#" tabindex="1">
                 <h3 class="services__text">Производство<br>печатных плат</h3>
                 <span class="services__decorative-block"></span>
               </a>
             </li>
             <li class="services__item services__item--montage">
-              <a href="#">
+              <a href="#" tabindex="1">
                 <h3 class="services__text">Монтаж печатных<br>плат</h3>
                 <span class="services__decorative-block"></span>
               </a>
             </li>
             <li class="services__item services__item--components">
-              <a href="#">
+              <a href="#" tabindex="1">
                 <h3 class="services__text services__text--last">Комплектующие<br>для светотехники</h3>
                 <span class="services__decorative-block"></span>
               </a>
@@ -202,25 +202,25 @@
               <div class="form__container">
                 <div class="form__name">
                   <label class="visually-hidden" for="name">Ваше имя:</label>
-                  <input class="form__name-input" type="text" id="name" name="name" placeholder="Имя" autocomplete="off" required>
+                  <input type="text" id="name" name="name" placeholder="Имя" autocomplete="off" tabindex="1" required>
                 </div>
 
                 <div class="form__tel">
                   <label class="visually-hidden" for="tel">Ваш телефон:</label>
-                  <input class="form__tel-input" type="tel" id="tel" name="tel" placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" maxlength="18" autocomplete="off" required>
+                  <input type="tel" id="tel" name="tel" placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" maxlength="18" autocomplete="off" tabindex="1" required>
                 </div>
 
                 <div class="form__question">
                   <label class="visually-hidden" for="message">Ваш вопрос:</label>
-                  <textarea class="form__question-input" id="message" name="message" cols="30" rows="7" placeholder="Ваш вопрос" required></textarea>
+                  <textarea id="message" name="message" cols="30" rows="7" placeholder="Ваш вопрос" tabindex="1" required></textarea>
                 </div>
               </div>
 
               <div class="form__container form__container--question">
-                <button class="form__button" type="submit">Задать вопрос</button>
+                <button class="form__button" type="submit" tabindex="2">Задать вопрос</button>
 
                 <div class="form__block">
-                  <input class="form__checkbox visually-hidden" type="checkbox" id="checkbox" name="checkbox" required>
+                  <input class="visually-hidden" type="checkbox" id="checkbox" name="checkbox" tabindex="1" required>
                   <label class="form__checkbox-label" for="checkbox">
                     Я согласен на обработку персональных данных
                   </label>
@@ -360,7 +360,7 @@
         <p class="modal__text">
           Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
         </p>
-        <button class="modal__button-close" type="button" aria-label="Закрыть форму" tabindex="3">
+        <button class="modal__button-close" type="button" aria-label="Закрыть форму" tabindex="5">
           <span></span>
         </button>
 
@@ -371,25 +371,25 @@
             <div class="modal__container-inputs">
               <div class="modal__name">
                 <label class="visually-hidden" for="user_name">Ваше имя:</label>
-                <input class="modal__name-input" type="text" id="user_name" name="user_name" placeholder="Имя" autocomplete="off" required tabindex="1">
+                <input type="text" id="user_name" name="user_name" placeholder="Имя" autocomplete="off" tabindex="3" required>
               </div>
 
               <div class="modal__tel">
                 <label class="visually-hidden" for="user_tel">Ваш телефон:</label>
-                <input class="modal__tel-input" type="tel" id="user_tel" name="user_tel" placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" maxlength="18" autocomplete="off" required tabindex="1">
+                <input type="tel" id="user_tel" name="user_tel" placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" maxlength="18" autocomplete="off" tabindex="3" required>
               </div>
 
               <div class="modal__question">
                 <label class="visually-hidden" for="user_message">Ваш вопрос:</label>
-                <textarea class="modal__question-input" id="user_message" name="user_message" cols="30" rows="7" placeholder="Ваш вопрос" required tabindex="1"></textarea>
+                <textarea id="user_message" name="user_message" cols="30" rows="7" placeholder="Ваш вопрос" tabindex="3" required></textarea>
               </div>
             </div>
 
             <div class="modal__container-send">
-              <button class="modal__button" type="submit" tabindex="2">Отправить</button>
+              <button class="modal__button" type="submit" tabindex="4">Отправить</button>
 
               <div class="modal__block">
-                <input class="modal__checkbox visually-hidden" type="checkbox" id="user_checkbox" name="user_checkbox" required tabindex="1">
+                <input class="visually-hidden" type="checkbox" id="user_checkbox" name="user_checkbox" tabindex="3" required>
                 <label class="modal__checkbox-label" for="user_checkbox">
                   Я согласен на обработку персональных данных
                 </label>

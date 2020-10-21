@@ -59,9 +59,9 @@
   }
 }
 
-.form__name-input,
-.form__tel-input,
-.form__question-input {
+.form__name input[type="text"],
+.form__tel input[type="tel"],
+.form__question textarea {
   font-family: $font--pt-mono;
   font-style: normal;
   font-weight: normal;
@@ -78,8 +78,8 @@
   color: $white;
   background-color: $transparent-white;
   border: none;
+  border-radius: none;
   box-shadow: none;
-  outline: none;
 
   &:hover,
   &:focus {
@@ -99,7 +99,7 @@
   }
 }
 
-.form__name-input {
+.form__name input[type="text"] {
   margin: 0 30px 40px 0;
 
   @media (max-width: $tablet-width) {
@@ -107,7 +107,7 @@
   }
 }
 
-.form__tel-input {
+.form__tel input[type="tel"] {
   margin: 0 0 40px 30px;
 
   @media (max-width: $tablet-width) {
@@ -115,7 +115,7 @@
   }
 }
 
-.form__question-input {
+.form__question textarea {
   margin: 0 0 40px 0;
   padding: 12px 16px;
 
@@ -165,12 +165,15 @@
   &:focus {
     color: $blue;
     background-color: $white;
+
+    box-shadow: 0 0 0 1px $white;
+    outline: none;
   }
 
   @media (max-width: $desktop-width) {
     padding: 14px 15px;
 
-    width: 68%;
+    width: 70%;
   }
 
   @media (max-width: $tablet-width) {
@@ -180,7 +183,7 @@
   }
 }
 
-.form__checkbox {
+.form__block input[type="checkbox"] {
   &:checked + .form__checkbox-label::after {
     position: absolute;
     top: 8%;
@@ -194,6 +197,10 @@
     background-image: url("../img/icon-checkbox.svg");
     background-repeat: no-repeat;
     background-position: 50%;
+  }
+
+  &:focus + .form__checkbox-label::before {
+    outline: 2px solid $white;
   }
 
   @media (max-width: $tablet-width) {
@@ -220,6 +227,8 @@
   width: 100%;
 
   color: $white;
+
+  cursor: pointer;
 
   opacity: 0.7;
 

@@ -90,9 +90,9 @@
   padding: 0;
 }
 
-.modal__name-input,
-.modal__tel-input,
-.modal__question-input {
+.modal__name input[type="text"],
+.modal__tel input[type="tel"],
+.modal__question textarea {
   font-family: $font--pt-mono;
   font-style: normal;
   font-weight: normal;
@@ -105,13 +105,12 @@
   width: 100%;
 
   border: none;
+  border-radius: none;
 
   box-sizing: border-box;
 
   overflow: hidden;
   text-overflow: ellipsis;
-
-  outline: none;
 
   color: $white;
   background-color: $transparent-white;
@@ -119,6 +118,9 @@
   &:hover,
   &:focus {
     background-color: $light-white;
+
+    box-shadow: 0 0 0 1px $white;
+    outline: none;
   }
 
   &::placeholder {
@@ -126,7 +128,7 @@
   }
 }
 
-.modal__question-input {
+.modal__question textarea {
   margin: 0 0 27px 0;
 
   max-height: 104px;
@@ -178,6 +180,8 @@
   color: $white;
   background-color: transparent;
 
+  cursor: pointer;
+
   border: 1px solid $white;
   border-radius: 5px;
 
@@ -185,6 +189,9 @@
   &:focus {
     color: $blue;
     background-color: $white;
+
+    box-shadow: 0 0 0 1px $white;
+    outline: none;
   }
 }
 
@@ -208,6 +215,12 @@
   border: none;
 
   background-color: $blue;
+
+  &:hover,
+  &:focus {
+    box-shadow: -1px 1px 0 1px $white;
+    outline: none;
+  }
 
   span {
     position: relative;
@@ -248,7 +261,7 @@
   }
 }
 
-.modal__checkbox {
+.modal__block input[type="checkbox"] {
   &:checked + .modal__checkbox-label::after {
     position: absolute;
     top: 4.5%;
@@ -262,6 +275,10 @@
     background-image: url("../img/icon-checkbox.svg");
     background-repeat: no-repeat;
     background-position: 50%;
+  }
+
+  &:focus + .modal__checkbox-label::before {
+    outline: 2px solid $white;
   }
 }
 
@@ -283,6 +300,8 @@
   max-width: 400px;
 
   color: $white;
+
+  cursor: pointer;
 
   opacity: 0.7;
 
