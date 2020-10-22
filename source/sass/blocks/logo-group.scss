@@ -10,6 +10,8 @@
 
   &:hover,
   &:focus {
+    outline: none;
+
     span {
       color: $blue;
     }

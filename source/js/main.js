@@ -20,6 +20,12 @@
     element.classList.remove(className);
   };
 
+  var toggles = document.querySelectorAll('.navigation__title');
+
+  toggles.forEach(function (toggle) {
+    classListRemove(toggle, 'navigation__title--nojs');
+  });
+
   var isToggleActive = function (title) {
     var titles = Array.from(document.querySelectorAll(title));
 

@@ -71,35 +71,26 @@
   display: block;
   position: relative;
 
+  font-family: $font--roboto-regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+
   margin: 0 0 25px 0;
   padding: 0;
 
-  button {
-    font-family: $font--roboto-regular;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 16px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+  color: $dark-blue;
+  background-color: $light-gray;
 
-    margin: 0;
-    padding: 0;
-
-    color: $dark-blue;
-    background-color: $light-gray;
-
-    border: none;
-
-    &:focus,
-    &:active {
-      pointer-events: none;
-    }
-  }
+  border: none;
 
   @media (max-width: $tablet-width) {
     margin: 0;
-    padding: 30px 17px 27px 17px;
+    padding: 30px 17px 25px 17px;
 
     cursor: pointer;
 
@@ -134,6 +125,10 @@
     &--active + .navigation__list {
       display: none;
     }
+
+    &--nojs + .navigation__list {
+      display: block;
+    }
   }
 }
 
@@ -154,7 +149,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    padding: 5px 17px 24px 17px;
+    padding: 5px 20px 26px 15px;
   }
 }
 
@@ -183,6 +178,7 @@
     &:focus {
       color: $blue;
 
+      outline: none;
       opacity: 1;
     }
   }

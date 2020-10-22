@@ -125,9 +125,10 @@
 .copyright__link {
   &:hover,
   &:focus {
-    opacity: 1;
-
     color: $blue;
+
+    outline: none;
+    opacity: 1;
   }
 
   &--first {

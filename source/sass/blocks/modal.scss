@@ -118,6 +118,11 @@
   padding: 0;
 }
 
+.modal__container-send {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 .modal__name input[type="text"],
 .modal__tel input[type="tel"],
 .modal__question textarea {
@@ -133,7 +138,8 @@
   width: 100%;
 
   border: none;
-  border-radius: none;
+  border-radius: 0;
+  box-shadow: none;
 
   box-sizing: border-box;
 
@@ -278,7 +284,7 @@
   }
 
   &:focus + .modal__checkbox-label::before {
-    outline: 2px solid $white;
+    outline: 1px solid $white;
   }
 }
 

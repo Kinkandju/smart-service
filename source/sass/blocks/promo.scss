@@ -226,6 +226,8 @@
   &:hover,
   &:focus {
     opacity: 1;
+
+    outline: none;
   }
 
   @media (max-width: $desktop-width) {
