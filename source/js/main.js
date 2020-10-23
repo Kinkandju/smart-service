@@ -2,56 +2,19 @@
 
 (function () {
 
-  // var PHONE_INPUTS = ['tel', 'user_tel'];
   var ESC = 27;
   var DEVICE_SIZE = 768;
 
-  // PHONE_INPUTS.forEach(function (input) {
-  //   IMask(document.getElementById(input), {
-  //     mask: '+{7} (000) 000-00-00'
-  //   });
-  // });
+  var formTel = document.querySelector('#tel');
+  var modalTel = document.querySelector('#user_tel');
 
-  var classListAdd = function (element, className) {
-    element.classList.add(className);
-  };
+  function validateTel(tel) {
+    var telInputMask = new Inputmask('+7 (999) 999-99-99');
+    telInputMask.mask(tel);
+  }
 
-  var classListRemove = function (element, className) {
-    element.classList.remove(className);
-  };
-
-  var toggles = document.querySelectorAll('.navigation__title');
-
-  toggles.forEach(function (toggle) {
-    classListRemove(toggle, 'navigation__title--nojs');
-  });
-
-  var isToggleActive = function (title) {
-    var titles = Array.from(document.querySelectorAll(title));
-
-    titles.forEach(function (element) {
-      classListAdd(element, 'navigation__title--active');
-      window.addEventListener('resize', function () {
-        var action = innerWidth < DEVICE_SIZE ? classListAdd : classListRemove;
-        action(element, 'navigation__title--active');
-      });
-
-      element.addEventListener('click', function () {
-        if (innerWidth < DEVICE_SIZE) {
-          var action = classListAdd;
-          if (element.classList.contains('navigation__title--active')) {
-            titles.forEach(function (elem) {
-              classListAdd(elem, 'navigation__title--active');
-            });
-            action = classListRemove;
-          }
-          action(element, 'navigation__title--active');
-        }
-      });
-    });
-  };
-
-  isToggleActive('.navigation__title');
+  validateTel(formTel);
+  validateTel(modalTel);
 
   var popup = document.querySelector('.modal');
   var form = popup.querySelector('.modal__form');
@@ -84,7 +47,7 @@
     }
   }
 
-  var openPopup = function () {
+  function openPopup() {
     var buttonOpen = document.querySelector('.contacts__open-modal');
 
     if (buttonOpen) {
@@ -107,9 +70,9 @@
         document.body.classList.remove('modal--active');
       }
     });
-  };
+  }
 
-  var closePopup = function () {
+  function closePopup() {
     var buttonClose = popup.querySelector('.modal__button-close');
 
     if (buttonClose) {
@@ -125,7 +88,7 @@
         }
       });
     }
-  };
+  }
 
   form.addEventListener('submit', function () {
     if (isStorageSupport) {
@@ -138,61 +101,109 @@
   openPopup();
   closePopup();
 
-  var linkAnchors = document.querySelectorAll('.promo__link, .promo__scroll-down');
+  function getScroll() {
+    var linkAnchors = document.querySelectorAll('.promo__link, .promo__scroll-down');
 
-  for (var i = 0; i < linkAnchors.length; i++) {
-    linkAnchors[i].addEventListener('click', function (evt) {
-      evt.preventDefault();
+    for (var i = 0; i < linkAnchors.length; i++) {
+      linkAnchors[i].addEventListener('click', function (evt) {
+        evt.preventDefault();
 
-      var targetElement = document.querySelector(evt.currentTarget.href.replace(/[^#]*(.*)/, '$1'));
-      var ua = window.navigator.userAgent;
-      var msie = ua.indexOf('MSIE ');
-      var trident = ua.indexOf('Trident/');
+        var targetElement = document.querySelector(evt.currentTarget.href.replace(/[^#]*(.*)/, '$1'));
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf('MSIE ');
+        var trident = ua.indexOf('Trident/');
 
-      function isInternetExplorer() {
-        return msie > -1 || trident > -1;
-      }
-
-      var targetY;
-
-      if (isInternetExplorer() === false) {
-        targetY = targetElement.getBoundingClientRect().y;
-      } else {
-        targetY = targetElement.getBoundingClientRect().top;
-      }
-      var startY = window.pageYOffset;
-
-      function getScrollSpeed(object) {
-        var start = performance.now();
-
-        requestAnimationFrame(function animate(time) {
-          var timePart = (time - start) / object.duration;
-
-          if (timePart > 1) {
-            timePart = 1;
-          }
-
-          var progress = object.timing(timePart);
-          object.draw(progress);
-
-          if (timePart < 1) {
-            requestAnimationFrame(animate);
-          }
-        });
-      }
-
-      var data = {
-        duration: 1800,
-        timing: function (timeFraction) {
-          return timeFraction;
-        },
-        draw: function (progress) {
-          window.scrollTo(0, startY + progress * targetY);
+        function isInternetExplorer() {
+          return msie > -1 || trident > -1;
         }
-      };
 
-      getScrollSpeed(data);
+        var targetY;
+
+        if (isInternetExplorer() === false) {
+          targetY = targetElement.getBoundingClientRect().y;
+        } else {
+          targetY = targetElement.getBoundingClientRect().top;
+        }
+
+        var startY = window.pageYOffset;
+        var data = {
+          duration: 1800,
+          timing: function (timeFraction) {
+            return timeFraction;
+          },
+          draw: function (progress) {
+            window.scrollTo(0, startY + progress * targetY);
+          }
+        };
+
+        function getScrollSpeed(object) {
+          var start = performance.now();
+
+          requestAnimationFrame(function animate(time) {
+            var timePart = (time - start) / object.duration;
+
+            if (timePart > 1) {
+              timePart = 1;
+            }
+
+            var progress = object.timing(timePart);
+            object.draw(progress);
+
+            if (timePart < 1) {
+              requestAnimationFrame(animate);
+            }
+          });
+        }
+
+        getScrollSpeed(data);
+      });
+    }
+  }
+
+  getScroll();
+
+  function classListAdd(element, className) {
+    element.classList.add(className);
+  }
+
+  function classListRemove(element, className) {
+    element.classList.remove(className);
+  }
+
+  var toggles = document.querySelectorAll('.navigation__title');
+
+  function isToggleActive() {
+
+    function removeClassJs(toggle) {
+      for (var j = 0; j < toggles.length; j++) {
+        toggle[j].classList.remove('navigation__title--nojs');
+      }
+    }
+
+    removeClassJs(toggles);
+
+    toggles.forEach(function (element) {
+      classListAdd(element, 'navigation__title--active');
+      window.addEventListener('resize', function () {
+        var action = innerWidth < DEVICE_SIZE ? classListAdd : classListRemove;
+        action(element, 'navigation__title--active');
+      });
+
+      element.addEventListener('click', function () {
+        if (innerWidth < DEVICE_SIZE) {
+          var action = classListAdd;
+          if (element.classList.contains('navigation__title--active')) {
+            for (var j = 0; j < toggles.length; j++) {
+              classListAdd(toggles[j], 'navigation__title--active');
+            }
+            action = classListRemove;
+          }
+          action(element, 'navigation__title--active');
+        }
+      });
     });
   }
+
+  isToggleActive(toggles);
 
 })();

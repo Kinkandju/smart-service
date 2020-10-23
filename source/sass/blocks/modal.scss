@@ -123,6 +123,14 @@
   flex-direction: column-reverse;
 }
 
+.modal__name,
+.modal__tel,
+.modal__question {
+  label {
+    display: none;
+  }
+}
+
 .modal__name input[type="text"],
 .modal__tel input[type="tel"],
 .modal__question textarea {

@@ -29,11 +29,11 @@
 
       <div class="page-header__container">
         <a class="page-header__logo-group logo-group">
-          <img class="logo-group__image" src="img/logo.svg" width="52" height="52" alt="Логотип компании">
+          <img src="img/logo.svg" width="52" height="52" alt="Логотип компании">
 
           <div class="logo-group__text">
-            <span class="logo-group__text-bold">Smart Device</span>
-            <span class="logo-group__text-normal">умные технологии</span>
+            <span>Smart Device</span>
+            <span>умные технологии</span>
           </div>
         </a>
 
@@ -203,7 +203,7 @@
 
                 <div class="form__tel">
                   <label class="visually-hidden" for="tel">Ваш телефон:</label>
-                  <input type="tel" id="tel" name="tel" placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" maxlength="18" autocomplete="off" required>
+                  <input type="tel" id="tel" name="tel" placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" data-mask="+7 (000) 000-00-00" maxlength="18" autocomplete="off" required>
                 </div>
 
                 <div class="form__question">
@@ -235,15 +235,14 @@
         <div class="info__container-box">
           <div class="info__container">
             <a class="info__logo-group logo-group logo-group--footer">
-              <img class="logo-group__image logo-group__image--footer" src="img/logo.svg" width="52" height="52" alt="Логотип компании">
+              <img src="img/logo.svg" width="52" height="52" alt="Логотип компании">
 
               <div class="logo-group__text logo-group__text--footer">
-                <span class="logo-group__text-bold logo-group__text-bold--black">Service Device</span>
-                <span class="logo-group__text-normal">умные технологии</span>
+                <span>Service Device</span>
+                <span>умные технологии</span>
               </div>
             </a>
-
-            <span class="copyright__text copyright__text--desktop">
+            <span class="info__text">
               1999-2018 SD Service Devices
             </span>
 
@@ -395,8 +394,8 @@
     </section>
   </footer>
 
-  <script src="js/svg4everybody.js"></script>
-  <script>svg4everybody();</script>
+  <!-- <script src="js/svg4everybody.js"></script>
+  <script>svg4everybody();</script> -->
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 

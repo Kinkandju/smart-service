@@ -80,10 +80,6 @@
 .copyright__text {
   margin: 0 50px 0 0;
 
-  &--desktop {
-    display: none;
-  }
-
   &--middle {
     position: relative;
     right: 35px;
@@ -92,15 +88,6 @@
   @media (max-width: $desktop-width) {
     display: none;
 
-    &--desktop {
-      position: relative;
-      top: 0;
-      left: 5px;
-      display: block;
-
-      margin: 0;
-    }
-
     &--middle {
       display: none;
     }
@@ -108,13 +95,6 @@
 
   @media (max-width: $tablet-width) {
     display: none;
-
-    &--desktop {
-      left: 0;
-      display: block;
-
-      margin: 0 0 32px 0;
-    }
 
     &--middle {
       display: none;
