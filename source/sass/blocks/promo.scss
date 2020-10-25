@@ -165,6 +165,8 @@
 
   &:hover,
   &:focus {
+    border: 2px solid $white;
+
     color: $blue;
     background-color: $white;
   }

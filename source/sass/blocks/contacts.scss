@@ -51,6 +51,11 @@
 
     a {
       padding: 16px;
+
+      &:hover,
+      &:focus {
+        opacity: 0.5;
+      }
     }
   }
 

@@ -11,10 +11,7 @@
   &:hover,
   &:focus {
     outline: none;
-
-    span {
-      color: $blue;
-    }
+    opacity: 0.6;
   }
 
   img {
