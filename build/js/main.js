@@ -5,16 +5,18 @@
   var ESC = 27;
   var DEVICE_SIZE = 768;
 
-  var formTel = document.querySelector('#tel');
-  var modalTel = document.querySelector('#user_tel');
+  var maskedInputs = document.querySelectorAll('input[data-inputmask]');
 
-  function validateTel(tel) {
-    var telInputMask = new Inputmask('+7 (999) 999-99-99');
-    telInputMask.mask(tel);
-  }
+  var applyMask = function () {
+    Array.prototype.forEach.call(maskedInputs, function (input) {
+      var maskOption = {
+        mask: input.getAttribute('data-inputmask')
+      };
+      IMask(input, maskOption);
+    });
+  };
 
-  validateTel(formTel);
-  validateTel(modalTel);
+  applyMask();
 
   var popup = document.querySelector('.modal');
   var form = popup.querySelector('.modal__form');
@@ -170,16 +172,15 @@
     element.classList.remove(className);
   }
 
+  function removeClassJs(toggle) {
+    for (var j = 0; j < toggles.length; j++) {
+      toggle[j].classList.remove('navigation__title--nojs');
+    }
+  }
+
   var toggles = document.querySelectorAll('.navigation__title');
 
   function isToggleActive() {
-
-    function removeClassJs(toggle) {
-      for (var j = 0; j < toggles.length; j++) {
-        toggle[j].classList.remove('navigation__title--nojs');
-      }
-    }
-
     removeClassJs(toggles);
 
     toggles.forEach(function (element) {

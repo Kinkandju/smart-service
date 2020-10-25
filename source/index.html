@@ -203,7 +203,7 @@
 
                 <div class="form__tel">
                   <label class="visually-hidden" for="tel">Ваш телефон:</label>
-                  <input type="tel" id="tel" name="tel" placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" data-mask="+7 (000) 000-00-00" maxlength="18" autocomplete="off" required>
+                  <input type="tel" id="tel" name="tel" placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" data-inputmask="+{7} (000) 000-00-00" maxlength="18" autocomplete="off" required>
                 </div>
 
                 <div class="form__question">
@@ -369,7 +369,7 @@
 
               <div class="modal__tel">
                 <label class="visually-hidden" for="user_tel">Ваш телефон:</label>
-                <input type="tel" id="user_tel" name="user_tel" placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" maxlength="18" autocomplete="off" tabindex="1" required>
+                <input type="tel" id="user_tel" name="user_tel" placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" data-inputmask="+{7} (000) 000-00-00" maxlength="18" autocomplete="off" tabindex="1" required>
               </div>
 
               <div class="modal__question">
@@ -394,8 +394,6 @@
     </section>
   </footer>
 
-  <!-- <script src="js/svg4everybody.js"></script>
-  <script>svg4everybody();</script> -->
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 
