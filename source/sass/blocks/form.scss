@@ -48,7 +48,11 @@
   width: 47.4%;
 
   label {
-    display: none;
+    margin: 0;
+    padding: 0;
+
+    font-size: 0;
+    line-height: 0;
   }
 
   @media (max-width: $desktop-width) {
@@ -64,7 +68,11 @@
   width: 100%;
 
   label {
-    display: none;
+    margin: 0;
+    padding: 0;
+
+    font-size: 0;
+    line-height: 0;
   }
 
   @media (max-width: $tablet-width) {
