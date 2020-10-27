@@ -41,6 +41,79 @@
   padding: 0;
 }
 
+.navigation__toggle {
+  position: relative;
+
+  margin: 0 0 25px 0;
+  padding: 0;
+
+  h3 {
+    font-family: $font--roboto-regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    color: $dark-blue;
+    background-color: $light-gray;
+
+    border: none;
+  }
+
+  @media (max-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    cursor: pointer;
+
+    margin: 0;
+    padding: 30px 17px 25px 17px;
+
+    &--active .navigation__button {
+      &::after {
+        position: absolute;
+        top: -7px;
+        right: 7.5px;
+
+        width: 2px;
+        height: 16px;
+
+        content: "";
+
+        background: $silver;
+      }
+    }
+
+    &--active + .navigation__list {
+      display: none;
+    }
+
+    &--nojs + .navigation__list {
+      display: block;
+    }
+  }
+}
+
+.navigation__button {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 17px;
+
+    border: none;
+    background: $silver;
+
+    width: 16px;
+    height: 2px;
+  }
+}
+
 .navigation__menu {
   width: 68.5%;
 
@@ -64,71 +137,6 @@
 
   @media (max-width: $tablet-width) {
     width: 100%;
-  }
-}
-
-.navigation__title {
-  display: block;
-  position: relative;
-
-  font-family: $font--roboto-regular;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 16px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-
-
-  margin: 0 0 25px 0;
-  padding: 0;
-
-  color: $dark-blue;
-  background-color: $light-gray;
-
-  border: none;
-
-  @media (max-width: $tablet-width) {
-    margin: 0;
-    padding: 30px 17px 25px 17px;
-
-    cursor: pointer;
-
-    &::before {
-      position: absolute;
-      top: 50%;
-      right: 17px;
-
-      width: 16px;
-      height: 2px;
-
-      content: "";
-
-      background: $silver;
-    }
-
-    &--active {
-      &::after {
-        position: absolute;
-        top: 41%;
-        right: 24px;
-
-        width: 2px;
-        height: 16px;
-
-        content: "";
-
-        background: $silver;
-      }
-    }
-
-    &--active + .navigation__list {
-      display: none;
-    }
-
-    &--nojs + .navigation__list {
-      display: block;
-    }
   }
 }
 
