@@ -2,10 +2,10 @@
   position: relative;
 
   margin: 0;
-  padding: 195px 0 160px 0;
+  padding: 195px 0 114px 0;
 
   @media (max-width: $desktop-width) {
-    padding: 94px 0 163px 0;
+    padding: 94px 0 48px 0;
   }
 
   @media (max-width: $tablet-width) {
@@ -34,6 +34,7 @@
   @media (max-width: $tablet-width) {
     left: 0;
 
+    margin: 0;
     padding: 0;
 
     width: 100%;

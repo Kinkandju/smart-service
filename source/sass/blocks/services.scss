@@ -125,7 +125,8 @@
     display: block;
 
     margin: 0;
-    padding: 50px 44px;
+    // padding: 50px 44px;
+    padding: 40px 44px;
 
     width: 100%;
     height: 100%;
@@ -159,6 +160,10 @@
 
   &--components {
     background-image: url("../img/device3_desktop_1x.png");
+
+    a {
+      padding: 50px 44px;
+    }
   }
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {

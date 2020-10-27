@@ -1,7 +1,7 @@
 .navigation {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
 
   width: 70%;
@@ -115,7 +115,9 @@
 }
 
 .navigation__menu {
-  width: 68.5%;
+  flex-grow: 1;
+
+  width: 61%;
 
   @media (max-width: $desktop-width) {
     width: 50%;
@@ -129,7 +131,9 @@
 }
 
 .navigation__location {
-  width: 35%;
+  flex-shrink: 1;
+
+  width: 33.8%;
 
   @media (max-width: $desktop-width) {
     width: 48%;
