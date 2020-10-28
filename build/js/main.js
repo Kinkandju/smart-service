@@ -173,52 +173,27 @@
   var copyrightLink = document.querySelector('.copyright__link--first');
   var copyrightText = document.querySelector('.copyright__text--middle');
 
-  // function addElement() {
-  //   if (windowInnerWidth < DESKTOP_WIDTH) {
-  //     infoContainer.insertBefore(copyrightText, infoSocial);
-  //     copyrightText.style.margin = 0;
-  //     copyrightText.style.right = 0;
-  //   } else if (windowInnerWidth < TABLET_WIDTH) {
-  //     copyrightText.style.margin = 0;
-  //     copyrightText.style.marginBottom = 32 + 'px';
-  //     copyrightText.style.right = 0;
-  //   } else {
-  //     copyrightContainer.insertBefore(copyrightText, copyrightLink);
-  //     copyrightText.style.marginRight = 50 + 'px';
-  //     copyrightText.style.right = 35 + 'px';
-  //   }
-  // }
-
-  function addElementTablet() {
-    infoContainer.insertBefore(copyrightText, infoSocial);
-    copyrightText.style.margin = 0;
-    copyrightText.style.right = 0;
+  function getElement(addContainer, element, outContainer) {
+    addContainer.insertBefore(element, outContainer);
+    element.style.margin = 0;
+    element.style.right = 0;
   }
 
-  function addElementMobil() {
-    infoContainer.insertBefore(copyrightText, infoSocial);
-    copyrightText.style.margin = 0;
-    copyrightText.style.marginBottom = 32 + 'px';
-    copyrightText.style.right = 0;
-  }
-
-  function addElementDesktop() {
-    copyrightContainer.insertBefore(copyrightText, copyrightLink);
-    copyrightText.style.marginRight = 50 + 'px';
-    copyrightText.style.right = 35 + 'px';
-  }
-
-
-  window.addEventListener('resize', function (evt) {
-    evt.preventDefault();
-
+  function addElement() {
     if (windowInnerWidth < DESKTOP_WIDTH) {
-      addElementTablet();
+      getElement(infoContainer, copyrightText, infoSocial);
     } else if (windowInnerWidth < TABLET_WIDTH) {
-      addElementMobil();
+      getElement(infoContainer, copyrightText, infoSocial);
+      copyrightText.style.marginBottom = 32 + 'px';
     } else {
-      addElementDesktop();
+      getElement(copyrightContainer, copyrightText, copyrightLink);
+      copyrightText.style.marginRight = 50 + 'px';
+      copyrightText.style.right = 35 + 'px';
     }
+  }
+
+  window.addEventListener('resize', function () {
+    addElement();
   });
 
   function classListAdd(element, className) {
