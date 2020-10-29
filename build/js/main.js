@@ -6,6 +6,9 @@
   var DEVICE_SIZE = 768;
   var DESKTOP_WIDTH = 1024;
   var TABLET_WIDTH = 768;
+  var MARGIN_BUTTOM = 32;
+  var MARGIN_RIGHT = 50;
+  var RIGHT = 35;
 
   var maskedInputs = document.querySelectorAll('input[data-inputmask]');
 
@@ -179,29 +182,29 @@
   }
 
   function addElement(viewportWidth) {
-    if (viewportWidth < DESKTOP_WIDTH && viewportWidth > TABLET_WIDTH) {
+    if (viewportWidth < DESKTOP_WIDTH && viewportWidth >= TABLET_WIDTH) {
       getElement(infoContainer, copyrightText, infoSocial);
     } else if (viewportWidth < TABLET_WIDTH) {
       getElement(infoContainer, copyrightText, infoSocial);
-      copyrightText.style.marginBottom = 32 + 'px';
+      copyrightText.style.marginBottom = MARGIN_BUTTOM + 'px';
     } else {
       getElement(copyrightContainer, copyrightText, copyrightLink);
-      copyrightText.style.marginRight = 50 + 'px';
-      copyrightText.style.right = 35 + 'px';
+      copyrightText.style.marginRight = MARGIN_RIGHT + 'px';
+      copyrightText.style.right = RIGHT + 'px';
     }
   }
 
-  addElement(visualViewport.width);
+  addElement(window.innerWidth);
 
   window.addEventListener('resize', function (evt) {
-    addElement(evt.target.visualViewport.width);
+    addElement(evt.target.window.innerWidth);
   });
 
-  function classListAdd(element, className) {
+  function addClassList(element, className) {
     element.classList.add(className);
   }
 
-  function classListRemove(element, className) {
+  function removeClassList(element, className) {
     element.classList.remove(className);
   }
 
@@ -217,20 +220,20 @@
     removeClassJs(toggles);
 
     toggles.forEach(function (element) {
-      classListAdd(element, 'navigation__toggle--active');
+      addClassList(element, 'navigation__toggle--active');
       window.addEventListener('resize', function () {
-        var action = innerWidth < DEVICE_SIZE ? classListAdd : classListRemove;
+        var action = innerWidth < DEVICE_SIZE ? addClassList : removeClassList;
         action(element, 'navigation__toggle--active');
       });
 
       element.addEventListener('click', function () {
         if (innerWidth < DEVICE_SIZE) {
-          var action = classListAdd;
+          var action = addClassList;
           if (element.classList.contains('navigation__toggle--active')) {
             for (var i = 0; i < toggles.length; i++) {
-              classListAdd(toggles[i], 'navigation__toggle--active');
+              addClassList(toggles[i], 'navigation__toggle--active');
             }
-            action = classListRemove;
+            action = removeClassList;
           }
           action(element, 'navigation__toggle--active');
         }
