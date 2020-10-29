@@ -166,7 +166,6 @@
 
   getScroll();
 
-  var windowInnerWidth = document.documentElement.clientWidth;
   var infoContainer = document.querySelector('.info__container');
   var infoSocial = document.querySelector('.info__social');
   var copyrightContainer = document.querySelector('.copyright__container');
@@ -179,10 +178,10 @@
     element.style.right = 0;
   }
 
-  function addElement() {
-    if (windowInnerWidth < DESKTOP_WIDTH && windowInnerWidth > TABLET_WIDTH) {
+  function addElement(viewportWidth) {
+    if (viewportWidth < DESKTOP_WIDTH && viewportWidth > TABLET_WIDTH) {
       getElement(infoContainer, copyrightText, infoSocial);
-    } else if (windowInnerWidth < TABLET_WIDTH) {
+    } else if (viewportWidth < TABLET_WIDTH) {
       getElement(infoContainer, copyrightText, infoSocial);
       copyrightText.style.marginBottom = 32 + 'px';
     } else {
@@ -192,8 +191,10 @@
     }
   }
 
-  window.addEventListener('resize', function () {
-    addElement();
+  addElement(visualViewport.width);
+
+  window.addEventListener('resize', function (evt) {
+    addElement(evt.target.visualViewport.width);
   });
 
   function classListAdd(element, className) {
