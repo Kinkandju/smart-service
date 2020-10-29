@@ -180,7 +180,7 @@
   }
 
   function addElement() {
-    if (windowInnerWidth < DESKTOP_WIDTH) {
+    if (windowInnerWidth < DESKTOP_WIDTH && windowInnerWidth > TABLET_WIDTH) {
       getElement(infoContainer, copyrightText, infoSocial);
     } else if (windowInnerWidth < TABLET_WIDTH) {
       getElement(infoContainer, copyrightText, infoSocial);
@@ -205,8 +205,8 @@
   }
 
   function removeClassJs(toggle) {
-    for (var j = 0; j < toggles.length; j++) {
-      toggle[j].classList.remove('navigation__toggle--nojs');
+    for (var i = 0; i < toggles.length; i++) {
+      toggle[i].classList.remove('navigation__toggle--nojs');
     }
   }
 
@@ -226,8 +226,8 @@
         if (innerWidth < DEVICE_SIZE) {
           var action = classListAdd;
           if (element.classList.contains('navigation__toggle--active')) {
-            for (var j = 0; j < toggles.length; j++) {
-              classListAdd(toggles[j], 'navigation__toggle--active');
+            for (var i = 0; i < toggles.length; i++) {
+              classListAdd(toggles[i], 'navigation__toggle--active');
             }
             action = classListRemove;
           }
